@@ -8,6 +8,9 @@ subtopics:
   - id: bash
     title: "Bash"
     description: "These lessons focus on using the Command Line Interface and Bash for processing data."
+  - id: sciwms
+    title: "Scientific Workflow Management Systems"
+    description: "Here you can find brief tutorials on a couple different workflow engines that you might encounter in the wild."
 
 maintainers:
   - hexylena
