@@ -17,6 +17,19 @@
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml" />
+        <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/metabolomics/tutorials/lcms/tutorial.html" />
+        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+
+        <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material" />
+<meta name="DC.type" content="text" />
+<meta name="DC.title" content="Mass spectrometry: LC-MS analysis" />
+<meta name="DC.publisher" content="Galaxy Training Network" />
+<meta name="DC.date" content="2022-11-28 09:55:50 +0000" />
+<meta name="DC.creator" content="Mélanie Petera" />
+<meta name="DC.creator" content="Gildas Le Corguillé" />
+<meta name="DC.creator" content="Jean-François Martin" />
+<meta name="DC.creator" content="Yann Guitton" />
+<meta name="DC.creator" content="Workflow4Metabolomics core team" />
 
         
         
@@ -24,9 +37,11 @@
         
         
         <meta name="description" content="Training material to analyse Mass spectrometry data in Ga..." />
+        <meta property="og:site_name" content="Galaxy Training Network" />
         <meta property="og:title" content="Galaxy Training: Mass spectrometry: LC-MS analysis" />
         <meta property="og:description" content="Training material to analyse Mass spectrometry data in Ga..." />
         <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+
     </head>
     <body data-spy="scroll" data-target="#toc">
         <header>
@@ -49,6 +64,41 @@
                         </a>
                         
                     </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Languages">
+                            <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Languages
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            
+                              <strong class="dropdown-header">Automatic Translations</strong>
+            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metabolomics/tutorials/lcms/tutorial.html&edit-text=&act=url">
+                            Français
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metabolomics/tutorials/lcms/tutorial.html&edit-text=&act=url">
+                            日本語
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metabolomics/tutorials/lcms/tutorial.html&edit-text=&act=url">
+                            Español
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metabolomics/tutorials/lcms/tutorial.html&edit-text=&act=url">
+                            Português
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metabolomics/tutorials/lcms/tutorial.html&edit-text=&act=url">
+                            العربية
+                            </a>
+                            
+                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metabolomics/tutorials/lcms/tutorial.html&edit-text=&act=url" title="">
+                            And more!
+                            </a>
+                        </div>
+                    </li>
+
                     <li class="nav-item dropdown">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
         <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
@@ -99,46 +149,15 @@
             <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> Page Metrics
         </a>
 
+        <!-- link to feedback -->
         
-            <a class="dropdown-item" href="/training-material/feedback.html" title="Show feedback statistics about this repository">
-                <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
-            </a>
+            
+            
+                <a class="dropdown-item" href="/training-material/feedback.html" title="Show feedback statistics about this repository">
+                    <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
+                </a>
+            
         
-
-        <div class="dropdown-item">
-            <div>
-                <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Translate this page
-            </div>
-
-            <div id="lang-selector">
-                
-                <strong>Automatic Translations</strong>
-
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metabolomics/tutorials/lcms/tutorial.html&edit-text=&act=url">
-                Français
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metabolomics/tutorials/lcms/tutorial.html&edit-text=&act=url">
-                日本語
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metabolomics/tutorials/lcms/tutorial.html&edit-text=&act=url">
-                Español
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metabolomics/tutorials/lcms/tutorial.html&edit-text=&act=url">
-                Português
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metabolomics/tutorials/lcms/tutorial.html&edit-text=&act=url">
-                العربية
-                </a>
-                
-                <a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fmetabolomics%2Ftutorials%2Flcms%2Ftutorial.html&edit-text=&act=url" title="">
-                And more!
-                </a>
-            </div>
-        </div>
 
         <div class="dropdown-item">
             <div>
@@ -176,7 +195,6 @@
                 <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
             </div>
 
-            
             <div id="archive-selector">
             
                 <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/metabolomics/tutorials/lcms/tutorial.html" title="Version 2021-10-01">2021-10-01</a>
@@ -243,27 +261,14 @@
 
 {
   "@context": "http://schema.org",
-  "@type": "Course",
-  "accessMode": [
-    "textual",
-    "visual"
-  ],
-  "accessModeSufficient": [
-    "textual",
-    "visual"
-  ],
-  "accessibilityControl": [
-    "fullKeyboardControl",
-    "fullMouseControl"
-  ],
-  "accessibilityFeature": [
-    "alternativeText",
-    "tableOfContents"
-  ],
-  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "@type": "LearningResource",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+    "@type": "CreativeWork"
+  },
   "audience": {
     "@type": "EducationalAudience",
-    "educationalRole": "students"
+    "educationalRole": "Students"
   },
   "citation": {
     "@type": "CreativeWork",
@@ -276,7 +281,7 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2021-03-23 18:12:58 +0000",
+  "dateModified": "2022-11-28 09:55:50 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Mass spectrometry: LC-MS analysis",
   "interactivityType": "mixed",
@@ -301,27 +306,46 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
+  "identifier": "https://github.com/galaxyproject/training-material",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Metabolomics",
     "description": "Training material to analyse Mass spectrometry data in Galaxy: Metabolomics (LCMS, FIAMS, GCMS, NMR) and imaging.",
-    "url": "https://training.galaxyproject.org//training-material/topics/metabolomics/"
+    "url": "https://training.galaxyproject.org/training-material/topics/metabolomics/"
   },
-  "courseCode": "metabolomics / lcms / hands-on",
   "learningResourceType": "hands-on tutorial",
   "name": "Hands-on for 'Mass spectrometry: LC-MS analysis' tutorial",
-  "url": "https://training.galaxyproject.org//training-material/topics/metabolomics/tutorials/lcms/tutorial.html",
+  "url": "https://training.galaxyproject.org/training-material/topics/metabolomics/tutorials/lcms/tutorial.html",
   "timeRequired": "PT3H",
-  "description": "The questions this  addresses are:\n - What are the main steps of untargeted LC-MS data processing for metabolomic analysis?\n - How to conduct metabolomic data analysis from preprocessing to annotation using Galaxy?\n\n\\nThe objectives are:\n - To comprehend the diversity of LC-MS metabolomic data analysis.\n - To get familiar with the main steps constituting a metabolomic workflow for untargeted LC-MS analysis.\n - To evaluate the potential of a workflow approach when dealing with LC-MS metabolomic data.\n\n",
+  "keywords": "metabolomics",
+  "description": "The questions this  addresses are:\n - What are the main steps of untargeted LC-MS data processing for metabolomic analysis?\n - How to conduct metabolomic data analysis from preprocessing to annotation using Galaxy?\n\n\nThe objectives are:\n - To comprehend the diversity of LC-MS metabolomic data analysis.\n - To get familiar with the main steps constituting a metabolomic workflow for untargeted LC-MS analysis.\n - To evaluate the potential of a workflow approach when dealing with LC-MS metabolomic data.\n\n",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
     "alternateName": "en"
   },
-  "coursePrerequisites": [
+  "competencyRequired": [
     {
-      "@type": "CreativeWork",
-      "url": "https://training.galaxyproject.org//training-material/topics/introduction/",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/introduction/",
       "name": "Introduction to Galaxy Analyses",
       "description": "Introduction to Galaxy Analyses",
       "provider": {
@@ -332,51 +356,218 @@
       }
     }
   ],
-  "hasPart": [
-
-  ],
   "author": [
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Mélanie Petera"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/melpetera/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/melpetera/",
+      "name": "Mélanie Petera",
+      "image": "https://avatars.githubusercontent.com/melpetera",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Gildas Le Corguillé"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/lecorguille/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/lecorguille/",
+      "name": "Gildas Le Corguillé",
+      "image": "https://avatars.githubusercontent.com/lecorguille",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Jean-François Martin"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/jfrancoismartin/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/jfrancoismartin/",
+      "name": "Jean-François Martin",
+      "image": "https://avatars.githubusercontent.com/jfrancoismartin",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Yann Guitton"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/yguitton/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/yguitton/",
+      "name": "Yann Guitton",
+      "image": "https://avatars.githubusercontent.com/yguitton",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Workflow4Metabolomics core team"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/workflow4metabolomics/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/workflow4metabolomics/",
+      "name": "Workflow4Metabolomics core team",
+      "image": "https://avatars.githubusercontent.com/workflow4metabolomics",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     }
   ],
   "contributor": [
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Mélanie Petera"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/melpetera/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/melpetera/",
+      "name": "Mélanie Petera",
+      "image": "https://avatars.githubusercontent.com/melpetera",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Gildas Le Corguillé"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/lecorguille/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/lecorguille/",
+      "name": "Gildas Le Corguillé",
+      "image": "https://avatars.githubusercontent.com/lecorguille",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Jean-François Martin"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/jfrancoismartin/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/jfrancoismartin/",
+      "name": "Jean-François Martin",
+      "image": "https://avatars.githubusercontent.com/jfrancoismartin",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Yann Guitton"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/yguitton/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/yguitton/",
+      "name": "Yann Guitton",
+      "image": "https://avatars.githubusercontent.com/yguitton",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Workflow4Metabolomics core team"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/workflow4metabolomics/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/workflow4metabolomics/",
+      "name": "Workflow4Metabolomics core team",
+      "image": "https://avatars.githubusercontent.com/workflow4metabolomics",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     }
   ],
   "about": [
@@ -384,7 +575,7 @@
       "@type": "CreativeWork",
       "name": "Metabolomics",
       "description": "Training material to analyse Mass spectrometry data in Galaxy: Metabolomics (LCMS, FIAMS, GCMS, NMR) and imaging.",
-      "url": "https://training.galaxyproject.org//training-material/topics/metabolomics/"
+      "url": "https://training.galaxyproject.org/training-material/topics/metabolomics/"
     },
     {
       "@type": "DefinedTerm",
@@ -401,15 +592,20 @@
     <h1 data-toc-skip>Mass spectrometry: LC-MS analysis</h1>
     
 
-    <div class="contributors-line">Authors: 
+    <div markdown="0">
 
- <a href="/training-material/hall-of-fame/melpetera/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/melpetera" alt="Avatar">Mélanie Petera</a> <a href="/training-material/hall-of-fame/lecorguille/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/lecorguille" alt="Avatar">Gildas Le Corguillé</a> <a href="/training-material/hall-of-fame/jfrancoismartin/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/jfrancoismartin" alt="Avatar">Jean-François Martin</a> <a href="/training-material/hall-of-fame/yguitton/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/yguitton" alt="Avatar">Yann Guitton</a> <a href="/training-material/hall-of-fame/workflow4metabolomics/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/workflow4metabolomics" alt="Avatar">Workflow4Metabolomics core team</a>
+	<div class="contributors-line">
+		Authors: <a href="/training-material/hall-of-fame/melpetera/" class="contributor-badge contributor-melpetera"><img src="https://avatars.githubusercontent.com/melpetera?s=27" alt="Avatar">Mélanie Petera</a><a href="/training-material/hall-of-fame/lecorguille/" class="contributor-badge contributor-lecorguille"><img src="https://avatars.githubusercontent.com/lecorguille?s=27" alt="Avatar">Gildas Le Corguillé</a><a href="/training-material/hall-of-fame/jfrancoismartin/" class="contributor-badge contributor-jfrancoismartin"><img src="https://avatars.githubusercontent.com/jfrancoismartin?s=27" alt="Avatar">Jean-François Martin</a><a href="/training-material/hall-of-fame/yguitton/" class="contributor-badge contributor-yguitton"><img src="https://avatars.githubusercontent.com/yguitton?s=27" alt="Avatar">Yann Guitton</a><a href="/training-material/hall-of-fame/workflow4metabolomics/" class="contributor-badge contributor-workflow4metabolomics"><img src="https://avatars.githubusercontent.com/workflow4metabolomics?s=27" alt="Avatar">Workflow4Metabolomics core team</a>
+	</div>
 
 </div>
 
+
     <blockquote class="overview">
-        <h3>Overview</h3>
+        <div class="box-title" aria-label="overview box">Overview</div>
+        
         <img alt="Creative Commons License" class="float-right" style="border-width:0; display: inline-block; margin:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" aria-hidden="true" />
+        
         <strong><i class="far fa-question-circle" aria-hidden="true"></i> Questions:</strong>
         <ul>
         
@@ -465,16 +661,12 @@
         <div id="supporting-materials"><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials:</strong></div>
         <ul class="supporting_material">
             
-                <li class="btn btn-default supporting_material"><a href="/training-material/topics/metabolomics/slides/introduction.html" title="Topic Overview slides">
-                    <i class="fab fa-slideshare" aria-hidden="true"></i> Topic Overview slides
-                </a></li>
-            
 
             
                 <li class="btn btn-default supporting_material">
 
 
-<a class="topic-icon" href="https://zenodo.org/record/3244991">
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/3244991">
     <i class="far fa-copy" aria-hidden="true"></i> Datasets
 </a>
 
@@ -485,7 +677,7 @@
                 <li class="btn btn-default supporting_material">
 
 
-    <a class="topic-icon" href="/training-material/topics/metabolomics/tutorials/lcms/workflows/" title="Workflows" alt="Mass spectrometry: LC-MS analysis workflows">
+    <a class="btn btn-default topic-icon" href="/training-material/topics/metabolomics/tutorials/lcms/workflows/" title="Workflows" alt="Mass spectrometry: LC-MS analysis workflows">
         <i class="fas fa-share-alt" aria-hidden="true"></i> Workflows
     </a>
 
@@ -499,13 +691,40 @@
             
             
             
+                 <li class="btn btn-default supporting_material">
+    <a class="topic-icon" href="/training-material/topics/metabolomics/tutorials/lcms/faqs/" title="Frequently Asked Questions" alt="Tutorial FAQs">
+        <i class="far fa-question-circle" aria-hidden="true"></i> FAQs
+    </a>
+  </li>
+
+
+            
+
+            <!-- Check the GTN Video Library for recordings of this tutorial or associated slides -->
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
 
             
                 <li class="btn btn-default supporting_material">
 
 
     <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
-        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span> Available on these Galaxies 
+        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>&nbsp;Available on these Galaxies 
     </a>
     <ul class="dropdown-menu">
     
@@ -515,12 +734,6 @@
             </a>
         </li>
     
-    
-        
-    
-        
-    
-        
     
         
     
@@ -579,11 +792,11 @@
         
     
         
+    
+        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
-        
-    
         
     
         
@@ -688,9 +901,11 @@
         </ul>
         
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Mar 23, 2021 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Nov 28, 2022 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+            
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>
+            
             <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">The GTN Framework is licensed under MIT</a>
         </div>
     </blockquote>
@@ -702,9 +917,9 @@
                 <nav id="toc" data-toggle="toc" class="sticky-top" aria-label="Table of Contents"></nav>
             </div>
             <div class="col-sm-10">
-                
+                 
 
-                <h1 class="no_toc" id="introduction">Introduction</h1>
+                <h1 id="introduction">Introduction</h1>
 
 <p>You may already know that there are different types of <em>-omic</em> sciences; out of these, metabolomics is most closely related to phenotypes.
 Metabolomics involves the study of different types of matrices, such as blood, urine, tissues, in various organisms including plants. It  focuses on studying the very small molecules
@@ -718,7 +933,7 @@ and annotation. To be able to perform a complete LC-MS analysis in a single envi
 team provides <span class="notranslate">Galaxy</span> tools dedicated to metabolomics. This tutorial explains the main steps involved in untargeted LC-MS data processing
 for metabolomic analysis, and shows how to conduct metabolomic data analysis from preprocessing to annotation using <span class="notranslate">Galaxy</span>.</p>
 
-<p>To illustrate this approach, we will use data from <a class="citation" href="#Thvenot2015">Thévenot <i>et al.</i> 2015</a>. The objectives of this paper was to analyze
+<p>To illustrate this approach, we will use data from <span class="citation"><a href="#Thvenot2015">Thévenot <i>et al.</i> 2015</a></span>. The objectives of this paper was to analyze
 the influence of age, body mass index, and gender on the urine metabolome. To do so, the authors collected samples
 from 183 employees from the French Alte<span class="notranslate">rna</span>tive Energies and Atomic Energy Commission (CEA) and performed LC-HRMS LTQ-Orbitrap
 (negative ionization mode) analyses.</p>
@@ -732,7 +947,7 @@ the chosen diversity of sample will allow you to explore the basics of a metabol
 biological samples).</p>
 
 <p>To analyze these data, we will then follow a light version of the <a href="http://workflow4metabolomics.org/the-lc-ms-workflow">LC-MS <span class="notranslate">workflow</span></a>,
-developed by the <a href="http://workflow4metabolomics.org/">Wokflow4metabolomics group</a> (<a class="citation" href="#Giacomoni2014">Giacomoni <i>et al.</i> 2014</a>, <a class="citation" href="#Guitton2017">Guitton <i>et al.</i> 2017</a>).
+developed by the <a href="http://workflow4metabolomics.org/">Wokflow4metabolomics group</a> (<span class="citation"><a href="#Giacomoni2014">Giacomoni <i>et al.</i> 2014</a></span>, <span class="citation"><a href="#Guitton2017">Guitton <i>et al.</i> 2017</a></span>).
 The <span class="notranslate">workflow</span> is composed of 4 main parts:</p>
 <ol>
   <li><strong>Preprocessing</strong> extracts ions from raw data</li>
@@ -741,14 +956,15 @@ The <span class="notranslate">workflow</span> is composed of 4 main parts:</p>
   <li><strong>Annotation</strong> puts a name on selected variables</li>
 </ol>
 
-<p><a href="../../images/tutorial-lcms-workflow.png"><img src="../../images/tutorial-lcms-workflow.png" alt="The full tutorial workflow" loading="lazy" /></a></p>
+<p><a href="../../images/tutorial-lcms-workflow.png"><img src="../../images/tutorial-lcms-workflow.png" alt="The full tutorial workflow. " loading="lazy" /></a></p>
 
 <blockquote class="agenda">
-  <h3 id="agenda">Agenda</h3>
+  <div id="agenda" class="box-title" aria-label="agenda box: ">Agenda</div>
 
   <p>In this tutorial, we will cover:</p>
 
 <ol id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
   <li><a href="#preprocessing-with-xcms" id="markdown-toc-preprocessing-with-xcms">Preprocessing with XCMS</a>    <ol>
       <li><a href="#importing-the-lcms-data-into-galaxy" id="markdown-toc-importing-the-lcms-data-into-galaxy">Importing the LC/MS data into <span class="notranslate">Galaxy</span></a></li>
       <li><a href="#data-preparation-for-xcms-msnbase-readmsdata" id="markdown-toc-data-preparation-for-xcms-msnbase-readmsdata">Data preparation for XCMS: <em>MSnbase readMSData</em></a></li>
@@ -775,13 +991,14 @@ The <span class="notranslate">workflow</span> is composed of 4 main parts:</p>
     </ol>
   </li>
   <li><a href="#annotation" id="markdown-toc-annotation">Annotation</a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
 </ol>
 
 </blockquote>
 
 <h1 id="preprocessing-with-xcms">Preprocessing with XCMS</h1>
 
-<p>The first step in the <span class="notranslate">workflow</span> is the pre-processing of the raw data with <strong>XCMS</strong> (<a class="citation" href="#Smith2006">Smith <i>et al.</i> 2006</a>).</p>
+<p>The first step in the <span class="notranslate">workflow</span> is the pre-processing of the raw data with <strong>XCMS</strong> (<span class="citation"><a href="#Smith2006">Smith <i>et al.</i> 2006</a></span>).</p>
 
 <p><strong>XCMS</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> is a free and open source software dedicated to pre-processing of any type of mass spectrometry acquisition files from low to
 high resolution, including FT-MS data coupled with different kind of chromatography (liquid or gas). This software is
@@ -790,7 +1007,7 @@ used worldwide by a huge community of specialists in metabolomics using mass spe
 <p>This software is based on different algorithms that have been published, and is provided and maintained using R software.</p>
 
 <p><strong>MSnbase readMSData</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>, prior to <strong>XCMS</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> is able to read files with open format as <code class="language-plaintext highlighter-rouge">mzXML</code>, <code class="language-plaintext highlighter-rouge">mzMl</code>, <code class="language-plaintext highlighter-rouge">mzData</code> and <code class="language-plaintext highlighter-rouge">netCDF</code>, which are independent of the constructors’ formats. The <strong>XCMS</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> package itself is composed of R functions able to extract, filter, align and fill gap, with the possibility to annotate isotopes,
-adducts and fragments using the R package CAMERA (<a class="citation" href="#CAMERA">Carsten Kuhl 2017</a>). This set of functions gives modularity, and thus is particularly well
+adducts and fragments using the R package CAMERA (<span class="citation"><a href="#CAMERA">Carsten Kuhl 2017</a></span>). This set of functions gives modularity, and thus is particularly well
 adapted to define workflows, one of the key points of <span class="notranslate">Galaxy</span>.</p>
 
 <h2 id="importing-the-lcms-data-into-galaxy">Importing the LC/MS data into <span class="notranslate">Galaxy</span></h2>
@@ -803,14 +1020,14 @@ pre-processing in parallel, since the initial actions in the extraction process 
 having to launch jobs manually for each sample. You can start using the dataset collection option from the very beginning of your analysis, when uploading your data into <span class="notranslate">Galaxy</span>.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-data-upload-the-mzxml-with-get-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Data upload the mzXML with <strong>Get data</strong></h3>
+  <div id="hands-on-data-upload-the-mzxml-with-b-get-data-b" class="box-title" aria-label="hands-on box: Data upload the mzXML with &lt;b&gt;Get data&lt;/b&gt;"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Data upload the mzXML with <b>Get data</b></div>
 
   <ol>
     <li>
       <p>Create a new history for this tutorial</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-creating-a-new-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history</h3>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>  <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>  <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>  <li>Select the option <strong>Create New</strong> from the menu</li></ol></blockquote>
+      <blockquote class="tip">  <div id="tip-creating-a-new-history" class="box-title"><button type="button" aria-controls="tip-creating-a-new-history-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a new history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>  <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>  <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>  <li>Select the option <strong>Create New</strong> from the menu</li></ol></blockquote>
     </li>
     <li>Import the 9 <code class="language-plaintext highlighter-rouge">mzXML</code> files into a collection named <code class="language-plaintext highlighter-rouge">sacurine</code>
       <ul>
@@ -830,10 +1047,10 @@ https://zenodo.org/record/3244991/files/QC1_014.mzML
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-via-links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links</h3>  <ul>  <li>Copy the link location</li>  <li>    <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>  </li>  <li>    <p>Click on <strong>Collection</strong> on the top</p>  </li>  <li>Select <strong>Paste/Fetch Data</strong></li>  <li>    <p>Paste the link into the text field</p>  </li>  <li>    <p>Change <strong>Type (set all):</strong> from “Auto-detect” to <code class="language-plaintext highlighter-rouge">mzml</code></p>  </li>  <li>    <p>Press <strong>Start</strong></p>  </li>  <li>    <p>Click on <strong>Build</strong> when available</p>  </li>  <li>    <p>Enter a name for the collection</p>    <ul>      <li>sacurine</li>    </ul>  </li>  <li>Click on <strong>Create list</strong> (and wait a bit)</li></ul></blockquote>
+      <blockquote class="tip">  <div id="tip-importing-via-links" class="box-title"><button type="button" aria-controls="tip-importing-via-links-contents" aria-expanded="true" aria-label="Toggle tip box: Importing via links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Copy the link location</li>  <li>    <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>  </li>  <li>    <p>Click on <strong>Collection</strong> on the top</p>  </li>  <li>Select <strong>Paste/Fetch Data</strong></li>  <li>    <p>Paste the link into the text field</p>  </li>  <li>    <p>Change <strong>Type (set all):</strong> from “Auto-detect” to <code class="language-plaintext highlighter-rouge">mzml</code></p>  </li>  <li>    <p>Press <strong>Start</strong></p>  </li>  <li>    <p>Click on <strong>Build</strong> when available</p>  </li>  <li>    <p>Enter a name for the collection</p>    <ul>      <li>sacurine</li>    </ul>  </li>  <li>Click on <strong>Create list</strong> (and wait a bit)</li></ul></blockquote>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-data-from-a-data-library"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing data from a data library</h3>  <p>As an alte<span class="notranslate">rna</span>tive to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>  <ul>  <li>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></li>  <li>Navigate to the correct folder as indicated by your instructor</li>  <li>Select the desired files</li>  <li>Click on the <strong>To History</strong> button near the top and select <strong>as a Collection</strong> from the dropdown menu</li>  <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>  <li>Click on <strong>Import</strong></li></ul></blockquote>
+      <blockquote class="tip">  <div id="tip-importing-data-from-a-data-library" class="box-title"><button type="button" aria-controls="tip-importing-data-from-a-data-library-contents" aria-expanded="true" aria-label="Toggle tip box: Importing data from a data library"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing data from a data library<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>As an alte<span class="notranslate">rna</span>tive to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>  <ul>  <li>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></li>  <li>Navigate to the correct folder as indicated by your instructor</li>  <li>Select the desired files</li>  <li>Click on the <strong>To History</strong> button near the top and select <strong>as a Collection</strong> from the dropdown menu</li>  <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>  <li>Click on <strong>Import</strong></li></ul></blockquote>
     </li>
     <li>Make sure your data is in a <strong>collection</strong>. Make sure it is named <code class="language-plaintext highlighter-rouge">sacurine</code>
       <ul>
@@ -841,7 +1058,7 @@ https://zenodo.org/record/3244991/files/QC1_014.mzML
       </ul>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-creating-a-dataset-collection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a dataset collection</h3>  <ul>  <li>Click on <strong>Operations on multiple datasets</strong> (check box icon) at the top of the history panel <img src="/training-material/topics/galaxy-interface/images/historyItemControls.png" alt="Operations on multiple datasets button" /></li>  <li>Check all the datasets in your history you would like to include</li>  <li>    <p>Click <strong>For all selected..</strong> and choose <strong>Build dataset list</strong></p>    <p><img src="/training-material/topics/galaxy-interface/images/buildList.png" alt="build list collection menu item" width="15%" /></p>  </li>  <li>Enter a name for your collection</li>  <li>Click <strong>Create List</strong> to build your collection</li>  <li>Click on the checkmark icon at the top of your history again</li></ul></blockquote>
+      <blockquote class="tip">  <div id="tip-creating-a-dataset-collection" class="box-title"><button type="button" aria-controls="tip-creating-a-dataset-collection-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a dataset collection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a dataset collection<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Click on <strong>Operations on multiple datasets</strong> (check box icon) at the top of the history panel <img src="/training-material/topics/galaxy-interface/images/historyItemControls.png" alt="Operations on multiple datasets button" /></li>  <li>Check all the datasets in your history you would like to include</li>  <li>    <p>Click <strong>For all selected..</strong> and choose <strong>Build dataset list</strong></p>    <p><img src="/training-material/topics/galaxy-interface/images/buildList.png" alt="build list collection menu item" width="15%" /></p>  </li>  <li>Enter a name for your collection</li>  <li>Click <strong>Create List</strong> to build your collection</li>  <li>Click on the checkmark icon at the top of your history again</li></ul></blockquote>
     </li>
   </ol>
 </blockquote>
@@ -857,7 +1074,7 @@ https://zenodo.org/record/3244991/files/QC1_014.mzML
 <p><strong>MSnbase readMSData</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> takes as input your raw files and prepares <code class="language-plaintext highlighter-rouge">RData</code> files for the first XCMS step.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-msnbase-readmsdata"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: MSnbase readMSData</h3>
+  <div id="hands-on-msnbase-readmsdata" class="box-title" aria-label="hands-on box: MSnbase readMSData"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: MSnbase readMSData</div>
 
   <ol>
     <li><strong>MSnbase readMSData</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -866,17 +1083,17 @@ https://zenodo.org/record/3244991/files/QC1_014.mzML
       </ul>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-selecting-a-datast-collection-as-input"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Selecting a datast collection as input</h3>  <ol>  <li>Click on <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <strong>Dataset collection</strong> in front of the input parameter you want to supply the collection to.</li>  <li>Select the collection you want to use from the list</li></ol></blockquote>
+      <blockquote class="tip">  <div id="tip-selecting-a-dataset-collection-as-input" class="box-title"><button type="button" aria-controls="tip-selecting-a-dataset-collection-as-input-contents" aria-expanded="true" aria-label="Toggle tip box: Selecting a dataset collection as input"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Selecting a dataset collection as input<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ol>  <li>Click on <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <strong>Dataset collection</strong> in front of the input parameter you want to supply the collection to.</li>  <li>Select the collection you want to use from the list</li></ol></blockquote>
     </li>
   </ol>
 
   <blockquote class="question">
-    <h3 id="question-question"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+    <div id="question" class="box-title" aria-label="question box: "><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Question</div>
 
     <p>What do you get as output?</p>
 
     <blockquote class="solution">
-      <h3 id="solution-solution"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <div id="solution" class="box-title"><button type="button" aria-controls="solution-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
       <ol>
         <li>A <strong>Dataset collection</strong> containing 9 dataset.</li>
@@ -923,7 +1140,7 @@ Note that you can either:</p>
 </ul>
 
 <blockquote class="tip">
-  <h3 id="tip-optional-generate-the-right-template-with-xcms-get-a-samplemetadata-file-tool"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Optional: Generate the right template with <strong>xcms get a sampleMetadata file</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></h3>
+  <div id="tip-optional-generate-the-right-template-with-b-xcms-get-a-samplemetadata-file-b" class="box-title"><button type="button" aria-controls="tip-optional-generate-the-right-template-with-b-xcms-get-a-samplemetadata-file-b-contents" aria-expanded="true" aria-label="Toggle tip box: Optional: Generate the right template with &lt;b&gt;xcms get a sampleMetadata file&lt;/b&gt;"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Optional: Generate the right template with <b>xcms get a sampleMetadata file</b><span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>In the case of this tutorial, we already prepared a <em>sampleMetadata</em> file with all the necessary information. Below is an optional hands-on explaining how to get a template to fill, with the two following advantages:</p>
 
@@ -933,7 +1150,7 @@ Note that you can either:</p>
   </ol>
 
   <blockquote class="notranslate hands_on">
-    <h3 id="hands_on-hands-on-xcms-get-a-samplemetadata-file"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: xcms get a sampleMetadata file</h3>
+    <div id="hands-on-xcms-get-a-samplemetadata-file" class="box-title" aria-label="hands-on box: xcms get a sampleMetadata file"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: xcms get a sampleMetadata file</div>
 
     <ol>
       <li><strong>xcms get a sampleMetadata file</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -959,7 +1176,7 @@ software you find appropriate to construct your table, as long as you save your 
 use a sp<span class="notranslate">reads</span>heet software such as Microsoft Excel or LibreOffice.</p>
 
 <blockquote class="warning">
-  <h3 id="comment-important-save-your-table-in-the-correct-format"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Important: Save your table in the correct format</h3>
+  <div id="warning-important-save-your-table-in-the-correct-format" class="box-title" aria-label="warning box: Important: Save your table in the correct format"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i><span class="visually-hidden"></span> Warning: Important: Save your table in the correct format</div>
 
   <p>The file has to be a <code class="language-plaintext highlighter-rouge">.txt</code>or a <code class="language-plaintext highlighter-rouge">.tsv</code> (tab-separated values). Neither <code class="language-plaintext highlighter-rouge">.xlsx</code> nor <code class="language-plaintext highlighter-rouge">.odt</code> are supported.
 If you use a sp<span class="notranslate">reads</span>heet software, be sure to change the default format to <strong>Text (Tab delimited)</strong> or equivalent.</p>
@@ -968,7 +1185,7 @@ If you use a sp<span class="notranslate">reads</span>heet software, be sure to c
 <p>Once your sampleMetadata table is ready, you can proceed to the upload. In this tutorial we already prepared the table for you ;)</p>
 
 <blockquote class="tip">
-  <h3 id="tip-optional-filling-the-samplemetadata-using-the-template-obtained-from-galaxy"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Optional: Filling the <em>sampleMetadata</em> using the template obtained from <span class="notranslate">Galaxy</span></h3>
+  <div id="tip-optional-filling-the-i-samplemetadata-i-using-the-template-obtained-from-galaxy" class="box-title"><button type="button" aria-controls="tip-optional-filling-the-i-samplemetadata-i-using-the-template-obtained-from-galaxy-contents" aria-expanded="true" aria-label="Toggle tip box: Optional: Filling the &lt;i&gt;sampleMetadata&lt;/i&gt; using the template obtained from Galaxy"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Optional: Filling the <i>sampleMetadata</i> using the template obtained from <span class="notranslate">Galaxy</span><span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>For this tutorial, we already provide the <em>sampleMetadata</em> file, so you only have to upload it to <span class="notranslate">Galaxy</span>. Below we
 explain how we filled this file from the template we generated in <span class="notranslate">Galaxy</span>.</p>
@@ -1224,7 +1441,7 @@ be uploaded into <span class="notranslate">Galaxy</span>.</p>
 <h4 id="upload-the-samplemetada-file-with-get-data">Upload the sampleMetada file with ‘Get data’</h4>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-upload-the-samplemetada"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Upload the sampleMetada</h3>
+  <div id="hands-on-upload-the-samplemetada" class="box-title" aria-label="hands-on box: Upload the sampleMetada"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Upload the sampleMetada</div>
 
   <ol>
     <li>Import the <code class="language-plaintext highlighter-rouge">sampleMetadata_completed.tsv</code> file from Zenodo or from a shared data library (ask your instructor)
@@ -1232,10 +1449,10 @@ be uploaded into <span class="notranslate">Galaxy</span>.</p>
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-via-links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links</h3>  <ul>  <li>Copy the link location</li>  <li>    <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>  </li>  <li>Select <strong>Paste/Fetch Data</strong></li>  <li>    <p>Paste the link into the text field</p>  </li>  <li>    <p>Press <strong>Start</strong></p>  </li>  <li>    <p><strong>Close</strong> the window</p>  </li>  <li>By default, <span class="notranslate">Galaxy</span> uses the URL as the name, so rename the files with a more useful name.</li></ul></blockquote>
+      <blockquote class="tip">  <div id="tip-importing-via-links-1" class="box-title"><button type="button" aria-controls="tip-importing-via-links-1-contents" aria-expanded="true" aria-label="Toggle tip box: Importing via links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Copy the link location</li>  <li>    <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>  </li>  <li>Select <strong>Paste/Fetch Data</strong></li>  <li>    <p>Paste the link into the text field</p>  </li>  <li>    <p>Press <strong>Start</strong></p>  </li>  <li><strong>Close</strong> the window</li></ul></blockquote>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-data-from-a-data-library"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing data from a data library</h3>  <p>As an alte<span class="notranslate">rna</span>tive to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>  <ul>  <li>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></li>  <li>Navigate to the correct folder as indicated by your instructor</li>  <li>Select the desired files</li>  <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>  <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>  <li>Click on <strong>Import</strong></li></ul></blockquote>
+      <blockquote class="tip">  <div id="tip-importing-data-from-a-data-library-1" class="box-title"><button type="button" aria-controls="tip-importing-data-from-a-data-library-1-contents" aria-expanded="true" aria-label="Toggle tip box: Importing data from a data library"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing data from a data library<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>As an alte<span class="notranslate">rna</span>tive to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>  <ul>  <li>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></li>  <li>Navigate to the correct folder as indicated by your instructor</li>  <li>Select the desired files</li>  <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>  <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>  <li>Click on <strong>Import</strong></li></ul></blockquote>
     </li>
     <li>Check the data type of your imported files.
       <ul>
@@ -1243,10 +1460,10 @@ be uploaded into <span class="notranslate">Galaxy</span>.</p>
       </ul>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-changing-the-datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype</h3>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>  <li>Select  your desired datatype</li>  <li>Click the <strong>Change datatype</strong> button</li></ul></blockquote>
+      <blockquote class="tip">  <div id="tip-changing-the-datatype" class="box-title"><button type="button" aria-controls="tip-changing-the-datatype-contents" aria-expanded="true" aria-label="Toggle tip box: Changing the datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>  <li>Select  your desired datatype    <ul>      <li>tip: you can start typing the datatype into the field to filter the dropdown menu</li>    </ul>  </li>  <li>Click the <strong>Save</strong> button</li></ul></blockquote>
 
       <blockquote class="comment">
-        <h3 id="comment-comment"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+        <div id="comment" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
 
         <p>Here we provided the sampleMetadata file so we know that the upload led to a ‘tabular’ file. But from experience we also know that
 it can happen that, when uploading a sampleMetadata table, a user obtains other inappropriate types of data. This is generally due to the file
@@ -1259,14 +1476,14 @@ right away if you happen to get one of these obvious issues.</p>
       <p>Rename your sampleMetadata file with a shorter name ‘sampleMetadata_completed.tsv’</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-renaming-a-dataset"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a dataset</h3>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, change the <strong>Name</strong> field</li>  <li>Click the <strong>Save</strong> button</li></ul></blockquote>
+      <blockquote class="tip">  <div id="tip-renaming-a-dataset" class="box-title"><button type="button" aria-controls="tip-renaming-a-dataset-contents" aria-expanded="true" aria-label="Toggle tip box: Renaming a dataset"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a dataset<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, change the <strong>Name</strong> field</li>  <li>Click the <strong>Save</strong> button</li></ul></blockquote>
     </li>
   </ol>
 
 </blockquote>
 
 <blockquote class="question">
-  <h3 id="question-question-1"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+  <div id="question-1" class="box-title" aria-label="question box: "><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Question</div>
 
   <ol>
     <li>How many columns should I have in my sampleMetadata file?</li>
@@ -1274,7 +1491,7 @@ right away if you happen to get one of these obvious issues.</p>
   </ol>
 
   <blockquote class="solution">
-    <h3 id="solution-solution-1"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+    <div id="solution-1" class="box-title"><button type="button" aria-controls="solution-1-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
       <li>At least 2, with the identifiers and the class column. But as many as you need to describe the potential variability of your samples
@@ -1303,7 +1520,7 @@ The tool automatically takes the second column as colour groups when a file is p
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-xcms-plot-chromatogram"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: xcms plot chromatogram</h3>
+  <div id="hands-on-xcms-plot-chromatogram" class="box-title" aria-label="hands-on box: xcms plot chromatogram"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: xcms plot chromatogram</div>
 
   <ol>
     <li><strong>xcms plot chromatogram</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1313,10 +1530,10 @@ The tool automatically takes the second column as colour groups when a file is p
       </ul>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-selecting-a-datast-collection-as-input"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Selecting a datast collection as input</h3>  <ol>  <li>Click on <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <strong>Dataset collection</strong> in front of the input parameter you want to supply the collection to.</li>  <li>Select the collection you want to use from the list</li></ol></blockquote>
+      <blockquote class="tip">  <div id="tip-selecting-a-dataset-collection-as-input-1" class="box-title"><button type="button" aria-controls="tip-selecting-a-dataset-collection-as-input-1-contents" aria-expanded="true" aria-label="Toggle tip box: Selecting a dataset collection as input"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Selecting a dataset collection as input<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ol>  <li>Click on <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <strong>Dataset collection</strong> in front of the input parameter you want to supply the collection to.</li>  <li>Select the collection you want to use from the list</li></ol></blockquote>
 
       <blockquote class="comment">
-        <h3 id="comment-comment-1"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+        <div id="comment-1" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
 
         <p>If you use this tool at a later step of XCMS <span class="notranslate">workflow</span> while having provided, in the Merger step (see further in this tutorial), a sampleMetadata with a second column containing groups,
 you will get colouring according to these groups even without providing a sampleMetadata file as a ‘plot chromatogram’ parameter.</p>
@@ -1329,7 +1546,7 @@ you will get colouring according to these groups even without providing a sample
 <p>This tool generates Base Peak Intensity Chromatograms (BPIs) and Total Ion Chromatograms (TICs). If you provide groups as we do here, you obtain two plots:
 one with colours based on provided groups, one with one colour per sample.</p>
 
-<p><img src="../../images/lcms_BPC_9samp.png" alt="Base Peak Intensity Chromatograms" loading="lazy" /></p>
+<p><img src="../../images/lcms_BPC_9samp.png" alt="Base Peak Intensity Chromatograms. " loading="lazy" /></p>
 
 <h2 id="first-xcms-step-peak-picking">First XCMS step: <em>peak picking</em></h2>
 
@@ -1339,11 +1556,11 @@ independently. The idea here is, for each peak, to proceed to chromatographic pe
 <p>The XCMS solution provides two different algorithms to perform chromatographic peak detection: <em>matchedFilter</em> and
 <em>centWave</em>. The matchedFilter strategy is the first one provided by the XCMS R package. It is compatible with any
 LC-MS device, but was developed at a time when high resolution mass spectrometry was not common standard yet. On the
-other side, the <strong>centWave</strong> algorithm (<a class="citation" href="#Tautenhahn2008">Tautenhahn <i>et al.</i> 2008</a>) was specifically developed for high resolution mass spectrometry, dedicated to
+other side, the <strong>centWave</strong> algorithm (<span class="citation"><a href="#Tautenhahn2008">Tautenhahn <i>et al.</i> 2008</a></span>) was specifically developed for high resolution mass spectrometry, dedicated to
 data in centroid mode. In this tutorial, you will practice using the centWave algorithm.</p>
 
 <blockquote class="comment">
-  <h3 id="comment-how-the-centwave-algorithm-works"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> How the centWave algorithm works</h3>
+  <div id="comment-how-the-centwave-algorithm-works" class="box-title" aria-label="comment box: How the centWave algorithm works"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: How the centWave algorithm works</div>
 
   <p>Remember that these steps are performed for each of your data files independently.</p>
   <ul>
@@ -1362,7 +1579,7 @@ pre-processing.</p>
 <p>Let’s try performing the peakpicking step with the <strong>xcms findChromPeaks (xcmsSet)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-xcms-findchrompeaks-xcmsset"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: xcms findChromPeaks (xcmsSet)</h3>
+  <div id="hands-on-xcms-findchrompeaks-xcmsset" class="box-title" aria-label="hands-on box: xcms findChromPeaks (xcmsSet)"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: xcms findChromPeaks (xcmsSet)</div>
 
   <ol>
     <li><strong>xcms findChromPeaks (xcmsSet)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1386,7 +1603,7 @@ pre-processing.</p>
   <p>You can leave the other parameters with their default values.</p>
 
   <blockquote class="comment">
-    <h3 id="comment-comment-2"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+    <div id="comment-2" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
 
     <p>Along with the parameters used in the core centWave algorithm, XCMS provides other filtering options allowing you to get
 rid of ions that you don’t want to consider. For example, you can use <em>Spectra Filters</em> allowing you to discard some RT or M/z
@@ -1416,7 +1633,7 @@ at this step that you need to provide the needed information if you want distinc
 the Merger tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-xcms-findchrompeaks-merger"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: xcms findChromPeaks Merger</h3>
+  <div id="hands-on-xcms-findchrompeaks-merger" class="box-title" aria-label="hands-on box: xcms findChromPeaks Merger"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: xcms findChromPeaks Merger</div>
 
   <ol>
     <li><strong>xcms findChromPeaks Merger</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1426,7 +1643,7 @@ the Merger tool.</p>
       </ul>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-selecting-a-datast-collection-as-input"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Selecting a datast collection as input</h3>  <ol>  <li>Click on <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <strong>Dataset collection</strong> in front of the input parameter you want to supply the collection to.</li>  <li>Select the collection you want to use from the list</li></ol></blockquote>
+      <blockquote class="tip">  <div id="tip-selecting-a-dataset-collection-as-input-2" class="box-title"><button type="button" aria-controls="tip-selecting-a-dataset-collection-as-input-2-contents" aria-expanded="true" aria-label="Toggle tip box: Selecting a dataset collection as input"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Selecting a dataset collection as input<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ol>  <li>Click on <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <strong>Dataset collection</strong> in front of the input parameter you want to supply the collection to.</li>  <li>Select the collection you want to use from the list</li></ol></blockquote>
     </li>
   </ol>
 
@@ -1452,7 +1669,7 @@ on the resulting matrix. It must be chosen according to the quality of the chrom
 than a given number of samples. Either a percentage of the total number of samples or an absolute value of samples can be given. This is defined by the user.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-xcms-groupchrompeaks-group"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: xcms groupChromPeaks (group)</h3>
+  <div id="hands-on-xcms-groupchrompeaks-group" class="box-title" aria-label="hands-on box: xcms groupChromPeaks (group)"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: xcms groupChromPeaks (group)</div>
 
   <ol>
     <li><strong>xcms groupChromPeaks (group)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1478,10 +1695,10 @@ dot corresponds to a sample. The plot allows to assess the quality of alignment.
 
 <p>Here is an example of two m/z slides obtained from the hands-on:</p>
 
-<p><img src="../../images/lcms_group_9samp.png" alt="plotChromPeakDensity.pdf" loading="lazy" /></p>
+<p><img src="../../images/lcms_group_9samp.png" alt="plotChromPeakDensity.pdf. " loading="lazy" /></p>
 
 <blockquote class="question">
-  <h3 id="question-questions"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
+  <div id="question-2" class="box-title" aria-label="question box: "><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Question</div>
 
   <ol>
     <li>Look at the <code class="language-plaintext highlighter-rouge">283.1127 - 283.1163</code> m/z slice. How many peak groups are considered? Can you explain why some peaks are not affected to peak groups?</li>
@@ -1489,7 +1706,7 @@ dot corresponds to a sample. The plot allows to assess the quality of alignment.
   </ol>
 
   <blockquote class="solution">
-    <h3 id="solution-solution-2"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+    <div id="solution-2" class="box-title"><button type="button" aria-controls="solution-2-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
       <li>There are 3 peak groups in this m/z slice. The two peaks that are not assigned to peak groups are alone in their retention time area. Thus,
@@ -1526,7 +1743,7 @@ peaks’ parameter to put them aside.</p>
 <p>The algorithm uses statistical smoothing methods. You can choose between linear or loess regression.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-xcms-adjustrtime-retcor"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: xcms adjustRtime (retcor)</h3>
+  <div id="hands-on-xcms-adjustrtime-retcor" class="box-title" aria-label="hands-on box: xcms adjustRtime (retcor)"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: xcms adjustRtime (retcor)</div>
 
   <ol>
     <li><strong>xcms adjustRtime (retcor)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1544,7 +1761,7 @@ peaks’ parameter to put them aside.</p>
   <p>You can leave the other parameters to default values.</p>
 
   <blockquote class="comment">
-    <h3 id="comment-comment-3"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+    <div id="comment-3" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
 
     <p>If you have a very large number of samples (<em>e.g.</em> a thousand), it might be impossible to find peaks that are present in 100% of your samples.
 If that is the case and you still set a very high value for the minimum required fraction of samples, the tool can not complete successfully the retention
@@ -1558,13 +1775,13 @@ time correction. A special attention should also be given to this parameter when
 It also allows you to check whether the well behaved peaks were distributed homogeneously along the chromatogram.</p>
 
 <blockquote class="tip">
-  <h3 id="tip-tip-check-the-impact-of-rt-correction-using-xcms-plot-chromatogram"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Check the impact of RT correction using ‘xcms plot chromatogram’</h3>
+  <div id="tip-check-the-impact-of-rt-correction-using-xcms-plot-chromatogram" class="box-title"><button type="button" aria-controls="tip-check-the-impact-of-rt-correction-using-xcms-plot-chromatogram-contents" aria-expanded="true" aria-label="Toggle tip box: Check the impact of RT correction using 'xcms plot chromatogram'"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Check the impact of RT correction using 'xcms plot chromatogram'<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Apart from the plots generated by the adjustRtime tool, you can check the impact of the retention time
 correction by comparing the chromatogram you obtained previously to a new one generated after correction.</p>
 
   <blockquote class="notranslate hands_on">
-    <h3 id="hands_on-hands-on-xcms-plot-chromatogram-1"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: xcms plot chromatogram</h3>
+    <div id="hands-on-xcms-plot-chromatogram-1" class="box-title" aria-label="hands-on box: xcms plot chromatogram"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: xcms plot chromatogram</div>
 
     <ol>
       <li><strong>xcms plot chromatogram</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1573,7 +1790,7 @@ correction by comparing the chromatogram you obtained previously to a new one ge
         </ul>
 
         <blockquote class="comment">
-          <h3 id="comment-comment-4"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+          <div id="comment-4" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
 
           <p>As in the previous ‘plot chromatogram’, you can use your completed sampleMetadata file to get colours.</p>
         </blockquote>
@@ -1593,7 +1810,7 @@ since retention times are supposed to be less variable inside a same peak group 
 lower a little the bandwidth parameter.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-second-xcms-groupchrompeaks-group"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: second ‘xcms groupChromPeaks (group)’</h3>
+  <div id="hands-on-second-xcms-groupchrompeaks-group" class="box-title" aria-label="hands-on box: second 'xcms groupChromPeaks (group)'"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: second 'xcms groupChromPeaks (group)'</div>
 
   <ol>
     <li><strong>xcms groupChromPeaks (group)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1615,7 +1832,7 @@ lower a little the bandwidth parameter.</p>
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-comment-5"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+        <div id="comment-5" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
 
         <p>When performing this second grouping (or at the first one if you do not plan to perform retention time correction),
 you can take this opportunity to check how your peak table looks like at this point of the XCMS extraction. For this, you can
@@ -1630,7 +1847,7 @@ set the ‘Get the Peak List’ option to <code class="language-plaintext highli
 last adjustRtime step and thus your last grouping step, you will obtain your final peak list (<em>i.e.</em> final list of ions).</p>
 
 <blockquote class="question">
-  <h3 id="question-questions-1"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
+  <div id="question-3" class="box-title" aria-label="question box: "><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Question</div>
 
   <ol>
     <li>How many ions did you obtained with the final grouping step?</li>
@@ -1639,12 +1856,11 @@ sample. What do you notice when looking at the intensity of the first ion regard
   </ol>
 
   <blockquote class="solution">
-    <h3 id="solution-solution-3"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+    <div id="solution-3" class="box-title"><button type="button" aria-controls="solution-3-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
       <li>The final grouping step led to 5815 ions.</li>
-      <li>The first ion (M58T69) has a ‘NA’ value for the first sample (QC1_014). This is also the case for several other ions
-and samples.</li>
+      <li>The first ion (M58T69) has a ‘NA’ value for the first sample (QC1_014). This is also the case for several other ions and samples.</li>
     </ol>
 
   </blockquote>
@@ -1659,7 +1875,7 @@ step.</p>
 <p>To be able to get the information that may actually exist behind NAs, there is an additional XCMS step that is called <em>fillChromPeaks</em>.</p>
 
 <blockquote class="comment">
-  <h3 id="comment-comment-6"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+  <div id="comment-6" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
 
   <p>Before performing the ‘fillChromPeaks’ step, it is highly recommended to first have a look at your data concerning the distribution
 of NAs in your data. Indeed, this will allow you to check whether your results are consistent with your expectations; if not you
@@ -1676,7 +1892,7 @@ an overview of it using the <strong>Intensity Check</strong> <i class="fas fa-wr
 chromatographic peak for this ion was identified.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-xcms-fillchrompeaks-fillpeaks"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: xcms fillChromPeaks (fillPeaks)</h3>
+  <div id="hands-on-xcms-fillchrompeaks-fillpeaks" class="box-title" aria-label="hands-on box: xcms fillChromPeaks (fillPeaks)"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: xcms fillChromPeaks (fillPeaks)</div>
 
   <ol>
     <li><strong>xcms fillChromPeaks (fillPeaks)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1691,7 +1907,7 @@ chromatographic peak for this ion was identified.</p>
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-comment-7"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+        <div id="comment-7" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
 
         <p>The <em>“Reported intensity values”</em> parameter is important here. It defines how the intensity will be computed. You have three choices:</p>
         <ul>
@@ -1739,7 +1955,7 @@ for a first attempt to run this function. Nevertheless, a few parameters have to
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-cameraannotate"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: CAMERA.annotate</h3>
+  <div id="hands-on-camera-annotate" class="box-title" aria-label="hands-on box: CAMERA.annotate"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: CAMERA.annotate</div>
 
   <ol>
     <li><strong>CAMERA.annotate</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1760,7 +1976,7 @@ for a first attempt to run this function. Nevertheless, a few parameters have to
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-comment-8"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+        <div id="comment-8" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
 
         <p>As said previously, there are quite a few parameters in this tool, some of them having very high impact on your annotations.
 In particular, the <strong>Mode</strong> parameter will influence a lot your results regarding pcgroups, and adducts (that will not be computed otherwise).</p>
@@ -1792,7 +2008,7 @@ corresponding information in your variableMetadata file for later use.</p>
 </ul>
 
 <blockquote class="comment">
-  <h3 id="comment-comment-9"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+  <div id="comment-9" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
 
   <p>The preprocessing part of this analysis can be quite time-consuming, and already corresponds to quite a few number of steps, depending of your analysis.
 It can also generate several versions of your 3 tables, with only one of interest for each at the end of the extraction process. We highly recommend,
@@ -1809,14 +2025,14 @@ long and thus may reduce the names’ readability. Hence, we highly recommend yo
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-copying-the-3-tables-into-a-new-history-and-renaming-them"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Copying the 3 tables into a new history and renaming them</h3>
+  <div id="hands-on-copying-the-3-tables-into-a-new-history-and-renaming-them" class="box-title" aria-label="hands-on box: Copying the 3 tables into a new history and renaming them"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Copying the 3 tables into a new history and renaming them</div>
 
   <ol>
     <li>
       <p>Create a new history with the 3 tables</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-copy-a-dataset-to-a-new-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Copy a dataset to a new history</h3>  <ol>  <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>  <li>Click on <strong>Copy Dataset</strong></li>  <li>    <p>Select the desired files</p>  </li>  <li>    <p>“New history name:” <code class="language-plaintext highlighter-rouge">Sacurine Processing</code></p>  </li>  <li>Click on the new history name in the green box that have just appear to switch to this history</li></ol></blockquote>
+      <blockquote class="tip">  <div id="tip-copy-a-dataset-between-histories" class="box-title"><button type="button" aria-controls="tip-copy-a-dataset-between-histories-contents" aria-expanded="true" aria-label="Toggle tip box: Copy a dataset between histories"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Copy a dataset between histories<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>There 3 ways to copy datasets between histories</p>  <ol>  <li>    <p>From the original history</p>    <ol>      <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>      <li>Click on <strong>Copy Dataset</strong></li>      <li>        <p>Select the desired files</p>      </li>      <li>        <p>“New history name:” <code class="language-plaintext highlighter-rouge">Sacurine Processing</code></p>      </li>      <li>Click on the new history name in the green box that have just appear to switch to this history</li>    </ol>  </li>  <li>    <p>From the <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-columns</span> <strong>View all histories</strong></p>    <ol>      <li>Click on <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-columns</span> <strong>View all histories</strong> on the top right</li>      <li>Switch to the history in which the dataset should be copied</li>      <li>Drag the dataset to copy from its original history</li>      <li>Drop it in the target history</li>    </ol>  </li>  <li>    <p>From the target history</p>    <ol>      <li>Click on <strong>User</strong> in the top bar</li>      <li>Click on <strong>Datasets</strong></li>      <li>Search for the dataset to copy</li>      <li>Click on it</li>      <li>Click on <strong>Copy to History</strong></li>    </ol>  </li></ol></blockquote>
     </li>
     <li>
       <p>Rename the 3 tables with shorter names:</p>
@@ -1826,7 +2042,7 @@ long and thus may reduce the names’ readability. Hence, we highly recommend yo
       </ul>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-renaming-a-dataset"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a dataset</h3>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, change the <strong>Name</strong> field</li>  <li>Click the <strong>Save</strong> button</li></ul></blockquote>
+      <blockquote class="tip">  <div id="tip-renaming-a-dataset-1" class="box-title"><button type="button" aria-controls="tip-renaming-a-dataset-1-contents" aria-expanded="true" aria-label="Toggle tip box: Renaming a dataset"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a dataset<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, change the <strong>Name</strong> field</li>  <li>Click the <strong>Save</strong> button</li></ul></blockquote>
     </li>
   </ol>
 
@@ -1848,7 +2064,7 @@ difficulties in revealing investigated effects. Identifying such variability can
 </ul>
 
 <blockquote class="comment">
-  <h3 id="comment-comments"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comments</h3>
+  <div id="comment-10" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
   <p>To get a little more information regarding data processing, do not hesitate to visit the usemetabo.oc platform:
 <a href="https://usemetabo.org/courses/w4mlc-ms-processing">Link to LC-MS processing step</a></p>
 </blockquote>
@@ -1861,7 +2077,7 @@ analysis. One of the most commonly used method is the <strong>Principal Componen
 over useful information using the <strong>Quality Metrics</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-using-quality-metrics-to-get-an-overview-of-your-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Using <strong>Quality Metrics</strong> to get an overview of your data</h3>
+  <div id="hands-on-using-b-quality-metrics-b-to-get-an-overview-of-your-data" class="box-title" aria-label="hands-on box: Using &lt;b&gt;Quality Metrics&lt;/b&gt; to get an overview of your data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Using <b>Quality Metrics</b> to get an overview of your data</div>
 
   <ol>
     <li><strong>Quality Metrics</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1886,10 +2102,10 @@ It provides a variety of useful information:</p>
   <li>Ions’ standard deviation (sd) and mean values (plot top right panel)</li>
 </ul>
 
-<p><img src="../../images/lcms_QM_9samp_raw.png" alt="Quality_Metrics_figure.pdf" loading="lazy" /></p>
+<p><img src="../../images/lcms_QM_9samp_raw.png" alt="Quality_Metrics_figure.pdf. " loading="lazy" /></p>
 
 <blockquote class="question">
-  <h3 id="question-question-time-cross-referencing-information"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question time: cross-referencing information</h3>
+  <div id="question-cross-referencing-information" class="box-title" aria-label="question box: cross-referencing information"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Question: cross-referencing information</div>
 
   <p>Look at the ‘Quality_Metrics_figure.pdf’ file.</p>
   <ol>
@@ -1902,7 +2118,7 @@ Can this observation help you understand the CV results you just looked at?</li>
   </ol>
 
   <blockquote class="solution">
-    <h3 id="solution-solution-4"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+    <div id="solution-4" class="box-title"><button type="button" aria-controls="solution-4-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
       <li>You can read on the plot that <em>pool CV &lt; 30%: 26%</em>, meaning that the pool values are stable only for a quarter of the ions
@@ -1938,7 +2154,7 @@ rid of these unwanted variabilities.</p>
 to get rid of it.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-data-normalisation"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Data normalisation</h3>
+  <div id="hands-on-data-normalisation" class="box-title" aria-label="hands-on box: Data normalisation"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Data normalisation</div>
 
   <ol>
     <li><strong>Batch_correction</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1954,7 +2170,7 @@ to get rid of it.</p>
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-comment-10"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+        <div id="comment-11" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
         <p>The choice of type of regression model to use depends on several parameters.
 In this case-study, since we only have 3 pools, there are only two possible choices: <em>linear</em> or <em>all loess sample</em>
 When possible, we recommend to use pools to correct the signal drift, that is why we chose to run the tool with <em>linear</em>.</p>
@@ -1968,12 +2184,12 @@ When possible, we recommend to use pools to correct the signal drift, that is wh
 
 <p>For each ion independently, the normalisation process works as described in the following picture:</p>
 
-<p><img src="../../images/lcms_BC_theo.png" alt="How this works" loading="lazy" /></p>
+<p><img src="../../images/lcms_BC_theo.png" alt="How this works. " loading="lazy" /></p>
 
 <p>The methodology is meant to correct for signal drift. In the tool, it is combined with a correction for batch effect. Thus, if your
 sequence is divided into several batches, the idea is to obtain something similar to the following picture:</p>
 
-<p><img src="../../images/lcms_BC_theo2.png" alt="Before/after picture" loading="lazy" /></p>
+<p><img src="../../images/lcms_BC_theo2.png" alt="Before/after picture. " loading="lazy" /></p>
 
 <p>In the case of <em>linear</em> regression model, the tool performs some tests before applying the normalisation for quality purposes.
 For some ions, if the normalisation process would have led to inconsistent results, the concerned ions are not corrected for signal drift.
@@ -1993,7 +2209,7 @@ whatever the pool CV value, it will be lower than the corresponding sample CV va
 by biological variability. Thus, we can filter the ions that do not respect this particular condition.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-cv-calculation"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: CV calculation</h3>
+  <div id="hands-on-cv-calculation" class="box-title" aria-label="hands-on box: CV calculation"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: CV calculation</div>
 
   <ol>
     <li><strong>Quality Metrics</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2004,7 +2220,7 @@ by biological variability. Thus, we can filter the ions that do not respect this
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-comment-11"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+        <div id="comment-12" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
 
         <p>Do not forget you need to use this tool again, since this time indicators will be computed on normalised intensities.
 What we are going to use this time is the tabular output, but while you are at it you can always check the pdf file.</p>
@@ -2018,7 +2234,7 @@ What we are going to use this time is the tabular output, but while you are at i
 your data using the <strong>Generic_Filter</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-data-filtering"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Data filtering</h3>
+  <div id="hands-on-data-filtering" class="box-title" aria-label="hands-on box: Data filtering"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Data filtering</div>
 
   <ol>
     <li><strong>Generic_Filter</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2065,7 +2281,7 @@ your data using the <strong>Generic_Filter</strong> <i class="fas fa-wrench" ari
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-comment-12"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+        <div id="comment-13" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
 
         <p>You can see here that you can take the opportunity of this filtering step to get rid of the pools. Indeed, next step is
 statistical analysis, and you do not need the pools anymore since they do not participate in the scientific design of the study.</p>
@@ -2076,7 +2292,7 @@ statistical analysis, and you do not need the pools anymore since they do not pa
 </blockquote>
 
 <blockquote class="question">
-  <h3 id="question-questions-2"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
+  <div id="question-4" class="box-title" aria-label="question box: "><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Question</div>
 
   <ol>
     <li>What does the <em>0.3</em> threshold mean in the hands-on exercise you just executed?</li>
@@ -2085,7 +2301,7 @@ statistical analysis, and you do not need the pools anymore since they do not pa
   </ol>
 
   <blockquote class="solution">
-    <h3 id="solution-solution-5"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+    <div id="solution-5" class="box-title"><button type="button" aria-controls="solution-5-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
       <li>The <em>0.3</em> value corresponds to the maximum value kept in the dataset (‘Interval of values to remove: <em>upper</em>’) regarding the
@@ -2127,7 +2343,7 @@ statistical analysis performed on LC-MS data, you can take a few minutes to watc
 and the ions that we have in our dataset. For this calculation we can use the <strong>Univariate</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-statistical-analysis"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Statistical analysis</h3>
+  <div id="hands-on-statistical-analysis" class="box-title" aria-label="hands-on box: Statistical analysis"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Statistical analysis</div>
 
   <ol>
     <li><strong>Univariate</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2141,7 +2357,7 @@ and the ions that we have in our dataset. For this calculation we can use the <s
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-comment-13"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+        <div id="comment-14" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
 
         <p>In this tutorial, we chose to perform the analysis without multiple testing correction. This choice is not
 based on a relevant statistical strategy (which would more likely be to <em>use</em> multiple testing correction). It is based on
@@ -2159,12 +2375,12 @@ regarding statistical indices.</p>
 p-values and statistical indicators). ‘Significant’ results are illustrated by graphics in the <em>Univariate_figure.pdf</em> file.</p>
 
 <blockquote class="question">
-  <h3 id="question-questions-3"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
+  <div id="question-5" class="box-title" aria-label="question box: "><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Question</div>
 
   <p>How many <em>significant</em> variables were found?</p>
 
   <blockquote class="solution">
-    <h3 id="solution-solution-6"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+    <div id="solution-6" class="box-title"><button type="button" aria-controls="solution-6-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <p>The tool found that 61 variables have a correlation coefficient significantly different from 0.</p>
 
@@ -2188,7 +2404,7 @@ absolute value above 0.9.</li>
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-variable-filtering"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Variable filtering</h3>
+  <div id="hands-on-variable-filtering" class="box-title" aria-label="hands-on box: Variable filtering"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Variable filtering</div>
 
   <ol>
     <li><strong>Generic_Filter</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2263,7 +2479,7 @@ bank HMDB (The Human Metabolome Database). Let’s try requesting directly into 
 <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-annotating-the-data-using-the-hmdb"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Annotating the data using the HMDB</h3>
+  <div id="hands-on-annotating-the-data-using-the-hmdb" class="box-title" aria-label="hands-on box: Annotating the data using the HMDB"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Annotating the data using the HMDB</div>
 
   <ol>
     <li><strong>HMDB MS search</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2291,13 +2507,13 @@ On the opposite, if the value provided is too high, you may end with a huge numb
 review to identify relevant proposed annotation.</p>
 
 <blockquote class="comment">
-  <h3 id="comment-comment-14"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+  <div id="comment-15" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
   <p>Once you reviewed carefully your annotation and settled for a subset of candidate identities, your are ready for further adventures.
 For now, <span class="notranslate">Galaxy</span>4Metabolomics stops here but we have various perspectives of additional tools for the future (a little bit of
 <a href="https://metexplore.toulouse.inra.fr/index.html/">MetExplore</a> for example?).</p>
 </blockquote>
 
-<h1 class="no_toc" id="conclusion">Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 
 <p>This tutorial allowed you to get a glance at what data analysis in Metabolomics could look like when dealing with LC-MS data.
 The <span class="notranslate">workflow</span> used here as an example is only one of many that you can already construct using <span class="notranslate">Galaxy</span>. For each of the four main steps described
@@ -2309,7 +2525,7 @@ and create, run and share!</p>
 
                 
                 <blockquote class="key_points">
-                    <h3><i class="fas fa-key" aria-hidden="true"></i> Key points</h3>
+                    <div class="box-title" aria-label="key-points box"><i class="fas fa-key" aria-hidden="true"></i> Key points</div>
                     <ul>
                         
                         <li><p>To process untargeted LC-MS metabolomic data, you need a large variety of steps and tools.</p>
@@ -2326,88 +2542,31 @@ and create, run and share!</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/metabolomics/faqs/">FAQ page for the Metabolomics topic</a> to see if your question is listed there.
+                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/metabolomics/faqs/">FAQ page for the Metabolomics topic</a> to see if your question is listed there.
                 If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
                 <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
 
                 
 
                 
+
+
+                
                 <h1 id="bibliography">References</h1>
-                <ol class="bibliography"><li><span id="Smith2006">Smith, C. A., E. J. Want, G. O’Maille, R. Abagyan, and G. Siuzdak, 2006 <b>XCMS:  Processing Mass Spectrometry Data for Metabolite Profiling Using Nonlinear Peak Alignment,  Matching,  and Identification</b>. Analytical Chemistry 78: 779–787.</span>
-    
-    
-    <a href="https://doi.org/10.1021/ac051437y">10.1021/ac051437y</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li>
-<li><span id="Tautenhahn2008">Tautenhahn, R., C. Böttcher, and S. Neumann, 2008 <b>Highly sensitive feature detection for high resolution LC/MS</b>. BMC Bioinformatics 9: 504.</span>
-    
-    
-    <a href="https://doi.org/10.1186/1471-2105-9-504">10.1186/1471-2105-9-504</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li>
-<li><span id="Giacomoni2014">Giacomoni, F., G. L. Corguille, M. Monsoor, M. Landi, P. Pericard <i>et al.</i>, 2014 <b>Workflow4Metabolomics: a collaborative research infrastructure for computational metabolomics</b>. Bioinformatics 31: 1493–1495.</span>
-    
-    
-    <a href="https://doi.org/10.1093/bioinformatics/btu813">10.1093/bioinformatics/btu813</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li>
-<li><span id="Thvenot2015">Thévenot, E. A., A. Roux, Y. Xu, E. Ezan, and C. Junot, 2015 <b>Analysis of the Human Adult Urinary Metabolome Variations with Age,  Body Mass Index,  and Gender by Implementing a Comprehensive Workflow for Univariate and OPLS Statistical Analyses</b>. Journal of Proteome Research 14: 3322–3335.</span>
-    
-    
-    <a href="https://doi.org/10.1021/acs.jproteome.5b00354">10.1021/acs.jproteome.5b00354</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li>
-<li><span id="CAMERA">Carsten Kuhl, R. T., 2017 <b>CAMERA</b>.</span>
-    
-    
-    <a href="https://doi.org/10.18129/b9.bioc.camera">10.18129/b9.bioc.camera</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-      <a href="https://bioconductor.org/packages/CAMERA">https://bioconductor.org/packages/CAMERA</a>
-      
-    
-
-</li>
-<li><span id="Guitton2017">Guitton, Y., M. Tremblay-Franco, G. L. Corguillé, J.-F. Martin, M. Pétéra <i>et al.</i>, 2017 <b>Create,  run,  share,  publish,  and reference your LC–MS,  FIA–MS,  GC–MS,  and NMR data analysis workflows with the Workflow4Metabolomics 3.0 Galaxy online infrastructure for metabolomics</b>. The International Journal of Biochemistry &amp; Cell Biology 93: 89–101.</span>
-    
-    
-    <a href="https://doi.org/10.1016/j.biocel.2017.07.002">10.1016/j.biocel.2017.07.002</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li></ol>
+                <ol class="bibliography"><li id="Smith2006">Smith, C. A., E. J. Want, G. O’Maille, R. Abagyan, and G. Siuzdak, 2006 <b>XCMS:  Processing Mass Spectrometry Data for Metabolite Profiling Using Nonlinear Peak Alignment,  Matching,  and Identification</b>. Analytical Chemistry 78: 779–787. <a href="https://doi.org/10.1021/ac051437y">10.1021/ac051437y</a></li>
+<li id="Tautenhahn2008">Tautenhahn, R., C. Böttcher, and S. Neumann, 2008 <b>Highly sensitive feature detection for high resolution LC/MS</b>. BMC Bioinformatics 9: 504. <a href="https://doi.org/10.1186/1471-2105-9-504">10.1186/1471-2105-9-504</a></li>
+<li id="Giacomoni2014">Giacomoni, F., G. L. Corguille, M. Monsoor, M. Landi, P. Pericard <i>et al.</i>, 2014 <b>Workflow4Metabolomics: a collaborative research infrastructure for computational metabolomics</b>. Bioinformatics 31: 1493–1495. <a href="https://doi.org/10.1093/bioinformatics/btu813">10.1093/bioinformatics/btu813</a></li>
+<li id="Thvenot2015">Thévenot, E. A., A. Roux, Y. Xu, E. Ezan, and C. Junot, 2015 <b>Analysis of the Human Adult Urinary Metabolome Variations with Age,  Body Mass Index,  and Gender by Implementing a Comprehensive Workflow for Univariate and OPLS Statistical Analyses</b>. Journal of Proteome Research 14: 3322–3335. <a href="https://doi.org/10.1021/acs.jproteome.5b00354">10.1021/acs.jproteome.5b00354</a></li>
+<li id="CAMERA">Carsten Kuhl, R. T., 2017 <b>CAMERA</b>. <a href="https://doi.org/10.18129/b9.bioc.camera">10.18129/b9.bioc.camera</a> <a href="https://bioconductor.org/packages/CAMERA">https://bioconductor.org/packages/CAMERA</a></li>
+<li id="Guitton2017">Guitton, Y., M. Tremblay-Franco, G. L. Corguillé, J.-F. Martin, M. Pétéra <i>et al.</i>, 2017 <b>Create,  run,  share,  publish,  and reference your LC–MS,  FIA–MS,  GC–MS,  and NMR data analysis workflows with the Workflow4Metabolomics 3.0 Galaxy online infrastructure for metabolomics</b>. The International Journal of Biochemistry &amp; Cell Biology 93: 89–101. <a href="https://doi.org/10.1016/j.biocel.2017.07.002">10.1016/j.biocel.2017.07.002</a></li></ol>
                 
 
                 
 
                 <h1>Feedback</h1>
-                <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+                <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452">how it went</a>.
+                <br>Did you use this material as a learner or student? Click the form below to leave feedback.<i class="fas fa-hand-point-down"></i>
+                </p>
 
                 <div id="feedback-button">
                     <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
@@ -2437,12 +2596,11 @@ and create, run and share!</p>
                     })(window, document);
                 </script>
 
-
-
                 <h1>Citing this Tutorial</h1>
                 <p>
                     <ol>
-                        <li id="citation-text">Mélanie Petera, Gildas Le Corguillé, Jean-François Martin, Yann Guitton, Workflow4Metabolomics core team, 2021 <b>Mass spectrometry: LC-MS analysis (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/metabolomics/tutorials/lcms/tutorial.html">https://training.galaxyproject.org/training-material/topics/metabolomics/tutorials/lcms/tutorial.html</a> Online; accessed TODAY
+                        <li id="citation-text">
+                            Mélanie Petera, Gildas Le Corguillé, Jean-François Martin, Yann Guitton, Workflow4Metabolomics core team,  <b>Mass spectrometry: LC-MS analysis (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/metabolomics/tutorials/lcms/tutorial.html">https://training.galaxyproject.org/training-material/topics/metabolomics/tutorials/lcms/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
@@ -2450,37 +2608,49 @@ and create, run and share!</p>
                     </ol>
                 </p>
 
-
+                <!-- collapsible boxcontaining the BibTeX-formatted citation -->
                 <blockquote class="details">
-                  <h3><i class="fa fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> BibTeX</h3>
-                  <p style="display: none;">
 
-                <div class="highlighter-rouge"><div class="highlight"><pre class="highlight">
+                  <div id="citation-bibtex" class="box-title">
+                    <button type="button" aria-controls="citation-bibtex" aria-expanded="false" aria-label="Toggle details box: BibTeX for citing this tutorial">
+                      <i class="fas fa-info-circle" aria-hidden="true"></i>
+                      <span class="visually-hidden"></span> BibTeX<span role="button" class="fold-unfold fa fa-minus-square" aria-hidden="true"></span>
+                    </button>
+                   </div>
+                   <p style="display: none;">
+
+                   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight">
+
+
 <code id="citation-code">@misc{metabolomics-lcms,
 author = "Mélanie Petera and Gildas Le Corguillé and Jean-François Martin and Yann Guitton and Workflow4Metabolomics core team",
 title = "Mass spectrometry: LC-MS analysis (Galaxy Training Materials)",
-year = "2021",
-month = "03",
-day = "23"
+year = "",
+month = "",
+day = ""
 url = "\url{https://training.galaxyproject.org/training-material/topics/metabolomics/tutorials/lcms/tutorial.html}",
 note = "[Online; accessed TODAY]"
 }
-@article{Batut_2018,
-    doi = {10.1016/j.cels.2018.05.012},
-    url = {https://doi.org/10.1016%2Fj.cels.2018.05.012},
-    year = 2018,
-    month = {jun},
-    publisher = {Elsevier {BV}},
-    volume = {6},
-    number = {6},
-    pages = {752--758.e1},
-    author = {B{\'{e}}r{\'{e}}nice Batut and Saskia Hiltemann and Andrea Bagnacani and Dannon Baker and Vivek Bhardwaj and Clemens Blank and Anthony Bretaudeau and Loraine Brillet-Gu{\'{e}}guen and Martin {\v{C}}ech and John Chilton and Dave Clements and Olivia Doppelt-Azeroual and Anika Erxleben and Mallory Ann Freeberg and Simon Gladman and Youri Hoogstrate and Hans-Rudolf Hotz and Torsten Houwaart and Pratik Jagtap and Delphine Larivi{\`{e}}re and Gildas Le Corguill{\'{e}} and Thomas Manke and Fabien Mareuil and Fidel Ram{\'{\i}}rez and Devon Ryan and Florian Christoph Sigloch and Nicola Soranzo and Joachim Wolff and Pavankumar Videm and Markus Wolfien and Aisanjiang Wubuli and Dilmurat Yusuf and James Taylor and Rolf Backofen and Anton Nekrutenko and Björn Grüning},
-    title = {Community-Driven Data Analysis Training for Biology},
-    journal = {Cell Systems}
-}</code>
-                </pre></div></div>
-                </p>
+@article{Hiltemann_2023,
+	doi = {10.1371/journal.pcbi.1010752},
+	url = {https://doi.org/10.1371%2Fjournal.pcbi.1010752},
+	year = 2023,
+	month = {jan},
+	publisher = {Public Library of Science ({PLoS})},
+	volume = {19},
+	number = {1},
+	pages = {e1010752},
+	author = {Saskia Hiltemann and Helena Rasche and Simon Gladman and Hans-Rudolf Hotz and Delphine Larivi{\`{e}}re and Daniel Blankenberg and Pratik D. Jagtap and Thomas Wollmann and Anthony Bretaudeau and Nadia Gou{\'{e}} and Timothy J. Griffin and Coline Royaux and Yvan Le Bras and Subina Mehta and Anna Syme and Frederik Coppens and Bert Droesbeke and Nicola Soranzo and Wendi Bacon and Fotis Psomopoulos and Crist{\'{o}}bal Gallardo-Alba and John Davis and Melanie Christine Föll and Matthias Fahrner and Maria A. Doyle and Beatriz Serrano-Solano and Anne Claire Fouilloux and Peter van Heusden and Wolfgang Maier and Dave Clements and Florian Heyl and Björn Grüning and B{\'{e}}r{\'{e}}nice Batut and},
+	editor = {Francis Ouellette},
+	title = {Galaxy Training: A powerful framework for teaching!},
+	journal = {PLoS Comput Biol} Computational Biology}
+}
+</code>
+                   </pre></div></div>
+                   </p>
                 </blockquote>
+
+                
 
 
 <script type="text/javascript">
@@ -2490,7 +2660,7 @@ document.getElementById("citation-code").innerHTML = document.getElementById("ci
 document.getElementById("citation-text").innerHTML = document.getElementById("citation-text").innerHTML.replace("TODAY", d.toDateString());
 </script>
 
-                <h3><i class="far fa-thumbs-up" aria-hidden="true"></i> Congratulations on successfully completing this tutorial!</h3>
+                <i class="far fa-thumbs-up" aria-hidden="true"></i> Congratulations on successfully completing this tutorial!
 
                 
 
@@ -2506,39 +2676,39 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
         </div>
         
+        <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/popper.min.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
+        <script type="text/javascript" src="/training-material/assets/js/details-element-polyfill.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="/training-material/assets/js/bootstrap-toc.min.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/main.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+
+        <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+        <script type="text/javascript">
+        var snippets=document.querySelectorAll('div.highlight');
+        [].forEach.call(snippets,function(snippet){
+            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        });
+
+        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+            target:function(trigger){return trigger.nextElementSibling;
+        }});
+        </script>
+        
+
+        <script type="text/javascript">
+            if(window.location.hostname === "galaxyproject.github.io") {
+                // Redirect
+                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+                window.setTimeout(function(){
+                    window.location.href = redirect;
+                }, 5000)
+
+            }
+        </script>
     </body>
-    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/popper.min.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-    <script type="text/javascript" src="/training-material/assets/js/details-element-polyfill.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/main.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
-
-    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
-    <script type="text/javascript">
-    var snippets=document.querySelectorAll('div.highlight');
-    [].forEach.call(snippets,function(snippet){
-        snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-    });
-
-    var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-        target:function(trigger){return trigger.nextElementSibling;
-    }});
-    </script>
-    
-
-    <script type="text/javascript">
-        if(window.location.hostname === "galaxyproject.github.io") {
-            // Redirect
-            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-            window.setTimeout(function(){
-                window.location.href = redirect;
-            }, 5000)
-
-        }
-    </script>
 </html>

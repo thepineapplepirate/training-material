@@ -17,6 +17,15 @@
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml" />
+        <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/statistics/tutorials/CNN/tutorial.html" />
+        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+
+        <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material" />
+<meta name="DC.type" content="text" />
+<meta name="DC.title" content="Deep Learning (Part 3) - Convolutional neural networks (CNN)" />
+<meta name="DC.publisher" content="Galaxy Training Network" />
+<meta name="DC.date" content="2023-01-24 14:21:57 +0000" />
+<meta name="DC.creator" content="Kaivan Kamali" />
 
         
         
@@ -24,9 +33,11 @@
         
         
         <meta name="description" content="Statistical Analyses for omics data and machine learning ..." />
+        <meta property="og:site_name" content="Galaxy Training Network" />
         <meta property="og:title" content="Galaxy Training: Deep Learning (Part 3) - Convolutional neural networks (CNN)" />
         <meta property="og:description" content="Statistical Analyses for omics data and machine learning ..." />
         <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+
     </head>
     <body data-spy="scroll" data-target="#toc">
         <header>
@@ -49,6 +60,41 @@
                         </a>
                         
                     </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Languages">
+                            <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Languages
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            
+                              <strong class="dropdown-header">Automatic Translations</strong>
+            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/statistics/tutorials/CNN/tutorial.html&edit-text=&act=url">
+                            Français
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/statistics/tutorials/CNN/tutorial.html&edit-text=&act=url">
+                            日本語
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/statistics/tutorials/CNN/tutorial.html&edit-text=&act=url">
+                            Español
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/statistics/tutorials/CNN/tutorial.html&edit-text=&act=url">
+                            Português
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/statistics/tutorials/CNN/tutorial.html&edit-text=&act=url">
+                            العربية
+                            </a>
+                            
+                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/statistics/tutorials/CNN/tutorial.html&edit-text=&act=url" title="">
+                            And more!
+                            </a>
+                        </div>
+                    </li>
+
                     <li class="nav-item dropdown">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
         <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
@@ -99,46 +145,15 @@
             <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> Page Metrics
         </a>
 
+        <!-- link to feedback -->
         
-            <a class="dropdown-item" href="/training-material/feedback.html" title="Show feedback statistics about this repository">
-                <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
-            </a>
+            
+            
+                <a class="dropdown-item" href="/training-material/feedback.html" title="Show feedback statistics about this repository">
+                    <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
+                </a>
+            
         
-
-        <div class="dropdown-item">
-            <div>
-                <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Translate this page
-            </div>
-
-            <div id="lang-selector">
-                
-                <strong>Automatic Translations</strong>
-
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/statistics/tutorials/CNN/tutorial.html&edit-text=&act=url">
-                Français
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/statistics/tutorials/CNN/tutorial.html&edit-text=&act=url">
-                日本語
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/statistics/tutorials/CNN/tutorial.html&edit-text=&act=url">
-                Español
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/statistics/tutorials/CNN/tutorial.html&edit-text=&act=url">
-                Português
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/statistics/tutorials/CNN/tutorial.html&edit-text=&act=url">
-                العربية
-                </a>
-                
-                <a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fstatistics%2Ftutorials%2FCNN%2Ftutorial.html&edit-text=&act=url" title="">
-                And more!
-                </a>
-            </div>
-        </div>
 
         <div class="dropdown-item">
             <div>
@@ -176,7 +191,6 @@
                 <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
             </div>
 
-            
             <div id="archive-selector">
             
                 <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/statistics/tutorials/CNN/tutorial.html" title="Version 2021-10-01">2021-10-01</a>
@@ -243,27 +257,14 @@
 
 {
   "@context": "http://schema.org",
-  "@type": "Course",
-  "accessMode": [
-    "textual",
-    "visual"
-  ],
-  "accessModeSufficient": [
-    "textual",
-    "visual"
-  ],
-  "accessibilityControl": [
-    "fullKeyboardControl",
-    "fullMouseControl"
-  ],
-  "accessibilityFeature": [
-    "alternativeText",
-    "tableOfContents"
-  ],
-  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "@type": "LearningResource",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+    "@type": "CreativeWork"
+  },
   "audience": {
     "@type": "EducationalAudience",
-    "educationalRole": "students"
+    "educationalRole": "Students"
   },
   "citation": {
     "@type": "CreativeWork",
@@ -276,7 +277,7 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2021-05-24 15:57:24 +0000",
+  "dateModified": "2023-01-24 14:21:57 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Deep Learning (Part 3) - Convolutional neural networks (CNN)",
   "interactivityType": "mixed",
@@ -301,27 +302,46 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
+  "identifier": "https://github.com/galaxyproject/training-material",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Statistics and machine learning",
     "description": "Statistical Analyses for omics data and machine learning using Galaxy tools",
-    "url": "https://training.galaxyproject.org//training-material/topics/statistics/"
+    "url": "https://training.galaxyproject.org/training-material/topics/statistics/"
   },
-  "courseCode": "statistics / CNN / hands-on",
   "learningResourceType": "hands-on tutorial",
   "name": "Hands-on for 'Deep Learning (Part 3) - Convolutional neural networks (CNN)' tutorial",
-  "url": "https://training.galaxyproject.org//training-material/topics/statistics/tutorials/CNN/tutorial.html",
+  "url": "https://training.galaxyproject.org/training-material/topics/statistics/tutorials/CNN/tutorial.html",
   "timeRequired": "PT2H",
-  "description": "The questions this  addresses are:\n - What is a convolutional neural network (CNN)?\n - What are some applications of CNN?\n\n\\nThe objectives are:\n - Understand the inspiration behind CNN and learn the CNN architecture\n - Learn the convolution operation and its parameters\n - Learn how to create a CNN using Galaxy's deep learning tools\n - Solve an image classification problem on MNIST digit classification dataset using CNN in Galaxy\n\n",
+  "keywords": "statistics",
+  "description": "The questions this  addresses are:\n - What is a convolutional neural network (CNN)?\n - What are some applications of CNN?\n\n\nThe objectives are:\n - Understand the inspiration behind CNN and learn the CNN architecture\n - Learn the convolution operation and its parameters\n - Learn how to create a CNN using Galaxy's deep learning tools\n - Solve an image classification problem on MNIST digit classification dataset using CNN in Galaxy\n\n",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
     "alternateName": "en"
   },
-  "coursePrerequisites": [
+  "competencyRequired": [
     {
-      "@type": "CreativeWork",
-      "url": "https://training.galaxyproject.org//training-material/topics/introduction/",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/introduction/",
       "name": "Introduction to Galaxy Analyses",
       "description": "Introduction to Galaxy Analyses",
       "provider": {
@@ -332,8 +352,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/statistics/tutorials/intro_deep_learning/tutorial.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/statistics/tutorials/intro_deep_learning/tutorial.html",
       "name": "Introduction to deep learning",
       "description": "Hands-on for 'Introduction to deep learning' tutorial",
       "learningResourceType": "hands-on tutorial",
@@ -346,8 +367,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/statistics/tutorials/FNN/slides.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/statistics/tutorials/FNN/slides.html",
       "name": "Feedforward neural networks (FNN) \n Deep Learning - Part 1",
       "description": "Slides for 'Feedforward neural networks (FNN) \n Deep Learning - Part 1' tutorial",
       "learningResourceType": "slides",
@@ -360,8 +382,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/statistics/tutorials/FNN/tutorial.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/statistics/tutorials/FNN/tutorial.html",
       "name": "Deep Learning (Part 1) - Feedforward neural networks (FNN)",
       "description": "Hands-on for 'Deep Learning (Part 1) - Feedforward neural networks (FNN)' tutorial",
       "learningResourceType": "hands-on tutorial",
@@ -374,22 +397,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/statistics/tutorials/FNN/slides.html",
-      "name": "Feedforward neural networks (FNN) \n Deep Learning - Part 1",
-      "description": "Slides for 'Feedforward neural networks (FNN) \n Deep Learning - Part 1' tutorial",
-      "learningResourceType": "slides",
-      "interactivityType": "expositive",
-      "provider": {
-        "@type": "Organization",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "url": "https://galaxyproject.org/teach/gtn/"
-      }
-    },
-    {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/statistics/tutorials/RNN/slides.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/statistics/tutorials/RNN/slides.html",
       "name": "Recurrent neural networks (RNN) \n Deep Learning - Part 2",
       "description": "Slides for 'Recurrent neural networks (RNN) \n Deep Learning - Part 2' tutorial",
       "learningResourceType": "slides",
@@ -402,8 +412,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/statistics/tutorials/RNN/tutorial.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/statistics/tutorials/RNN/tutorial.html",
       "name": "Deep Learning (Part 2) - Recurrent neural networks (RNN)",
       "description": "Hands-on for 'Deep Learning (Part 2) - Recurrent neural networks (RNN)' tutorial",
       "learningResourceType": "hands-on tutorial",
@@ -414,35 +425,52 @@
         "name": "Galaxy Training Network",
         "url": "https://galaxyproject.org/teach/gtn/"
       }
-    },
-    {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/statistics/tutorials/RNN/slides.html",
-      "name": "Recurrent neural networks (RNN) \n Deep Learning - Part 2",
-      "description": "Slides for 'Recurrent neural networks (RNN) \n Deep Learning - Part 2' tutorial",
-      "learningResourceType": "slides",
-      "interactivityType": "expositive",
-      "provider": {
-        "@type": "Organization",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "url": "https://galaxyproject.org/teach/gtn/"
-      }
     }
-  ],
-  "hasPart": [
-
   ],
   "author": [
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Kaivan Kamali"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/kxk302/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/kxk302/",
+      "name": "Kaivan Kamali",
+      "image": "https://avatars.githubusercontent.com/kxk302",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     }
   ],
   "contributor": [
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Kaivan Kamali"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/kxk302/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/kxk302/",
+      "name": "Kaivan Kamali",
+      "image": "https://avatars.githubusercontent.com/kxk302",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     }
   ],
   "about": [
@@ -450,7 +478,7 @@
       "@type": "CreativeWork",
       "name": "Statistics and machine learning",
       "description": "Statistical Analyses for omics data and machine learning using Galaxy tools",
-      "url": "https://training.galaxyproject.org//training-material/topics/statistics/"
+      "url": "https://training.galaxyproject.org/training-material/topics/statistics/"
     },
     {
       "@type": "DefinedTerm",
@@ -467,15 +495,20 @@
     <h1 data-toc-skip>Deep Learning (Part 3) - Convolutional neural networks (CNN)</h1>
     
 
-    <div class="contributors-line">Authors: 
+    <div markdown="0">
 
- <a href="/training-material/hall-of-fame/kxk302/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/kxk302" alt="Avatar">Kaivan Kamali</a>
+	<div class="contributors-line">
+		Authors: <a href="/training-material/hall-of-fame/kxk302/" class="contributor-badge contributor-kxk302"><img src="https://avatars.githubusercontent.com/kxk302?s=27" alt="Avatar">Kaivan Kamali</a>
+	</div>
 
 </div>
 
+
     <blockquote class="overview">
-        <h3>Overview</h3>
+        <div class="box-title" aria-label="overview box">Overview</div>
+        
         <img alt="Creative Commons License" class="float-right" style="border-width:0; display: inline-block; margin:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" aria-hidden="true" />
+        
         <strong><i class="far fa-question-circle" aria-hidden="true"></i> Questions:</strong>
         <ul>
         
@@ -544,6 +577,10 @@
                         
                     
                         
+                    
+                        
+                    
+                        
                             
                             <li> Introduction to deep learning:
                             
@@ -566,6 +603,8 @@
                         
                     
                 
+                    
+                        
                     
                         
                     
@@ -608,7 +647,11 @@
                     
                         
                     
+                        
+                    
                 
+                    
+                        
                     
                         
                     
@@ -633,6 +676,8 @@
                                 
                             
                             </li>
+                        
+                    
                         
                     
                         
@@ -682,7 +727,7 @@
                 <li class="btn btn-default supporting_material">
 
 
-<a class="topic-icon" href="https://zenodo.org/record/4697906">
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/4697906">
     <i class="far fa-copy" aria-hidden="true"></i> Datasets
 </a>
 
@@ -693,7 +738,7 @@
                 <li class="btn btn-default supporting_material">
 
 
-    <a class="topic-icon" href="/training-material/topics/statistics/tutorials/CNN/workflows/" title="Workflows" alt="Deep Learning (Part 3) - Convolutional neural networks (CNN) workflows">
+    <a class="btn btn-default topic-icon" href="/training-material/topics/statistics/tutorials/CNN/workflows/" title="Workflows" alt="Deep Learning (Part 3) - Convolutional neural networks (CNN) workflows">
         <i class="fas fa-share-alt" aria-hidden="true"></i> Workflows
     </a>
 
@@ -707,13 +752,64 @@
             
             
             
+                 <li class="btn btn-default supporting_material">
+    <a class="topic-icon" href="/training-material/topics/statistics/tutorials/CNN/faqs/" title="Frequently Asked Questions" alt="Tutorial FAQs">
+        <i class="far fa-question-circle" aria-hidden="true"></i> FAQs
+    </a>
+  </li>
+
+
+            
+
+            <!-- Check the GTN Video Library for recordings of this tutorial or associated slides -->
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <li class="btn btn-default supporting_material">
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
+        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>&nbsp;Recordings
+    </a>
+    <ul class="dropdown-menu">
+        
+        
+        
+        
+
+        <li>
+
+            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/statistics/CNN" title="View GTN Video Library for this Tutorial">
+                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Lecture & Tutorial (February 2021)
+            </a>
+        </li>
+        
+        
+        
+        
+        
+    </ul>
+   </li>
+   
+
+
 
             
                 <li class="btn btn-default supporting_material">
 
 
     <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
-        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span> Available on these Galaxies 
+        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>&nbsp;Available on these Galaxies 
     </a>
     <ul class="dropdown-menu">
     
@@ -723,12 +819,6 @@
             </a>
         </li>
     
-    
-        
-    
-        
-    
-        
     
         
     
@@ -795,11 +885,11 @@
         
     
         
+    
+        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
-        
-    
         
     
         
@@ -904,9 +994,11 @@
         </ul>
         
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> May 24, 2021 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jan 24, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+            
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>
+            
             <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">The GTN Framework is licensed under MIT</a>
         </div>
     </blockquote>
@@ -918,12 +1010,12 @@
                 <nav id="toc" data-toggle="toc" class="sticky-top" aria-label="Table of Contents"></nav>
             </div>
             <div class="col-sm-10">
-                
+                 
 
-                <h1 class="no_toc" id="introduction">Introduction</h1>
+                <h1 id="introduction">Introduction</h1>
 
 <p>Artificial neural networks are a machine learning discipline that have been successfully applied to problems
-in pattern classification, clustering, regression, association, time series prediction, optimiztion, and control <a class="citation" href="#JainEtAl">Jain <i>et al.</i> 1996</a>.
+in pattern classification, clustering, regression, association, time series prediction, optimiztion, and control <span class="citation"><a href="#JainEtAl">Jain <i>et al.</i> 1996</a></span>.
 With the increasing popularity of social media in the past decade, image and video processing tasks have become very
 important. The previous neural network architectures (e.g. feedforward neural networks) could not scale up to handle
 image and video processing tasks. This gave way to the development of convolutional neural networks that are specifically
@@ -931,17 +1023,21 @@ tailored to image and video processing tasks. In this tutorial, we explain what 
 their architecture, and solve an image classification problem using MNIST digit classification dataset using a CNN in <span class="notranslate">Galaxy</span>.</p>
 
 <blockquote class="agenda">
-  <h3 id="agenda">Agenda</h3>
+  <div id="agenda" class="box-title" aria-label="agenda box: ">Agenda</div>
 
   <p>In this tutorial, we will cover:</p>
 
 <ol id="markdown-toc">
-  <li><a href="#limitations-of-feedforward-neural-networks-fnn-for-image-processing" id="markdown-toc-limitations-of-feedforward-neural-networks-fnn-for-image-processing">Limitations of feedforward neural networks (FNN) for image processing</a></li>
-  <li><a href="#inspiration-for-convolutional-neural-networks" id="markdown-toc-inspiration-for-convolutional-neural-networks">Inspiration for convolutional neural networks</a></li>
-  <li><a href="#architecture-of-cnn" id="markdown-toc-architecture-of-cnn">Architecture of CNN</a></li>
-  <li><a href="#mnist-dataset" id="markdown-toc-mnist-dataset">MNIST dataset</a></li>
-  <li><a href="#get-data" id="markdown-toc-get-data">Get data</a></li>
-  <li><a href="#classification-of-mnist-dataset-images-with-cnn" id="markdown-toc-classification-of-mnist-dataset-images-with-cnn">Classification of MNIST dataset images with CNN</a></li>
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a>    <ol>
+      <li><a href="#limitations-of-feedforward-neural-networks-fnn-for-image-processing" id="markdown-toc-limitations-of-feedforward-neural-networks-fnn-for-image-processing">Limitations of feedforward neural networks (FNN) for image processing</a></li>
+      <li><a href="#inspiration-for-convolutional-neural-networks" id="markdown-toc-inspiration-for-convolutional-neural-networks">Inspiration for convolutional neural networks</a></li>
+      <li><a href="#architecture-of-cnn" id="markdown-toc-architecture-of-cnn">Architecture of CNN</a></li>
+      <li><a href="#mnist-dataset" id="markdown-toc-mnist-dataset">MNIST dataset</a></li>
+      <li><a href="#get-data" id="markdown-toc-get-data">Get data</a></li>
+      <li><a href="#classification-of-mnist-dataset-images-with-cnn" id="markdown-toc-classification-of-mnist-dataset-images-with-cnn">Classification of MNIST dataset images with CNN</a></li>
+    </ol>
+  </li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
 </ol>
 
 </blockquote>
@@ -963,9 +1059,9 @@ images, each pixel in a color image is represented by 3 values, representing red
 can be represented by various combination of these primary colors. Since each color pixel can be represented by 3 values, we say the <strong>channel</strong> size
 is 3. Such an image can be represented by 64 X 64 X 3 = 12,288 values (rows X columns X channels). The number of weights between the input layer and
 the first hidden layer with 500 nodes is now 12,288 X 500 = 6,144,000. It is clear that a FNN cannot scale to handle larger images
-(<a class="citation" href="#OSheaEtAl">O’Shea and Nash 2015</a>) and that we need a more scalable architecture.</p>
+(<span class="citation"><a href="#OSheaEtAl">O’Shea and Nash 2015</a></span>) and that we need a more scalable architecture.</p>
 
-<figure id="figure-1"><img src="../../images/FFNN.png" alt="Neurons forming the input, output, and hidden layers of a multi-layer feedforward neural network" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Feedforward neural network with a hidden layer. Biases to hidden/output layer neurons are omitted for clarity</figcaption></figure>
+<figure id="figure-1"><img src="../../images/FFNN.png" alt="Neurons forming the input, output, and hidden layers of a multi-layer feedforward neural network. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Feedforward neural network with a hidden layer. Biases to hidden/output layer neurons are omitted for clarity</figcaption></figure>
 
 <p>Another problem with using FNN for image processing is that a 2 dimensional image is represented as a 1 dimensional vector in the input layer,
 hence, any spatial relationship in the data is ignored. CNN, on the other hand, maintains the spatial structure of the data, and is better suited
@@ -973,23 +1069,23 @@ for finding spatial relationships in the image data.</p>
 
 <h2 id="inspiration-for-convolutional-neural-networks">Inspiration for convolutional neural networks</h2>
 
-<p>In 1959 Hubel and Wiesel conducted an experiment to understand how the visual cortex of the brain processes visual information (<a class="citation" href="#HubelWiesel">Hubel and Wiesel 1959</a>).
+<p>In 1959 Hubel and Wiesel conducted an experiment to understand how the visual cortex of the brain processes visual information (<span class="citation"><a href="#HubelWiesel">Hubel and Wiesel 1959</a></span>).
 They recorded the activity of the neurons in the visual cortex of a cat while moving a bright line in front of the cat. They noticed that some cells fire
 when the bright line is shown at a particular angle and a particular location (They called these <strong>simple</strong> cells). Other neurons fired when the bright
 line was shown regardless of the angle/location and seemed to detect movement (They called these <strong>complex</strong> cells). It seemed complex cells receive
 inputs from multiple simple cells and have an hierarchical structure. Hubel and Wiesel won the Noble prize for their findings in 1981.</p>
 
-<p>In 1980, inspired by hierarchical structure of complex and simple cells, Fukushima proposed <em>Neocognitron</em> (<a class="citation" href="#Fukishima">Fukushima 1988</a>), a hierarchical neural
+<p>In 1980, inspired by hierarchical structure of complex and simple cells, Fukushima proposed <em>Neocognitron</em> (<span class="citation"><a href="#Fukishima">Fukushima 1988</a></span>), a hierarchical neural
 network used for handwritten Japanese character recognition. Neocognitron was the first CNN, and had its own training algorithm. In 1989, LeCun et. al.
-(<a class="citation" href="#LeCunEtAl">LeCun <i>et al.</i> 1989</a>) proposed a CNN that could be trained by backpropagation algorithm. CNN gained immense popularity when they outperformed other
+(<span class="citation"><a href="#LeCunEtAl">LeCun <i>et al.</i> 1989</a></span>) proposed a CNN that could be trained by backpropagation algorithm. CNN gained immense popularity when they outperformed other
 models at ILSVRC (ImageNet Large Scale Visual Recognition Challenge). ILSVRC is a competition in object classification and detection on hundreds of
 object categories and millions of images. The challenge has been run annually from 2010 to present, attracting participation from more than fifty
-institutions (<a class="citation" href="#RussakovskyEtAl">Russakovsky <i>et al.</i> 2015</a>). Notable CNN architectures that won ILSVRC are AlexNet in 2012 (<a class="citation" href="#KrizhevskyEtAl">Krizhevsky <i>et al.</i> 2012</a>), ZFNet in 2013 (
-<a class="citation" href="#ZeilerEtAl">Zeiler and Fergus 2013</a>), GoogLeNet and VGG in 2014 (<a class="citation" href="#SzegedyEtAl">Szegedy <i>et al.</i> 2014</a>, <a class="citation" href="#SimonyanEtAl">Simonyan and Zisserman 2015</a>), and ResNet in 2015 (<a class="citation" href="#HeEtAl">He <i>et al.</i> 2015</a>).</p>
+institutions (<span class="citation"><a href="#RussakovskyEtAl">Russakovsky <i>et al.</i> 2015</a></span>). Notable CNN architectures that won ILSVRC are AlexNet in 2012 (<span class="citation"><a href="#KrizhevskyEtAl">Krizhevsky <i>et al.</i> 2012</a></span>), ZFNet in 2013 (
+<span class="citation"><a href="#ZeilerEtAl">Zeiler and Fergus 2013</a></span>), GoogLeNet and VGG in 2014 (<span class="citation"><a href="#SzegedyEtAl">Szegedy <i>et al.</i> 2014</a></span>, <span class="citation"><a href="#SimonyanEtAl">Simonyan and Zisserman 2015</a></span>), and ResNet in 2015 (<span class="citation"><a href="#HeEtAl">He <i>et al.</i> 2015</a></span>).</p>
 
 <h2 id="architecture-of-cnn">Architecture of CNN</h2>
 
-<p>A typical CNN has the following 4 layers (<a class="citation" href="#OSheaEtAl">O’Shea and Nash 2015</a>)</p>
+<p>A typical CNN has the following 4 layers (<span class="citation"><a href="#OSheaEtAl">O’Shea and Nash 2015</a></span>)</p>
 
 <ol>
   <li>Input layer</li>
@@ -1014,9 +1110,9 @@ a 28 pixel by 28 pixel grayscale image. Each pixel is represented by a number be
 values in total), and the values are randomly set to 0 or 1. Convolution is the process of placing the 3 by 3 filter on the top left
 corner of the image, multiplying filter values by the pixel values and adding the results, moving the filter to the right one pixel at
 a time and repeating this process. When we get to the top right corner of the image, we simply move the filter down one pixel and
-restart from the right. This process ends when we get to the bottom right corner of the image.</p>
+restart from the left. This process ends when we get to the bottom right corner of the image.</p>
 
-<figure id="figure-2"><img src="../../images/Conv_no_padding_no_strides.gif" alt="A 3 by 3 filter applied to a 4 by 4 image, resulting in a 2 by 2 image" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 2:</span> A 3 by 3 filter applied to a 4 by 4 image, resulting in a 2 by 2 image (<a class="citation" href="#DumoulinVisin">Dumoulin and Visin 2016</a>)</figcaption></figure>
+<figure id="figure-2"><img src="../../images/Conv_no_padding_no_strides.gif" alt="A 3 by 3 filter applied to a 4 by 4 image, resulting in a 2 by 2 image. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 2:</span> A 3 by 3 filter applied to a 4 by 4 image, resulting in a 2 by 2 image (<span class="citation"><a href="#DumoulinVisin">Dumoulin and Visin 2016</a></span>)</figcaption></figure>
 
 <p>Covolution operator has the following parameters:</p>
 
@@ -1036,46 +1132,46 @@ sized filters are preferred to even sized filters, due to the nice geometric pro
 down. If we want to keep the resultant image size the same, we can use <em>padding</em>. We pad the input in every direction with 0’s before applying the
 filter. If the padding is 1 by 1, then we add 1 zero in evey direction. If its 2 by 2, then we add 2 zeros in every direction, and so on.</p>
 
-<figure id="figure-3"><img src="../../images/Conv_same_padding_no_strides.gif" alt="A 3 by 3 filter applied to a 5 by 5 image, with padding of 1, resulting in a 5 by 5 image" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 3:</span> A 3 by 3 filter applied to a 5 by 5 image, with padding of 1, resulting in a 5 by 5 image (<a class="citation" href="#DumoulinVisin">Dumoulin and Visin 2016</a>)</figcaption></figure>
+<figure id="figure-3"><img src="../../images/Conv_same_padding_no_strides.gif" alt="A 3 by 3 filter applied to a 5 by 5 image, with padding of 1, resulting in a 5 by 5 image. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 3:</span> A 3 by 3 filter applied to a 5 by 5 image, with padding of 1, resulting in a 5 by 5 image (<span class="citation"><a href="#DumoulinVisin">Dumoulin and Visin 2016</a></span>)</figcaption></figure>
 
 <p>As mentioned before, we start the convolution by placing the filter on the top left corner of the image, and after multiplying filter and image
 values (and adding them), we move the filter to the right and repeat the process. How many pixels we move to the right (or down) is the <em>stride</em>.
 In figure 2 and 3, the stride of the filter is 1. We move the filter one pixel to the right (or down). But we could use a different stride. Figure 4
 shows an example of using stride of 2.</p>
 
-<figure id="figure-4"><img src="../../images/Conv_no_padding_strides.gif" alt="A 3 by 3 filter applied to a 5 by 5 image, with stride of 2, resulting in a 2 by 2 image" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 4:</span> A 3 by 3 filter applied to a 5 by 5 image, with stride of 2, resulting in a 2 by 2 image (<a class="citation" href="#DumoulinVisin">Dumoulin and Visin 2016</a>)</figcaption></figure>
+<figure id="figure-4"><img src="../../images/Conv_no_padding_strides.gif" alt="A 3 by 3 filter applied to a 5 by 5 image, with stride of 2, resulting in a 2 by 2 image. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 4:</span> A 3 by 3 filter applied to a 5 by 5 image, with stride of 2, resulting in a 2 by 2 image (<span class="citation"><a href="#DumoulinVisin">Dumoulin and Visin 2016</a></span>)</figcaption></figure>
 
 <p>When we apply a, say 3 by 3, filter to an image, our filter’s output is affected by pixels in a 3 by 3 subset of the image. If we like to have a
 larger <em>receptive field</em> (portion of the image that affect our filter’s output), we could use <em>dilation</em>. If we set the dilation to 2 (Figure 5),
 instead of a contiguous 3 by 3 subset of the image, every other pixel of a 5 by 5 subset of the image affects the filter’s output.</p>
 
-<figure id="figure-5"><img src="../../images/Conv_dilation.gif" alt="A 3 by 3 filter applied to a 7 by 7 image, with dilation of 2, resulting in a 3 by 3 image" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 5:</span> A 3 by 3 filter applied to a 7 by 7 image, with dilation of 2, resulting in a 3 by 3 image (<a class="citation" href="#DumoulinVisin">Dumoulin and Visin 2016</a>)</figcaption></figure>
+<figure id="figure-5"><img src="../../images/Conv_dilation.gif" alt="A 3 by 3 filter applied to a 7 by 7 image, with dilation of 2, resulting in a 3 by 3 image. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 5:</span> A 3 by 3 filter applied to a 7 by 7 image, with dilation of 2, resulting in a 3 by 3 image (<span class="citation"><a href="#DumoulinVisin">Dumoulin and Visin 2016</a></span>)</figcaption></figure>
 
 <p>After the filter scans the whole image, we apply an activation function to filter output to introduce non-linearlity. The preferred activation function
-used in CNN is ReLU or one its variants like Leaky ReLU (<a class="citation" href="#NwankpaEtAl">Nwankpa <i>et al.</i> 2018</a>). ReLU leaves pixels with positive values in filter output as is, and
+used in CNN is ReLU or one its variants like Leaky ReLU (<span class="citation"><a href="#NwankpaEtAl">Nwankpa <i>et al.</i> 2018</a></span>). ReLU leaves pixels with positive values in filter output as is, and
 replacing negative values with 0 (or a small number in case of Leaky ReLU). Figure 6 shows the results of applying ReLU activation function to a filter
 output.</p>
 
-<figure id="figure-6"><img src="../../images/Conv_ReLU.png" alt="Two matrices representing filter output before and after ReLU activation function is applied" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 6:</span> Applying ReLU activation function to filter output</figcaption></figure>
+<figure id="figure-6"><img src="../../images/Conv_ReLU.png" alt="Two matrices representing filter output before and after ReLU activation function is applied. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 6:</span> Applying ReLU activation function to filter output</figcaption></figure>
 
 <p>Given the input size, filter size, padding, stride and dilation you can calculate the output size of the convolution operation as below.</p>
 
 \[\frac{(\text{input size} - \text{(filter size + (filter size -1)*(dilation - 1)})) + (2*padding)}{stride} + 1\]
 
-<figure id="figure-7"><img src="../../images/Conv_single_input_channel.png" alt="One matrix representing an input vector and another matrix representing a filter, along with calculation for single input channel two dimensional convolution operation" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 7:</span> Illustration of single input channel two dimensional convolution</figcaption></figure>
+<figure id="figure-7"><img src="../../images/Conv_single_input_channel.png" alt="One matrix representing an input vector and another matrix representing a filter, along with calculation for single input channel two dimensional convolution operation. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 7:</span> Illustration of single input channel two dimensional convolution</figcaption></figure>
 
 <p>Figure 7 illustrates the calculations for a convolution operation, via a 3 by 3 filter on a single channel 5 by 5 input vector (5 x 5 x 1). Figure 8
 illustrates the calculations when the input vector has 3 channels (5 x 5 x 3). To show this in 2 dimensions, we are displaying each channel in input
 vector and filter separately. Figure 9 shows a sample multi-channel 2D convolution in 3 dimensions.</p>
 
-<figure id="figure-8"><img src="../../images/Conv_multiple_input_channel.png" alt="Three matrices representing an input vector and another three matrices representing a filter, along with calculation for multiple input channel two dimensional convolution operation " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 8:</span> Illustration of multiple input channel two dimensional convolution</figcaption></figure>
+<figure id="figure-8"><img src="../../images/Conv_multiple_input_channel.png" alt="Three matrices representing an input vector and another three matrices representing a filter, along with calculation for multiple input channel two dimensional convolution operation . " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 8:</span> Illustration of multiple input channel two dimensional convolution</figcaption></figure>
 
 <p>As Figures 8 and 9 show the output of a multi-channel 2 dimensional filter is a single channel 2 dimensional image. Applying <em>multiple</em> filters to the
 input image results in a multi-channel 2 dimensional image for the output. For example, if the input image is 28 by 28 by 3 (rows x columns x channels),
 and we apply a 3 by 3 filter with 1 by 1 padding, we would get a 28 by 28 by 1 image. If we apply 15 filters to the input image, our output would be 28
 by 28 by 15. Hence, the number of filters in a convolution layer allows us to increase or decrease the channel size.</p>
 
-<figure id="figure-9"><img src="../../images/Conv_multiple_channel_3d.gif" alt="Multiple cubes representing input vector, filter, and output in a 3 channel 2 dimensional convolution operation" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 9:</span> Three dimensional illustration of multiple input channel two dimensional convolution (Source: https://thomelane.github.io/convolutions/2DConvRGB.html)</figcaption></figure>
+<figure id="figure-9"><img src="../../images/Conv_multiple_channel_3d.gif" alt="Multiple cubes representing input vector, filter, and output in a 3 channel 2 dimensional convolution operation. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 9:</span> Three dimensional illustration of multiple input channel two dimensional convolution (Source: https://thomelane.github.io/convolutions/2DConvRGB.html)</figcaption></figure>
 
 <h3 id="pooling-layer">Pooling layer</h3>
 
@@ -1088,7 +1184,7 @@ filter with a stride of 2 that returns the maximum value as it slides over the i
 <p>The last layer in a CNN is a fully connected layer. We connect all the nodes from the previous layer to this fully connected layer, which is responsible
 for classification of the image.</p>
 
-<figure id="figure-10"><img src="../../images/Conv_CNN.png" alt="A convolutional neural network with 3 convolution layers followed by 3 pooling layers" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 10:</span> A convolutional neural network with 3 convolution layers followed by 3 pooling layers (<a class="citation" href="#OSheaEtAl">O’Shea and Nash 2015</a>)</figcaption></figure>
+<figure id="figure-10"><img src="../../images/Conv_CNN.png" alt="A convolutional neural network with 3 convolution layers followed by 3 pooling layers. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 10:</span> A convolutional neural network with 3 convolution layers followed by 3 pooling layers (<span class="citation"><a href="#OSheaEtAl">O’Shea and Nash 2015</a></span>)</figcaption></figure>
 
 <p>As shown in Figure 10, a typical CNN usually has more than one convolution layer plus pooling layer. Each convolution plus pooling layer is responsible
 for feature extraction at a different level of abstraction. For example, the filters in the first layer could detect horizental, vertical, and diagonal
@@ -1098,7 +1194,7 @@ feature extraction. This distinguishes CNN from other classification techniques 
 
 <h2 id="mnist-dataset">MNIST dataset</h2>
 
-<p>The MNIST database of handwritten digits (<a class="citation" href="#LeCunMnist">LeCun <i>et al.</i> 2010</a>) is composed of a training set of 60,000 images and a test set of 10,000 images. The digits
+<p>The MNIST database of handwritten digits (<span class="citation"><a href="#LeCunMnist">LeCun <i>et al.</i> 2010</a></span>) is composed of a training set of 60,000 images and a test set of 10,000 images. The digits
 have been size-normalized and centered in a fixed-size image (28 by 28 pixels). Images are grayscale, where each pixel is represented by a number between
 0 and 255 (0 for black, 255 for white, and other values for different shades of gray). MNIST database is a standard image classification dataset and is used
 to compare various Machine Learning techniques.</p>
@@ -1106,26 +1202,26 @@ to compare various Machine Learning techniques.</p>
 <h2 id="get-data">Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Data upload</h3>
+  <div id="hands-on-data-upload" class="box-title" aria-label="hands-on box: Data upload"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Data upload</div>
 
   <ol>
     <li>
       <p>Make sure you have an empty analysis history.</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-creating-a-new-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history</h3>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>  <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>  <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>  <li>Select the option <strong>Create New</strong> from the menu</li></ol></blockquote>
+      <blockquote class="tip">  <div id="tip-creating-a-new-history" class="box-title"><button type="button" aria-controls="tip-creating-a-new-history-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a new history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>  <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>  <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>  <li>Select the option <strong>Create New</strong> from the menu</li></ol></blockquote>
     </li>
     <li>
       <p><strong>Rename your history</strong> to make it easy to recognize</p>
 
       <blockquote class="tip">
-        <h3 id="tip-rename-a-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Rename a history</h3>
+        <div id="tip-rename-a-history" class="box-title"><button type="button" aria-controls="tip-rename-a-history-contents" aria-expanded="true" aria-label="Toggle tip box: Rename a history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Rename a history<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
         <ul>
           <li>
             <p>Click on the title of the history (by default the title is <code class="language-plaintext highlighter-rouge">Unnamed history</code>)</p>
 
-            <p><img src="../../../../shared/images/rename_history.png" alt="Renaming history" loading="lazy" /></p>
+            <p><img src="../../../../shared/images/rename_history.png" alt="Renaming history. " loading="lazy" /></p>
           </li>
           <li>Type <code class="language-plaintext highlighter-rouge"><span class="notranslate">Galaxy</span> Introduction</code> as the name</li>
           <li>Press <kbd>Enter</kbd></li>
@@ -1143,19 +1239,19 @@ https://zenodo.org/record/4697906/files/y_test.tsv
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-via-links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links</h3>  <ul>  <li>Copy the link location</li>  <li>    <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>  </li>  <li>Select <strong>Paste/Fetch Data</strong></li>  <li>    <p>Paste the link into the text field</p>  </li>  <li>    <p>Press <strong>Start</strong></p>  </li>  <li>    <p><strong>Close</strong> the window</p>  </li>  <li>By default, <span class="notranslate">Galaxy</span> uses the URL as the name, so rename the files with a more useful name.</li></ul></blockquote>
+      <blockquote class="tip">  <div id="tip-importing-via-links" class="box-title"><button type="button" aria-controls="tip-importing-via-links-contents" aria-expanded="true" aria-label="Toggle tip box: Importing via links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Copy the link location</li>  <li>    <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>  </li>  <li>Select <strong>Paste/Fetch Data</strong></li>  <li>    <p>Paste the link into the text field</p>  </li>  <li>    <p>Press <strong>Start</strong></p>  </li>  <li><strong>Close</strong> the window</li></ul></blockquote>
     </li>
     <li>
       <p>Rename the datasets as <code class="language-plaintext highlighter-rouge">X_train</code>, <code class="language-plaintext highlighter-rouge">y_train</code>, <code class="language-plaintext highlighter-rouge">X_test</code>, and <code class="language-plaintext highlighter-rouge">y_test</code> respectively.</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-renaming-a-dataset"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a dataset</h3>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, change the <strong>Name</strong> field</li>  <li>Click the <strong>Save</strong> button</li></ul></blockquote>
+      <blockquote class="tip">  <div id="tip-renaming-a-dataset" class="box-title"><button type="button" aria-controls="tip-renaming-a-dataset-contents" aria-expanded="true" aria-label="Toggle tip box: Renaming a dataset"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a dataset<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, change the <strong>Name</strong> field</li>  <li>Click the <strong>Save</strong> button</li></ul></blockquote>
     </li>
     <li>
-      <p>Check that the datatype of all the three datasets is <code class="language-plaintext highlighter-rouge">tabular</code>.</p>
+      <p>Check that the datatype of all four datasets is <code class="language-plaintext highlighter-rouge">tabular</code>.</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-changing-the-datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype</h3>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>  <li>Select <code class="language-plaintext highlighter-rouge">datatypes</code></li>  <li>Click the <strong>Change datatype</strong> button</li></ul></blockquote>
+      <blockquote class="tip">  <div id="tip-changing-the-datatype" class="box-title"><button type="button" aria-controls="tip-changing-the-datatype-contents" aria-expanded="true" aria-label="Toggle tip box: Changing the datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>  <li>Select <code class="language-plaintext highlighter-rouge">datatypes</code>    <ul>      <li>tip: you can start typing the datatype into the field to filter the dropdown menu</li>    </ul>  </li>  <li>Click the <strong>Save</strong> button</li></ul></blockquote>
     </li>
   </ol>
 
@@ -1166,10 +1262,39 @@ https://zenodo.org/record/4697906/files/y_test.tsv
 <p>In this section, we define a CNN and train it using MNIST dataset training data. The goal is to learn a model such that given an image
 of a digit we can predict whether the digit (0 to 9). We then evaluate the trained CNN on the test dataset and plot the confusion matrix.</p>
 
+<p>In order to train the CNN, we must have the One-Hot Encoding (OHE) representation of the training
+labels. This is needed to calculate the categorical cross entropy loss function. OHE encodes labels
+as a <strong>one-hot</strong> numeric array, where only one element is 1 and the rest are 0’s. For example, if
+we had 3 fruits (apple, orange, banana) and their labels were 1, 2, and 3, the OHE
+represntation of apple would be (1,0,0), the OHE representation of orange would be (0,1,0), and the
+OHE representation of banana would be (0,0,1). For apple with label 1, the first element of array
+is 1 (and the rest are 0’s); For Orange with label 2, the second element of the array is 1 (and the
+rest are 0’s); And for Banana with label 3, the third element of the array is 1 (and the rest are 0’s).
+We have 10 digits in our dataset and we would just have an array of size 10, where only one
+element is 1, corresponding to the digit, and the rest are 0’s.</p>
+
+<h3 id="create-one-hot-encoding-ohe-representation-of-training-labels"><strong>Create One-Hot Encoding (OHE) representation of training labels</strong></h3>
+
+<blockquote class="notranslate hands_on">
+  <div id="hands-on-one-hot-encoding" class="box-title" aria-label="hands-on box: One-Hot Encoding"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: One-Hot Encoding</div>
+
+  <ul>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_to_categorical/sklearn_to_categorical/1.0.8.3" title="Tested with toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_to_categorical/sklearn_to_categorical/1.0.8.3"><strong>To categorical</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/bgruening/sklearn_to_categorical/sklearn_to_categorical/1.0.8.3</span></span>
+      <ul>
+        <li><em>“Input file”</em> : Select <code class="language-plaintext highlighter-rouge">y_train</code></li>
+        <li><em>“Does the dataset contain header?”</em> : Select <code class="language-plaintext highlighter-rouge">No</code></li>
+        <li><em>“Total number of classes”</em>: Select <code class="language-plaintext highlighter-rouge">10</code></li>
+        <li>Click <em>“Run Tool”</em></li>
+      </ul>
+    </li>
+  </ul>
+
+</blockquote>
+
 <h3 id="create-a-deep-learning-model-architecture"><strong>Create a deep learning model architecture</strong></h3>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-model-config"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Model config</h3>
+  <div id="hands-on-model-config" class="box-title" aria-label="hands-on box: Model config"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Model config</div>
 
   <ul>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_config/keras_model_config/0.5.0" title="Tested with toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_config/keras_model_config/0.5.0"><strong>Create a deep learning model architecture</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/bgruening/keras_model_config/keras_model_config/0.5.0</span></span>
@@ -1245,7 +1370,7 @@ of a digit we can predict whether the digit (0 to 9). We then evaluate the train
             </li>
           </ul>
         </li>
-        <li>Click <em>“Execute”</em></li>
+        <li>Click <em>“Run Tool”</em></li>
       </ul>
     </li>
   </ul>
@@ -1262,7 +1387,7 @@ probability is predicted by CNN. The model config can be downloaded as a JSON fi
 <h3 id="create-a-deep-learning-model"><strong>Create a deep learning model</strong></h3>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-model-builder-optimizer-loss-function-and-fit-parameters"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Model builder (Optimizer, loss function, and fit parameters)</h3>
+  <div id="hands-on-model-builder-optimizer-loss-function-and-fit-parameters" class="box-title" aria-label="hands-on box: Model builder (Optimizer, loss function, and fit parameters)"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Model builder (Optimizer, loss function, and fit parameters)</div>
 
   <ul>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_builder/keras_model_builder/0.5.0" title="Tested with toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_builder/keras_model_builder/0.5.0"><strong>Create deep learning model</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/bgruening/keras_model_builder/keras_model_builder/0.5.0</span></span>
@@ -1283,7 +1408,7 @@ probability is predicted by CNN. The model config can be downloaded as a JSON fi
             <li><em>“batch_size”</em>: <code class="language-plaintext highlighter-rouge">500</code></li>
           </ul>
         </li>
-        <li>Click <em>“Execute”</em></li>
+        <li>Click <em>“Run Tool”</em></li>
       </ul>
     </li>
   </ul>
@@ -1299,10 +1424,10 @@ The model builder can be downloaded as a zip file.</p>
 <h3 id="deep-learning-training-and-evaluation"><strong>Deep learning training and evaluation</strong></h3>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-training-the-model"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Training the model</h3>
+  <div id="hands-on-training-the-model" class="box-title" aria-label="hands-on box: Training the model"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Training the model</div>
 
   <ul>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.8.2" title="Tested with toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.8.2"><strong>Deep learning training and evaluation</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.8.2</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.8.3" title="Tested with toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.8.3"><strong>Deep learning training and evaluation</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.8.3</span></span>
       <ul>
         <li><em>“Select a scheme”</em>: <code class="language-plaintext highlighter-rouge">Train and Validate</code></li>
         <li><em>“Choose the dataset containing pipeline/estimator object”</em>: Select the <em>Keras Model Builder</em> from the previous step.</li>
@@ -1310,11 +1435,11 @@ The model builder can be downloaded as a zip file.</p>
           <ul>
             <li><em>“Training samples dataset”</em>: Select <code class="language-plaintext highlighter-rouge">X_train</code> dataset</li>
             <li><em>“Choose how to select data by column:”</em>: <code class="language-plaintext highlighter-rouge">All columns</code></li>
-            <li><em>“Dataset containing class labels or target values”</em>: Select <code class="language-plaintext highlighter-rouge">y_train</code> dataset</li>
+            <li><em>“Dataset containing class labels or target values”</em>: Select the OHE representation of <code class="language-plaintext highlighter-rouge">y_train</code> dataset</li>
             <li><em>“Choose how to select data by column:”</em>: <code class="language-plaintext highlighter-rouge">All columns</code></li>
           </ul>
         </li>
-        <li>Click <em>“Execute”</em></li>
+        <li>Click <em>“Run Tool”</em></li>
       </ul>
     </li>
   </ul>
@@ -1327,10 +1452,10 @@ model weights, downloadable as an hdf5 file. These files are needed for predicti
 <h3 id="model-prediction"><strong>Model Prediction</strong></h3>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-testing-the-model"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Testing the model</h3>
+  <div id="hands-on-testing-the-model" class="box-title" aria-label="hands-on box: Testing the model"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Testing the model</div>
 
   <ul>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.8.2" title="Tested with toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.8.2"><strong>Model Prediction</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.8.2</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.8.3" title="Tested with toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.8.3"><strong>Model Prediction</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.8.3</span></span>
       <ul>
         <li><em>“Choose the dataset containing pipeline/estimator object”</em> : Select the trained model from the previous step.</li>
         <li><em>“Choose the dataset containing weights for the estimator above”</em> : Select the trained model weights from the previous step.</li>
@@ -1338,7 +1463,7 @@ model weights, downloadable as an hdf5 file. These files are needed for predicti
         <li><em>“Select input data type for prediction”</em>: <code class="language-plaintext highlighter-rouge">tabular data</code></li>
         <li><em>“Training samples dataset”</em>: Select <code class="language-plaintext highlighter-rouge">X_test</code> dataset</li>
         <li><em>“Choose how to select data by column:”</em>: <code class="language-plaintext highlighter-rouge">All columns</code></li>
-        <li>Click <em>“Execute”</em></li>
+        <li>Click <em>“Run Tool”</em></li>
       </ul>
     </li>
   </ul>
@@ -1350,17 +1475,17 @@ model weights, downloadable as an hdf5 file. These files are needed for predicti
 <h3 id="machine-learning-visualization-extension"><strong>Machine Learning Visualization Extension</strong></h3>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-creating-the-confusion-matrix"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Creating the confusion matrix</h3>
+  <div id="hands-on-creating-the-confusion-matrix" class="box-title" aria-label="hands-on box: Creating the confusion matrix"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Creating the confusion matrix</div>
 
   <ul>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/ml_visualization_ex/ml_visualization_ex/1.0.8.2" title="Tested with toolshed.g2.bx.psu.edu/repos/bgruening/ml_visualization_ex/ml_visualization_ex/1.0.8.2"><strong>Machine Learning Visualization Extension</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/bgruening/ml_visualization_ex/ml_visualization_ex/1.0.8.2</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/ml_visualization_ex/ml_visualization_ex/1.0.8.3" title="Tested with toolshed.g2.bx.psu.edu/repos/bgruening/ml_visualization_ex/ml_visualization_ex/1.0.8.3"><strong>Machine Learning Visualization Extension</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/bgruening/ml_visualization_ex/ml_visualization_ex/1.0.8.3</span></span>
       <ul>
         <li><em>“Select a plotting type”</em>: <code class="language-plaintext highlighter-rouge">Confusion matrix for classes</code></li>
         <li><em>“Select dataset containing the true labels”</em>”: <code class="language-plaintext highlighter-rouge">y_test</code></li>
         <li><em>“Choose how to select data by column:”</em>: <code class="language-plaintext highlighter-rouge">All columns</code></li>
         <li><em>“Select dataset containing the predicted labels”</em>”: Select <code class="language-plaintext highlighter-rouge">Model Prediction</code> from the previous step</li>
         <li><em>“Does the dataset contain header:”</em>: <code class="language-plaintext highlighter-rouge">Yes</code></li>
-        <li>Click <em>“Execute”</em></li>
+        <li>Click <em>“Run Tool”</em></li>
       </ul>
     </li>
   </ul>
@@ -1371,7 +1496,7 @@ model weights, downloadable as an hdf5 file. These files are needed for predicti
 classified by the model, True positives (TP) and true negatives (TN). It also lists the number of examples that were classified as positive that
 were actually negative (False positive, FP, or Type I error), and the number of examples that were classified as negative that were actually
 positive (False negative, FN, or Type 2 error). Given the confusion matrix, we can calculate <strong>precision</strong> and
-<strong>recall</strong> <a class="citation" href="#TatbulEtAl">Tatbul <i>et al.</i> 2018</a>. Precision is the fraction of predicted positives that are true positives (Precision = TP / (TP + FP)). Recall
+<strong>recall</strong> <span class="citation"><a href="#TatbulEtAl">Tatbul <i>et al.</i> 2018</a></span>. Precision is the fraction of predicted positives that are true positives (Precision = TP / (TP + FP)). Recall
 is the fraction of true positives that are predicted (Recall = TP / (TP + FN)). One way to describe the confusion matrix with just one value is
 to use the <strong>F score</strong>, which is the harmonic mean of precision and recall</p>
 
@@ -1381,7 +1506,7 @@ to use the <strong>F score</strong>, which is the harmonic mean of precision and
 
 \[F score = \frac{2 * \text{Precision * Recall}}{\text{Precision + Recall}}\]
 
-<figure id="figure-11"><img src="../../images/Conv_confusion_matrix.png" alt="Confusion matrix for MNIST image classification problem" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 11:</span> Image classification confusion matrix</figcaption></figure>
+<figure id="figure-11"><img src="../../images/Conv_confusion_matrix.png" alt="Confusion matrix for MNIST image classification problem. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 11:</span> Image classification confusion matrix</figcaption></figure>
 
 <p>Figure 11 is the resultant confusion matrix for our image problem. The first row in the table represents the <em>true</em> digit 0 class labels (we have
 967 + 2 + 1 + 8 + 2 = 980 digit 0 images). The second row represents the <em>true</em> digit 1 class labels (Again, we have 1,132 + 1 + 2 = 1,135 digit 1
@@ -1404,7 +1529,7 @@ follows:</p>
 
 <p>You can calculate the Precision, Recall, and F score for other digits in a similar manner.</p>
 
-<h1 class="no_toc" id="conclusion">Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 
 <p>In this tutorial, we explained the motivation for convolutional neural networks, explained their architecture, and discussed convolution
 operator and its parameters. We then used <span class="notranslate">Galaxy</span> to solve an image classification problem using CNN on MNIST dataset.</p>
@@ -1413,155 +1538,40 @@ operator and its parameters. We then used <span class="notranslate">Galaxy</span
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/statistics/faqs/">FAQ page for the Statistics and machine learning topic</a> to see if your question is listed there.
+                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/statistics/faqs/">FAQ page for the Statistics and machine learning topic</a> to see if your question is listed there.
                 If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
                 <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
 
                 
 
                 
+
+
+                
                 <h1 id="bibliography">References</h1>
-                <ol class="bibliography"><li><span id="HubelWiesel">Hubel, D. H., and T. N. Wiesel, 1959 <b>Receptive fields of single neurones in the cat’s striate cortex</b>. The Journal of physiology 148: 574–591.</span>
-    
-    
-    <a href="https://doi.org/10.1113/jphysiol.1959.sp006308">10.1113/jphysiol.1959.sp006308</a>
-    
-    
-
-</li>
-<li><span id="Fukishima">Fukushima, K., 1988 <b>Neocognitron: A hierarchical neural network capable of visual pattern recognition</b>. Neural Networks 1: 119–130.</span>
-    
-    
-    <a href="https://doi.org/https://doi.org/10.1016/0893-6080(88)90014-7">https://doi.org/10.1016/0893-6080(88)90014-7</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-      <a href="https://www.sciencedirect.com/science/article/pii/0893608088900147">https://www.sciencedirect.com/science/article/pii/0893608088900147</a>
-      
-    
-
-</li>
-<li><span id="LeCunEtAl">LeCun, Y., B. Boser, J. S. Denker, D. Henderson, R. E. Howard <i>et al.</i>, 1989 <b>Backpropagation Applied to Handwritten Zip Code Recognition</b>. Neural Computation 1: 541–551.</span>
-    
-    
-    <a href="https://doi.org/10.1162/neco.1989.1.4.541">10.1162/neco.1989.1.4.541</a>
-    
-    
-
-</li>
-<li><span id="JainEtAl">Jain, A. K., J. Mao, and K. M. Mohiuddin, 1996 <b>Artificial neural networks: a tutorial</b>. Computer 29: 31–44.</span>
-    
-    
-    <a href="https://doi.org/10.1109/2.485891">10.1109/2.485891</a>
-    
-    
-
-</li>
-<li><span id="LeCunMnist">LeCun, Y., C. Cortes, and C. J. Burges, 2010 <b>MNIST handwritten digit database</b>. ATT Labs [Online]. Available: http://yann.lecun.com/exdb/mnist 2:</span>
-    
-    
-    
-
-</li>
-<li><span id="KrizhevskyEtAl">Krizhevsky, A., I. Sutskever, and G. Hinton, 2012 <b>ImageNet Classification with Deep Convolutional Neural Networks</b>. Neural Information Processing Systems 25:</span>
-    
-    
-    <a href="https://doi.org/10.1145/3065386">10.1145/3065386</a>
-    
-    
-
-</li>
-<li><span id="ZeilerEtAl">Zeiler, M. D., and R. Fergus, 2013 <b>Visualizing and Understanding Convolutional Networks</b>. ECCV.</span>
-    
-    
-    <a href="https://doi.org/1311.2901">1311.2901</a>
-    
-    
-
-</li>
-<li><span id="SzegedyEtAl">Szegedy, C., W. Liu, Y. Jia, P. Sermanet, S. Reed <i>et al.</i>, 2014 <b>Going Deeper with Convolutions</b>. CVPR.</span>
-    
-    
-    <a href="https://doi.org/1409.4842">1409.4842</a>
-    
-    
-
-</li>
-<li><span id="OSheaEtAl">O’Shea, K., and R. Nash, 2015 <b>An Introduction to Convolutional Neural Networks</b>. CoRR abs/1511.08458:</span>
-    
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-      <a href="http://arxiv.org/abs/1511.08458">http://arxiv.org/abs/1511.08458</a>
-      
-    
-
-</li>
-<li><span id="RussakovskyEtAl">Russakovsky, O., J. Deng, H. Su, J. Krause, S. Satheesh <i>et al.</i>, 2015 <b>ImageNet Large Scale Visual Recognition Challenge</b>. International Journal of Computer Vision 115: 2211–252.</span>
-    
-    
-    <a href="https://doi.org/10.1007/s11263-015-0816-y">10.1007/s11263-015-0816-y</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li>
-<li><span id="SimonyanEtAl">Simonyan, K., and A. Zisserman, 2015 <b>Very Deep Convolutional Networks for Large-Scale Image Recognition</b>. CVPR.</span>
-    
-    
-    <a href="https://doi.org/1409.1556">1409.1556</a>
-    
-    
-
-</li>
-<li><span id="HeEtAl">He, K., X. Zhang, S. Ren, and J. Sun, 2015 <b>Deep Residual Learning for Image Recognition</b>. CVPR.</span>
-    
-    
-    <a href="https://doi.org/1512.03385">1512.03385</a>
-    
-    
-
-</li>
-<li><span id="DumoulinVisin">Dumoulin, V., and F. Visin, 2016 <b>A guide to convolution arithmetic for deep learning</b>.</span>
-    
-    
-    <a href="https://doi.org/1603.07285">1603.07285</a>
-    
-    
-
-</li>
-<li><span id="NwankpaEtAl">Nwankpa, C., W. Ijomah, A. Gachagan, and S. Marshall, 2018 <b>Activation Functions: Comparison of trends in Practice and Research for Deep Learning</b>. CoRR abs/1811.03378:</span>
-    
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-      <a href="http://arxiv.org/abs/1811.03378">http://arxiv.org/abs/1811.03378</a>
-      
-    
-
-</li>
-<li><span id="TatbulEtAl">Tatbul, N., T. J. Lee, S. Zdonik, M. Alam, and J. Gottschlich, 2018 <b>Precision and Recall for Time Series</b>. Advances in Neural Information Processing Systems 31: 1920–1930.</span>
-    
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-      <a href="https://proceedings.neurips.cc/paper/2018/file/8f468c873a32bb0619eaeb2050ba45d1-Paper.pdf">https://proceedings.neurips.cc/paper/2018/file/8f468c873a32bb0619eaeb2050ba45d1-Paper.pdf</a>
-      
-    
-
-</li></ol>
+                <ol class="bibliography"><li id="HubelWiesel">Hubel, D. H., and T. N. Wiesel, 1959 <b>Receptive fields of single neurones in the cat’s striate cortex</b>. The Journal of physiology 148: 574–591. <a href="https://doi.org/10.1113/jphysiol.1959.sp006308">10.1113/jphysiol.1959.sp006308</a></li>
+<li id="Fukishima">Fukushima, K., 1988 <b>Neocognitron: A hierarchical neural network capable of visual pattern recognition</b>. Neural Networks 1: 119–130. <a href="https://doi.org/https://doi.org/10.1016/0893-6080(88)90014-7">https://doi.org/10.1016/0893-6080(88)90014-7</a> <a href="https://www.sciencedirect.com/science/article/pii/0893608088900147">https://www.sciencedirect.com/science/article/pii/0893608088900147</a></li>
+<li id="LeCunEtAl">LeCun, Y., B. Boser, J. S. Denker, D. Henderson, R. E. Howard <i>et al.</i>, 1989 <b>Backpropagation Applied to Handwritten Zip Code Recognition</b>. Neural Computation 1: 541–551. <a href="https://doi.org/10.1162/neco.1989.1.4.541">10.1162/neco.1989.1.4.541</a></li>
+<li id="JainEtAl">Jain, A. K., J. Mao, and K. M. Mohiuddin, 1996 <b>Artificial neural networks: a tutorial</b>. Computer 29: 31–44. <a href="https://doi.org/10.1109/2.485891">10.1109/2.485891</a></li>
+<li id="LeCunMnist">LeCun, Y., C. Cortes, and C. J. Burges, 2010 <b>MNIST handwritten digit database</b>. ATT Labs [Online]. Available: http://yann.lecun.com/exdb/mnist 2:</li>
+<li id="KrizhevskyEtAl">Krizhevsky, A., I. Sutskever, and G. Hinton, 2012 <b>ImageNet Classification with Deep Convolutional Neural Networks</b>. Neural Information Processing Systems 25: <a href="https://doi.org/10.1145/3065386">10.1145/3065386</a></li>
+<li id="ZeilerEtAl">Zeiler, M. D., and R. Fergus, 2013 <b>Visualizing and Understanding Convolutional Networks</b>. ECCV. <a href="https://doi.org/1311.2901">1311.2901</a></li>
+<li id="SzegedyEtAl">Szegedy, C., W. Liu, Y. Jia, P. Sermanet, S. Reed <i>et al.</i>, 2014 <b>Going Deeper with Convolutions</b>. CVPR. <a href="https://doi.org/1409.4842">1409.4842</a></li>
+<li id="HeEtAl">He, K., X. Zhang, S. Ren, and J. Sun, 2015 <b>Deep Residual Learning for Image Recognition</b>. CVPR. <a href="https://doi.org/1512.03385">1512.03385</a></li>
+<li id="OSheaEtAl">O’Shea, K., and R. Nash, 2015 <b>An Introduction to Convolutional Neural Networks</b>. CoRR abs/1511.08458: <a href="http://arxiv.org/abs/1511.08458">http://arxiv.org/abs/1511.08458</a></li>
+<li id="RussakovskyEtAl">Russakovsky, O., J. Deng, H. Su, J. Krause, S. Satheesh <i>et al.</i>, 2015 <b>ImageNet Large Scale Visual Recognition Challenge</b>. International Journal of Computer Vision 115: 2211–252. <a href="https://doi.org/10.1007/s11263-015-0816-y">10.1007/s11263-015-0816-y</a></li>
+<li id="SimonyanEtAl">Simonyan, K., and A. Zisserman, 2015 <b>Very Deep Convolutional Networks for Large-Scale Image Recognition</b>. CVPR. <a href="https://doi.org/1409.1556">1409.1556</a></li>
+<li id="DumoulinVisin">Dumoulin, V., and F. Visin, 2016 <b>A guide to convolution arithmetic for deep learning</b>. <a href="https://doi.org/1603.07285">1603.07285</a></li>
+<li id="NwankpaEtAl">Nwankpa, C., W. Ijomah, A. Gachagan, and S. Marshall, 2018 <b>Activation Functions: Comparison of trends in Practice and Research for Deep Learning</b>. CoRR abs/1811.03378: <a href="http://arxiv.org/abs/1811.03378">http://arxiv.org/abs/1811.03378</a></li>
+<li id="TatbulEtAl">Tatbul, N., T. J. Lee, S. Zdonik, M. Alam, and J. Gottschlich, 2018 <b>Precision and Recall for Time Series</b>. Advances in Neural Information Processing Systems 31: 1920–1930. <a href="https://proceedings.neurips.cc/paper/2018/file/8f468c873a32bb0619eaeb2050ba45d1-Paper.pdf">https://proceedings.neurips.cc/paper/2018/file/8f468c873a32bb0619eaeb2050ba45d1-Paper.pdf</a></li></ol>
                 
 
                 
 
                 <h1>Feedback</h1>
-                <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+                <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452">how it went</a>.
+                <br>Did you use this material as a learner or student? Click the form below to leave feedback.<i class="fas fa-hand-point-down"></i>
+                </p>
 
                 <div id="feedback-button">
                     <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
@@ -1591,12 +1601,11 @@ operator and its parameters. We then used <span class="notranslate">Galaxy</span
                     })(window, document);
                 </script>
 
-
-
                 <h1>Citing this Tutorial</h1>
                 <p>
                     <ol>
-                        <li id="citation-text">Kaivan Kamali, 2021 <b>Deep Learning (Part 3) - Convolutional neural networks (CNN) (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/statistics/tutorials/CNN/tutorial.html">https://training.galaxyproject.org/training-material/topics/statistics/tutorials/CNN/tutorial.html</a> Online; accessed TODAY
+                        <li id="citation-text">
+                            Kaivan Kamali,  <b>Deep Learning (Part 3) - Convolutional neural networks (CNN) (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/statistics/tutorials/CNN/tutorial.html">https://training.galaxyproject.org/training-material/topics/statistics/tutorials/CNN/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
@@ -1604,37 +1613,49 @@ operator and its parameters. We then used <span class="notranslate">Galaxy</span
                     </ol>
                 </p>
 
-
+                <!-- collapsible boxcontaining the BibTeX-formatted citation -->
                 <blockquote class="details">
-                  <h3><i class="fa fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> BibTeX</h3>
-                  <p style="display: none;">
 
-                <div class="highlighter-rouge"><div class="highlight"><pre class="highlight">
+                  <div id="citation-bibtex" class="box-title">
+                    <button type="button" aria-controls="citation-bibtex" aria-expanded="false" aria-label="Toggle details box: BibTeX for citing this tutorial">
+                      <i class="fas fa-info-circle" aria-hidden="true"></i>
+                      <span class="visually-hidden"></span> BibTeX<span role="button" class="fold-unfold fa fa-minus-square" aria-hidden="true"></span>
+                    </button>
+                   </div>
+                   <p style="display: none;">
+
+                   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight">
+
+
 <code id="citation-code">@misc{statistics-CNN,
 author = "Kaivan Kamali",
 title = "Deep Learning (Part 3) - Convolutional neural networks (CNN) (Galaxy Training Materials)",
-year = "2021",
-month = "05",
-day = "24"
+year = "",
+month = "",
+day = ""
 url = "\url{https://training.galaxyproject.org/training-material/topics/statistics/tutorials/CNN/tutorial.html}",
 note = "[Online; accessed TODAY]"
 }
-@article{Batut_2018,
-    doi = {10.1016/j.cels.2018.05.012},
-    url = {https://doi.org/10.1016%2Fj.cels.2018.05.012},
-    year = 2018,
-    month = {jun},
-    publisher = {Elsevier {BV}},
-    volume = {6},
-    number = {6},
-    pages = {752--758.e1},
-    author = {B{\'{e}}r{\'{e}}nice Batut and Saskia Hiltemann and Andrea Bagnacani and Dannon Baker and Vivek Bhardwaj and Clemens Blank and Anthony Bretaudeau and Loraine Brillet-Gu{\'{e}}guen and Martin {\v{C}}ech and John Chilton and Dave Clements and Olivia Doppelt-Azeroual and Anika Erxleben and Mallory Ann Freeberg and Simon Gladman and Youri Hoogstrate and Hans-Rudolf Hotz and Torsten Houwaart and Pratik Jagtap and Delphine Larivi{\`{e}}re and Gildas Le Corguill{\'{e}} and Thomas Manke and Fabien Mareuil and Fidel Ram{\'{\i}}rez and Devon Ryan and Florian Christoph Sigloch and Nicola Soranzo and Joachim Wolff and Pavankumar Videm and Markus Wolfien and Aisanjiang Wubuli and Dilmurat Yusuf and James Taylor and Rolf Backofen and Anton Nekrutenko and Björn Grüning},
-    title = {Community-Driven Data Analysis Training for Biology},
-    journal = {Cell Systems}
-}</code>
-                </pre></div></div>
-                </p>
+@article{Hiltemann_2023,
+	doi = {10.1371/journal.pcbi.1010752},
+	url = {https://doi.org/10.1371%2Fjournal.pcbi.1010752},
+	year = 2023,
+	month = {jan},
+	publisher = {Public Library of Science ({PLoS})},
+	volume = {19},
+	number = {1},
+	pages = {e1010752},
+	author = {Saskia Hiltemann and Helena Rasche and Simon Gladman and Hans-Rudolf Hotz and Delphine Larivi{\`{e}}re and Daniel Blankenberg and Pratik D. Jagtap and Thomas Wollmann and Anthony Bretaudeau and Nadia Gou{\'{e}} and Timothy J. Griffin and Coline Royaux and Yvan Le Bras and Subina Mehta and Anna Syme and Frederik Coppens and Bert Droesbeke and Nicola Soranzo and Wendi Bacon and Fotis Psomopoulos and Crist{\'{o}}bal Gallardo-Alba and John Davis and Melanie Christine Föll and Matthias Fahrner and Maria A. Doyle and Beatriz Serrano-Solano and Anne Claire Fouilloux and Peter van Heusden and Wolfgang Maier and Dave Clements and Florian Heyl and Björn Grüning and B{\'{e}}r{\'{e}}nice Batut and},
+	editor = {Francis Ouellette},
+	title = {Galaxy Training: A powerful framework for teaching!},
+	journal = {PLoS Comput Biol} Computational Biology}
+}
+</code>
+                   </pre></div></div>
+                   </p>
                 </blockquote>
+
+                
 
 
 <script type="text/javascript">
@@ -1644,7 +1665,7 @@ document.getElementById("citation-code").innerHTML = document.getElementById("ci
 document.getElementById("citation-text").innerHTML = document.getElementById("citation-text").innerHTML.replace("TODAY", d.toDateString());
 </script>
 
-                <h3><i class="far fa-thumbs-up" aria-hidden="true"></i> Congratulations on successfully completing this tutorial!</h3>
+                <i class="far fa-thumbs-up" aria-hidden="true"></i> Congratulations on successfully completing this tutorial!
 
                 
 
@@ -1660,39 +1681,39 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
         </div>
         
+        <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/popper.min.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
+        <script type="text/javascript" src="/training-material/assets/js/details-element-polyfill.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="/training-material/assets/js/bootstrap-toc.min.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/main.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+
+        <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+        <script type="text/javascript">
+        var snippets=document.querySelectorAll('div.highlight');
+        [].forEach.call(snippets,function(snippet){
+            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        });
+
+        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+            target:function(trigger){return trigger.nextElementSibling;
+        }});
+        </script>
+        
+
+        <script type="text/javascript">
+            if(window.location.hostname === "galaxyproject.github.io") {
+                // Redirect
+                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+                window.setTimeout(function(){
+                    window.location.href = redirect;
+                }, 5000)
+
+            }
+        </script>
     </body>
-    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/popper.min.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-    <script type="text/javascript" src="/training-material/assets/js/details-element-polyfill.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/main.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
-
-    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
-    <script type="text/javascript">
-    var snippets=document.querySelectorAll('div.highlight');
-    [].forEach.call(snippets,function(snippet){
-        snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-    });
-
-    var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-        target:function(trigger){return trigger.nextElementSibling;
-    }});
-    </script>
-    
-
-    <script type="text/javascript">
-        if(window.location.hostname === "galaxyproject.github.io") {
-            // Redirect
-            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-            window.setTimeout(function(){
-                window.location.href = redirect;
-            }, 5000)
-
-        }
-    </script>
 </html>

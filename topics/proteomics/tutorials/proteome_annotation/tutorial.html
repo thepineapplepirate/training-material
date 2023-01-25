@@ -17,6 +17,18 @@
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml" />
+        <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/proteome_annotation/tutorial.html" />
+        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+
+        <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material" />
+<meta name="DC.type" content="text" />
+<meta name="DC.title" content="Annotating a protein list identified by LC-MS/MS experiments" />
+<meta name="DC.publisher" content="Galaxy Training Network" />
+<meta name="DC.date" content="2022-10-18 14:23:35 +0000" />
+<meta name="DC.creator" content="Valentin Loux" />
+<meta name="DC.creator" content="Florence Combes" />
+<meta name="DC.creator" content="David Christiany" />
+<meta name="DC.creator" content="Yves Vandenbrouck" />
 
         
         
@@ -24,9 +36,11 @@
         
         
         <meta name="description" content="Training material for proteomics workflows in Galaxy" />
+        <meta property="og:site_name" content="Galaxy Training Network" />
         <meta property="og:title" content="Galaxy Training: Annotating a protein list identified by LC-MS/MS experiments" />
         <meta property="og:description" content="Training material for proteomics workflows in Galaxy" />
         <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+
     </head>
     <body data-spy="scroll" data-target="#toc">
         <header>
@@ -49,6 +63,41 @@
                         </a>
                         
                     </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Languages">
+                            <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Languages
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            
+                              <strong class="dropdown-header">Automatic Translations</strong>
+            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/tutorials/proteome_annotation/tutorial.html&edit-text=&act=url">
+                            Français
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/tutorials/proteome_annotation/tutorial.html&edit-text=&act=url">
+                            日本語
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/tutorials/proteome_annotation/tutorial.html&edit-text=&act=url">
+                            Español
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/tutorials/proteome_annotation/tutorial.html&edit-text=&act=url">
+                            Português
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/tutorials/proteome_annotation/tutorial.html&edit-text=&act=url">
+                            العربية
+                            </a>
+                            
+                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/tutorials/proteome_annotation/tutorial.html&edit-text=&act=url" title="">
+                            And more!
+                            </a>
+                        </div>
+                    </li>
+
                     <li class="nav-item dropdown">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
         <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
@@ -99,46 +148,15 @@
             <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> Page Metrics
         </a>
 
+        <!-- link to feedback -->
         
-            <a class="dropdown-item" href="/training-material/feedback.html" title="Show feedback statistics about this repository">
-                <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
-            </a>
+            
+            
+                <a class="dropdown-item" href="/training-material/feedback.html" title="Show feedback statistics about this repository">
+                    <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
+                </a>
+            
         
-
-        <div class="dropdown-item">
-            <div>
-                <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Translate this page
-            </div>
-
-            <div id="lang-selector">
-                
-                <strong>Automatic Translations</strong>
-
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/tutorials/proteome_annotation/tutorial.html&edit-text=&act=url">
-                Français
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/tutorials/proteome_annotation/tutorial.html&edit-text=&act=url">
-                日本語
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/tutorials/proteome_annotation/tutorial.html&edit-text=&act=url">
-                Español
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/tutorials/proteome_annotation/tutorial.html&edit-text=&act=url">
-                Português
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/tutorials/proteome_annotation/tutorial.html&edit-text=&act=url">
-                العربية
-                </a>
-                
-                <a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fproteome_annotation%2Ftutorial.html&edit-text=&act=url" title="">
-                And more!
-                </a>
-            </div>
-        </div>
 
         <div class="dropdown-item">
             <div>
@@ -176,7 +194,6 @@
                 <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
             </div>
 
-            
             <div id="archive-selector">
             
                 <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/proteomics/tutorials/proteome_annotation/tutorial.html" title="Version 2021-10-01">2021-10-01</a>
@@ -243,27 +260,14 @@
 
 {
   "@context": "http://schema.org",
-  "@type": "Course",
-  "accessMode": [
-    "textual",
-    "visual"
-  ],
-  "accessModeSufficient": [
-    "textual",
-    "visual"
-  ],
-  "accessibilityControl": [
-    "fullKeyboardControl",
-    "fullMouseControl"
-  ],
-  "accessibilityFeature": [
-    "alternativeText",
-    "tableOfContents"
-  ],
-  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "@type": "LearningResource",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+    "@type": "CreativeWork"
+  },
   "audience": {
     "@type": "EducationalAudience",
-    "educationalRole": "students"
+    "educationalRole": "Students"
   },
   "citation": {
     "@type": "CreativeWork",
@@ -276,7 +280,7 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2021-06-24 18:28:09 +0000",
+  "dateModified": "2022-10-18 14:23:35 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Annotating a protein list identified by LC-MS/MS experiments",
   "interactivityType": "mixed",
@@ -301,28 +305,46 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
+  "identifier": "https://github.com/galaxyproject/training-material",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Proteomics",
     "description": "Training material for proteomics workflows in Galaxy",
-    "url": "https://training.galaxyproject.org//training-material/topics/proteomics/"
+    "url": "https://training.galaxyproject.org/training-material/topics/proteomics/"
   },
-  "courseCode": "proteomics / proteome_annotation / hands-on",
   "learningResourceType": "hands-on tutorial",
   "name": "Hands-on for 'Annotating a protein list identified by LC-MS/MS experiments' tutorial",
-  "url": "https://training.galaxyproject.org//training-material/topics/proteomics/tutorials/proteome_annotation/tutorial.html",
+  "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/proteome_annotation/tutorial.html",
   "timeRequired": "PT1H",
-  "keywords": "DDA, human",
-  "description": "The questions this  addresses are:\n - How to filter out technical contaminants?\n - How to check for tissue-specificity?\n - How to perform enrichment analysis?\n - How to map your protein list to pathways (Reactome)?\n - How to compare your proteome with other studies?\n\n\\nThe objectives are:\n - Execute a complete annotation pipeline of a protein list identified by LC-MS/MS experiments\n\n",
+  "keywords": "proteomics, DDA, human",
+  "description": "The questions this  addresses are:\n - How to filter out technical contaminants?\n - How to check for tissue-specificity?\n - How to perform enrichment analysis?\n - How to map your protein list to pathways (Reactome)?\n - How to compare your proteome with other studies?\n\n\nThe objectives are:\n - Execute a complete annotation pipeline of a protein list identified by LC-MS/MS experiments\n\n",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
     "alternateName": "en"
   },
-  "coursePrerequisites": [
+  "competencyRequired": [
     {
-      "@type": "CreativeWork",
-      "url": "https://training.galaxyproject.org//training-material/topics/introduction/",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/introduction/",
       "name": "Introduction to Galaxy Analyses",
       "description": "Introduction to Galaxy Analyses",
       "provider": {
@@ -333,43 +355,176 @@
       }
     }
   ],
-  "hasPart": [
-
-  ],
   "author": [
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Valentin Loux"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/vloux/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/vloux/",
+      "name": "Valentin Loux",
+      "image": "https://avatars.githubusercontent.com/vloux",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Florence Combes"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/combesf/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/combesf/",
+      "name": "Florence Combes",
+      "image": "https://avatars.githubusercontent.com/combesf",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "David Christiany"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/davidchristiany/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/davidchristiany/",
+      "name": "David Christiany",
+      "image": "https://avatars.githubusercontent.com/davidchristiany",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Yves Vandenbrouck"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/yvandenb/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/yvandenb/",
+      "name": "Yves Vandenbrouck",
+      "image": "https://avatars.githubusercontent.com/yvandenb",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     }
   ],
   "contributor": [
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Valentin Loux"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/vloux/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/vloux/",
+      "name": "Valentin Loux",
+      "image": "https://avatars.githubusercontent.com/vloux",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Florence Combes"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/combesf/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/combesf/",
+      "name": "Florence Combes",
+      "image": "https://avatars.githubusercontent.com/combesf",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "David Christiany"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/davidchristiany/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/davidchristiany/",
+      "name": "David Christiany",
+      "image": "https://avatars.githubusercontent.com/davidchristiany",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Yves Vandenbrouck"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/yvandenb/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/yvandenb/",
+      "name": "Yves Vandenbrouck",
+      "image": "https://avatars.githubusercontent.com/yvandenb",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     }
   ],
   "about": [
@@ -377,7 +532,7 @@
       "@type": "CreativeWork",
       "name": "Proteomics",
       "description": "Training material for proteomics workflows in Galaxy",
-      "url": "https://training.galaxyproject.org//training-material/topics/proteomics/"
+      "url": "https://training.galaxyproject.org/training-material/topics/proteomics/"
     },
     {
       "@type": "DefinedTerm",
@@ -394,15 +549,20 @@
     <h1 data-toc-skip>Annotating a protein list identified by LC-MS/MS experiments</h1>
     
 
-    <div class="contributors-line">Authors: 
+    <div markdown="0">
 
- <a href="/training-material/hall-of-fame/vloux/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/vloux" alt="Avatar">Valentin Loux</a> <a href="/training-material/hall-of-fame/combesf/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/combesf" alt="Avatar">Florence Combes</a> <a href="/training-material/hall-of-fame/davidchristiany/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/davidchristiany" alt="Avatar">David Christiany</a> <a href="/training-material/hall-of-fame/yvandenb/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/yvandenb" alt="Avatar">Yves Vandenbrouck</a>
+	<div class="contributors-line">
+		Authors: <a href="/training-material/hall-of-fame/vloux/" class="contributor-badge contributor-vloux"><img src="https://avatars.githubusercontent.com/vloux?s=27" alt="Avatar">Valentin Loux</a><a href="/training-material/hall-of-fame/combesf/" class="contributor-badge contributor-combesf"><img src="https://avatars.githubusercontent.com/combesf?s=27" alt="Avatar">Florence Combes</a><a href="/training-material/hall-of-fame/davidchristiany/" class="contributor-badge contributor-davidchristiany"><img src="https://avatars.githubusercontent.com/davidchristiany?s=27" alt="Avatar">David Christiany</a><a href="/training-material/hall-of-fame/yvandenb/" class="contributor-badge contributor-yvandenb"><img src="https://avatars.githubusercontent.com/yvandenb?s=27" alt="Avatar">Yves Vandenbrouck</a>
+	</div>
 
 </div>
 
+
     <blockquote class="overview">
-        <h3>Overview</h3>
+        <div class="box-title" aria-label="overview box">Overview</div>
+        
         <img alt="Creative Commons License" class="float-right" style="border-width:0; display: inline-block; margin:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" aria-hidden="true" />
+        
         <strong><i class="far fa-question-circle" aria-hidden="true"></i> Questions:</strong>
         <ul>
         
@@ -461,16 +621,12 @@
         <div id="supporting-materials"><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials:</strong></div>
         <ul class="supporting_material">
             
-                <li class="btn btn-default supporting_material"><a href="/training-material/topics/proteomics/slides/introduction.html" title="Topic Overview slides">
-                    <i class="fab fa-slideshare" aria-hidden="true"></i> Topic Overview slides
-                </a></li>
-            
 
             
                 <li class="btn btn-default supporting_material">
 
 
-<a class="topic-icon" href="https://zenodo.org/record/3405119">
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/3405119">
     <i class="far fa-copy" aria-hidden="true"></i> Datasets
 </a>
 
@@ -481,7 +637,7 @@
                 <li class="btn btn-default supporting_material">
 
 
-    <a class="topic-icon" href="/training-material/topics/proteomics/tutorials/proteome_annotation/workflows/" title="Workflows" alt="Annotating a protein list identified by LC-MS/MS experiments workflows">
+    <a class="btn btn-default topic-icon" href="/training-material/topics/proteomics/tutorials/proteome_annotation/workflows/" title="Workflows" alt="Annotating a protein list identified by LC-MS/MS experiments workflows">
         <i class="fas fa-share-alt" aria-hidden="true"></i> Workflows
     </a>
 
@@ -495,13 +651,64 @@
             
             
             
+                 <li class="btn btn-default supporting_material">
+    <a class="topic-icon" href="/training-material/topics/proteomics/tutorials/proteome_annotation/faqs/" title="Frequently Asked Questions" alt="Tutorial FAQs">
+        <i class="far fa-question-circle" aria-hidden="true"></i> FAQs
+    </a>
+  </li>
+
+
+            
+
+            <!-- Check the GTN Video Library for recordings of this tutorial or associated slides -->
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <li class="btn btn-default supporting_material">
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
+        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>&nbsp;Recordings
+    </a>
+    <ul class="dropdown-menu">
+        
+        
+
+        
+        
+        
+
+        <li>
+            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/proteomics/proteome_annotation/tutorial" title="View GTN Video Library for this Tutorial">
+                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Tutorial (February 2021)
+            </a>
+        </li>
+        
+        
+        
+        
+    </ul>
+   </li>
+   
+
+
 
             
                 <li class="btn btn-default supporting_material">
 
 
     <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
-        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span> Available on these Galaxies 
+        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>&nbsp;Available on these Galaxies 
     </a>
     <ul class="dropdown-menu">
     
@@ -619,11 +826,9 @@
         
     
         
-    
-        
-    
-        
-    
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
         
     
         
@@ -656,9 +861,11 @@
         </ul>
         
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jun 24, 2021 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Oct 18, 2022 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+            
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>
+            
             <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">The GTN Framework is licensed under MIT</a>
         </div>
     </blockquote>
@@ -670,41 +877,43 @@
                 <nav id="toc" data-toggle="toc" class="sticky-top" aria-label="Table of Contents"></nav>
             </div>
             <div class="col-sm-10">
-                
+                 
 
-                <h1 class="no_toc" id="introduction">Introduction</h1>
+                <h1 id="introduction">Introduction</h1>
 
-<p><a href="http://www.proteore.org">ProteoRE <span class="notranslate">Galaxy</span> instance</a> provides necessary tools to execute a whole annotation pipeline of a protein list identified by LC-MS/MS experiments. This activity introduces these tools and guides you through a simple pipeline using some example datasets based on the study entitled “Proteomic characterization of human exhaled breath condensate” <a class="citation" href="#Lacombe2018">Lacombe <i>et al.</i> 2018</a>.
+<p><a href="http://www.proteore.org">ProteoRE <span class="notranslate">Galaxy</span> instance</a> provides necessary tools to execute a whole annotation pipeline of a protein list identified by LC-MS/MS experiments. This activity introduces these tools and guides you through a simple pipeline using some example datasets based on the study entitled “Proteomic characterization of human exhaled breath condensate” <span class="citation"><a href="#Lacombe2018">Lacombe <i>et al.</i> 2018</a></span>.
 The goal of this study was to identify proteins secreted in the respiratory tract (lung, bronchi). Samples were obtained non-invasively by condensation of exhaled air that contains submicron droplets of airway lining fluid. Two pooled samples of EBC, each obtained from 10 healthy donors, were processed. Two ‘technical’ control samples were processed in parallel to the pooled samples to correct for exogenous protein contamination.
 A total of 229 unique proteins were identified in EBC among which 153 proteins were detected in both EBC pooled samples. A detailed bioinformatics analysis of these 153 proteins showed that most of the proteins identified corresponded to proteins secreted in the respiratory tract (lung, bronchi).</p>
 
 <blockquote class="agenda">
-  <h3 id="agenda">Agenda</h3>
+  <div id="agenda" class="box-title" aria-label="agenda box: ">Agenda</div>
 
 <ol id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
   <li><a href="#get-input-datasets" id="markdown-toc-get-input-datasets">Get Input Datasets</a></li>
   <li><a href="#filtering-out-technical-contaminants" id="markdown-toc-filtering-out-technical-contaminants">Filtering out technical contaminants</a></li>
   <li><a href="#check-for-the-presence-of-biological-contaminants" id="markdown-toc-check-for-the-presence-of-biological-contaminants">Check for the presence of biological contaminants</a></li>
   <li><a href="#functional-annotation-of-the-ebc-proteome-enrichment-analysis" id="markdown-toc-functional-annotation-of-the-ebc-proteome-enrichment-analysis">Functional annotation of the EBC proteome (enrichment analysis)</a></li>
   <li><a href="#visualize-ebc-proteome-on-biological-pathways-using-reactome" id="markdown-toc-visualize-ebc-proteome-on-biological-pathways-using-reactome">Visualize EBC proteome on biological pathways (using Reactome)</a></li>
   <li><a href="#comparison-with-other-proteomic-datasets-from-previous-studies" id="markdown-toc-comparison-with-other-proteomic-datasets-from-previous-studies">Comparison with other proteomic datasets from previous studies</a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
 </ol>
 
 </blockquote>
 
 <h1 id="get-input-datasets">Get Input Datasets</h1>
 
-<p>For this tutorial, we will use 3 datasets: the list of proteins identified by LC-MS/MS in the exhaled breath condensate (EBC) from <a class="citation" href="#Lacombe2018">Lacombe <i>et al.</i> 2018</a> and two others EBC proteomes previously published (<a class="citation" href="#Muccilli2015">Muccilli <i>et al.</i> 2015</a>  and <a class="citation" href="#Bredberg2011">Bredberg <i>et al.</i> 2011</a>). These datasets are available from Zenodo <a href="https://zenodo.org/record/3405119">here</a>.</p>
+<p>For this tutorial, we will use 3 datasets: the list of proteins identified by LC-MS/MS in the exhaled breath condensate (EBC) from <span class="citation"><a href="#Lacombe2018">Lacombe <i>et al.</i> 2018</a></span> and two others EBC proteomes previously published (<span class="citation"><a href="#Muccilli2015">Muccilli <i>et al.</i> 2015</a></span>  and <span class="citation"><a href="#Bredberg2011">Bredberg <i>et al.</i> 2011</a></span>). These datasets are available from Zenodo <a href="https://zenodo.org/record/3405119">here</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Data upload</h3>
+  <div id="hands-on-data-upload" class="box-title" aria-label="hands-on box: Data upload"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Data upload</div>
 
   <ol>
     <li>
       <p>Create a new history for this tutorial and give it a name</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-creating-a-new-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history</h3>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>  <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>  <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>  <li>Select the option <strong>Create New</strong> from the menu</li></ol></blockquote>
+      <blockquote class="tip">  <div id="tip-creating-a-new-history" class="box-title"><button type="button" aria-controls="tip-creating-a-new-history-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a new history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>  <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>  <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>  <li>Select the option <strong>Create New</strong> from the menu</li></ol></blockquote>
     </li>
     <li>
       <p>Import the files from <a href="https://zenodo.org/record/3405119">Zenodo</a> or from the shared data library (ask your instructors).</p>
@@ -715,10 +924,10 @@ https://zenodo.org/record/3405119/files/Mucilli.txt
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-via-links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links</h3>  <ul>  <li>Copy the link location</li>  <li>    <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>  </li>  <li>Select <strong>Paste/Fetch Data</strong></li>  <li>    <p>Paste the link into the text field</p>  </li>  <li>    <p>Press <strong>Start</strong></p>  </li>  <li>    <p><strong>Close</strong> the window</p>  </li>  <li>By default, <span class="notranslate">Galaxy</span> uses the URL as the name, so rename the files with a more useful name.</li></ul></blockquote>
+      <blockquote class="tip">  <div id="tip-importing-via-links" class="box-title"><button type="button" aria-controls="tip-importing-via-links-contents" aria-expanded="true" aria-label="Toggle tip box: Importing via links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Copy the link location</li>  <li>    <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>  </li>  <li>Select <strong>Paste/Fetch Data</strong></li>  <li>    <p>Paste the link into the text field</p>  </li>  <li>    <p>Press <strong>Start</strong></p>  </li>  <li><strong>Close</strong> the window</li></ul></blockquote>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-data-from-a-data-library"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing data from a data library</h3>  <p>As an alte<span class="notranslate">rna</span>tive to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>  <ul>  <li>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></li>  <li>Navigate to the correct folder as indicated by your instructor</li>  <li>Select the desired files</li>  <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>  <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>  <li>Click on <strong>Import</strong></li></ul></blockquote>
+      <blockquote class="tip">  <div id="tip-importing-data-from-a-data-library" class="box-title"><button type="button" aria-controls="tip-importing-data-from-a-data-library-contents" aria-expanded="true" aria-label="Toggle tip box: Importing data from a data library"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing data from a data library<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>As an alte<span class="notranslate">rna</span>tive to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>  <ul>  <li>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></li>  <li>Navigate to the correct folder as indicated by your instructor</li>  <li>Select the desired files</li>  <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>  <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>  <li>Click on <strong>Import</strong></li></ul></blockquote>
     </li>
   </ol>
 
@@ -726,10 +935,10 @@ https://zenodo.org/record/3405119/files/Mucilli.txt
 
 <h1 id="filtering-out-technical-contaminants">Filtering out technical contaminants</h1>
 
-<p>A group of 10 proteins were identified in both “technical” control samples with an enrichment in EBC samples below a fixed threshold. These proteins were thus considered to be technical contaminants (see list of proteins in Table 4 in <a class="citation" href="#Lacombe2018">Lacombe <i>et al.</i> 2018</a>) and have to be removed from the initial dataset.</p>
+<p>A group of 10 proteins were identified in both “technical” control samples with an enrichment in EBC samples below a fixed threshold. These proteins were thus considered to be technical contaminants (see list of proteins in Table 4 in <span class="citation"><a href="#Lacombe2018">Lacombe <i>et al.</i> 2018</a></span>) and have to be removed from the initial dataset.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-remove-the-contaminants"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Remove the contaminants</h3>
+  <div id="hands-on-remove-the-contaminants" class="box-title" aria-label="hands-on box: Remove the contaminants"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Remove the contaminants</div>
 
   <ol>
     <li><strong>Filter by keywords and/or numerical value</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -750,7 +959,7 @@ https://zenodo.org/record/3405119/files/Mucilli.txt
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-outputs"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Outputs</h3>
+        <div id="comment-outputs" class="box-title" aria-label="comment box: Outputs"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: Outputs</div>
         <ul>
           <li><strong>Filtered_Lacombe_2018.txt - Discarded_lines</strong>: output list with the ten proteins (contaminants) removed from the original dataset (10 proteins)</li>
           <li><strong>Filtered_Lacombe_2018.txt</strong>: output contains the remaining proteins that will be considered for further analysis (151 proteins)</li>
@@ -763,10 +972,10 @@ https://zenodo.org/record/3405119/files/Mucilli.txt
 
 <h1 id="check-for-the-presence-of-biological-contaminants">Check for the presence of biological contaminants</h1>
 
-<p>As EBC samples are obtained from air exhaled through the oral cavity, and even though the RTube collection device contained a saliva trap to separate saliva from the exhaled breath, contamination with salivary proteins had to be assessed. We decided to check the <span class="notranslate">expression</span> pattern for each protein of the “core” EBC proteome using the <a href="https://www.proteinatlas.org/">The Human Protein Atlas</a> (HPA, <a class="citation" href="#Uhln2005">Uhlén <i>et al.</i> 2005</a>). As HPA is indexed by Ensembl gene identifier (ENSG) we first need to convert Uniprot ID to Ensembl gene (ENSG). Secondly, check for proteins which are highly expressed in the salivary glands as reported by HPA, then in a third step, we filter out these proteins.</p>
+<p>As EBC samples are obtained from air exhaled through the oral cavity, and even though the RTube collection device contained a saliva trap to separate saliva from the exhaled breath, contamination with salivary proteins had to be assessed. We decided to check the <span class="notranslate">expression</span> pattern for each protein of the “core” EBC proteome using the <a href="https://www.proteinatlas.org/">The Human Protein Atlas</a> (HPA, <span class="citation"><a href="#Uhln2005">Uhlén <i>et al.</i> 2005</a></span>). As HPA is indexed by Ensembl gene identifier (ENSG) we first need to convert Uniprot ID to Ensembl gene (ENSG). Secondly, check for proteins which are highly expressed in the salivary glands as reported by HPA, then in a third step, we filter out these proteins.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-convert-uniprot-id-to-ensembl-gene-id"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Convert Uniprot ID to Ensembl gene ID</h3>
+  <div id="hands-on-convert-uniprot-id-to-ensembl-gene-id" class="box-title" aria-label="hands-on box: Convert Uniprot ID to Ensembl gene ID"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Convert Uniprot ID to Ensembl gene ID</div>
 
   <ol>
     <li><strong>ID Converter</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -790,7 +999,7 @@ https://zenodo.org/record/3405119/files/Mucilli.txt
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-output"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Output</h3>
+        <div id="comment-output" class="box-title" aria-label="comment box: Output"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: Output</div>
 
         <p>In the output file, a new column which contains Ensembl IDs was added (at the end)</p>
       </blockquote>
@@ -799,7 +1008,7 @@ https://zenodo.org/record/3405119/files/Mucilli.txt
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-check-for-proteins-highly-expressed-in-salivary-glands"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Check for proteins highly expressed in salivary glands</h3>
+  <div id="hands-on-check-for-proteins-highly-expressed-in-salivary-glands" class="box-title" aria-label="hands-on box: Check for proteins highly expressed in salivary glands"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Check for proteins highly expressed in salivary glands</div>
 
   <ol>
     <li><strong>Add <span class="notranslate">expression</span> data</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -819,7 +1028,7 @@ https://zenodo.org/record/3405119/files/Mucilli.txt
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-outputs-1"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Outputs</h3>
+        <div id="comment-outputs-1" class="box-title" aria-label="comment box: Outputs"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: Outputs</div>
 
         <p>In the output file, four columns were added (5, 6, 7 and 8) corresponding to the retrieved information from HPA.</p>
       </blockquote>
@@ -841,7 +1050,7 @@ Q9NZT1  Calmodulin-like protein 5  8  ENSG00000178372   CALML5 Calmodulin-like 5
 by filtering out the lines that contain the word <code class="language-plaintext highlighter-rouge">salivary</code> in the column of <span class="notranslate">RNA</span> transcript specific TPM.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-filter-the-data-to-remove-the-biological-contaminants"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Filter the data to remove the biological contaminants</h3>
+  <div id="hands-on-filter-the-data-to-remove-the-biological-contaminants" class="box-title" aria-label="hands-on box: Filter the data to remove the biological contaminants"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Filter the data to remove the biological contaminants</div>
 
   <ol>
     <li><strong>Filter by keywords and/or numerical value</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -862,7 +1071,7 @@ by filtering out the lines that contain the word <code class="language-plaintext
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-outputs-2"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Outputs</h3>
+        <div id="comment-outputs-2" class="box-title" aria-label="comment box: Outputs"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: Outputs</div>
         <p>Two output files are created:</p>
         <ul>
           <li><strong>Filtered Add <span class="notranslate">expression</span> data on data .. - Discarded lines</strong> (12 proteins)</li>
@@ -873,8 +1082,8 @@ by filtering out the lines that contain the word <code class="language-plaintext
   </ol>
 
   <blockquote class="tip">
-    <h3 id="tip-tip-using-genes-instead-of-keywords"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Using genes instead of keywords</h3>
-    <p>Note also that a list of “gene” may have been entered (selected on the basis of their TPM value) applied to column 5 instead of the keywords “salivary” to column 8, as it has been done in <a class="citation" href="#Lacombe2018">Lacombe <i>et al.</i> 2018</a>.</p>
+    <div id="tip-using-genes-instead-of-keywords" class="box-title"><button type="button" aria-controls="tip-using-genes-instead-of-keywords-contents" aria-expanded="true" aria-label="Toggle tip box: Using genes instead of keywords"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Using genes instead of keywords<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
+    <p>Note also that a list of “gene” may have been entered (selected on the basis of their TPM value) applied to column 5 instead of the keywords “salivary” to column 8, as it has been done in <span class="citation"><a href="#Lacombe2018">Lacombe <i>et al.</i> 2018</a></span>.</p>
   </blockquote>
 
 </blockquote>
@@ -886,7 +1095,7 @@ Now we can perform the GO terms analysis. Input list is the EBC proteome to be a
 removal, which is the output of biological contaminants filter step.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-go-terms-analysis"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: GO terms analysis</h3>
+  <div id="hands-on-go-terms-analysis" class="box-title" aria-label="hands-on box: GO terms analysis"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: GO terms analysis</div>
 
   <ol>
     <li><strong>GO terms classification and enrichment analysis</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -923,7 +1132,7 @@ removal, which is the output of biological contaminants filter step.</p>
   </ol>
 
   <blockquote class="comment">
-    <h3 id="comment-output-1"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Output</h3>
+    <div id="comment-output-1" class="box-title" aria-label="comment box: Output"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: Output</div>
 
     <p>Results created in History panel are the following:</p>
     <ul>
@@ -942,12 +1151,12 @@ removal, which is the output of biological contaminants filter step.</p>
 <h1 id="visualize-ebc-proteome-on-biological-pathways-using-reactome">Visualize EBC proteome on biological pathways (using Reactome)</h1>
 
 <p>The 157 proteins identified in EBC samples are now mapped to biological pathways and visualized
-via the web service of Reactome (<a class="citation" href="#croft2013reactome">Croft <i>et al.</i> 2013</a>), an open access, manually curated and peer-reviewed human pathway
+via the web service of Reactome (<span class="citation"><a href="#croft2013reactome">Croft <i>et al.</i> 2013</a></span>), an open access, manually curated and peer-reviewed human pathway
 database that aims to provide intuitive bioinformatics tools for the visualization,
 interpretation and analysis of pathway knowledge.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-protein-list-mapping-on-reactome-database"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Protein list <span class="notranslate">mapping</span> on Reactome database</h3>
+  <div id="hands-on-protein-list-mapping-on-reactome-database" class="box-title" aria-label="hands-on box: Protein list mapping on Reactome database"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Protein list <span class="notranslate">mapping</span> on Reactome database</div>
 
   <ol>
     <li><strong>Query pathway database [Reactome]</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -963,14 +1172,14 @@ interpretation and analysis of pathway knowledge.</p>
 </blockquote>
 
 <p>Within the <code class="language-plaintext highlighter-rouge">Query pathway database on data ..</code> output of the tool, you can click on a link that opens the connection on Reactome:
-<img src="../../images/ProteoreAnnot-reactome.png" alt="the mapping of your IDs on the database" loading="lazy" />.</p>
+<img src="../../images/ProteoreAnnot-reactome.png" alt="the mapping of your IDs on the database. " loading="lazy" />.</p>
 
 <p>Here you can explore the Reactome map of your IDs to see the context of your biological pathways.</p>
 
 <h1 id="comparison-with-other-proteomic-datasets-from-previous-studies">Comparison with other proteomic datasets from previous studies</h1>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-lists-comparison-with-venn-diagramm-tool"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Lists comparison with Venn diagramm tool</h3>
+  <div id="hands-on-lists-comparison-with-venn-diagramm-tool" class="box-title" aria-label="hands-on box: Lists comparison with Venn diagramm tool"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Lists comparison with Venn diagramm tool</div>
 
   <ol>
     <li><strong>Venn diagram</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1001,15 +1210,15 @@ interpretation and analysis of pathway knowledge.</p>
   </ol>
 
   <blockquote class="comment">
-    <h3 id="comment-output-2"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Output</h3>
+    <div id="comment-output-2" class="box-title" aria-label="comment box: Output"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: Output</div>
 
     <p>The Venn diagram shows the number of proteins specific and in common between the 3 lists.
-<img src="../../images/ProteoreAnnot-Venn.png" alt="Graphical output of the Venn diagram" loading="lazy" />.</p>
+<img src="../../images/ProteoreAnnot-Venn.png" alt="Graphical output of the Venn diagram. " loading="lazy" />.</p>
 
   </blockquote>
 </blockquote>
 
-<h1 class="no_toc" id="conclusion">Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 
 <p>ProteoRE offers a panel of tools to annotate a protein list.
 We showed that it is possible to make ID conversion, perform tissu-<span class="notranslate">expression</span> annotation, but also
@@ -1020,7 +1229,7 @@ This allows the user to go deeper in the analysis of proteomics analyses results
 
                 
                 <blockquote class="key_points">
-                    <h3><i class="fas fa-key" aria-hidden="true"></i> Key points</h3>
+                    <div class="box-title" aria-label="key-points box"><i class="fas fa-key" aria-hidden="true"></i> Key points</div>
                     <ul>
                         
                         <li><p>The Human Protein Atlas is a valuable resource for annotation and exploration of protein data</p>
@@ -1037,68 +1246,33 @@ This allows the user to go deeper in the analysis of proteomics analyses results
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/proteomics/faqs/">FAQ page for the Proteomics topic</a> to see if your question is listed there.
+                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/proteomics/faqs/">FAQ page for the Proteomics topic</a> to see if your question is listed there.
                 If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
                 <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+
+                
 
                 
                 <h1 data-toc-skip>Useful literature</h1>
                 <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/training-material/topics/proteomics#references">here</a>.</p>
                 
 
+
                 
                 <h1 id="bibliography">References</h1>
-                <ol class="bibliography"><li><span id="Uhln2005">Uhlén, M., E. Björling, C. Agaton, C. A.-K. Szigyarto, B. Amini <i>et al.</i>, 2005 <b>A Human Protein Atlas for Normal and Cancer Tissues Based on Antibody Proteomics</b>. Molecular &amp; Cellular Proteomics 4: 1920–1932.</span>
-    
-    
-    <a href="https://doi.org/10.1074/mcp.m500279-mcp200">10.1074/mcp.m500279-mcp200</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li>
-<li><span id="Bredberg2011">Bredberg, A., J. Gobom, A.-C. Almstrand, P. Larsson, K. Blennow <i>et al.</i>, 2011 <b>Exhaled Endogenous Particles Contain Lung Proteins</b>. Clinical Chemistry 58: 431–440.</span>
-    
-    
-    <a href="https://doi.org/10.1373/clinchem.2011.169235">10.1373/clinchem.2011.169235</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li>
-<li><span id="croft2013reactome">Croft, D., A. F. Mundo, R. Haw, M. Milacic, J. Weiser <i>et al.</i>, 2013 <b>The Reactome pathway knowledgebase</b>. Nucleic acids research 42: D472–D477.</span>
-    
-    
-    
-
-</li>
-<li><span id="Muccilli2015">Muccilli, V., R. Saletti, V. Cunsolo, J. Ho, E. Gili <i>et al.</i>, 2015 <b>Protein profile of exhaled breath condensate determined by high resolution mass spectrometry</b>. Journal of pharmaceutical and biomedical analysis 105: 134–149.</span>
-    
-    
-    
-
-</li>
-<li><span id="Lacombe2018">Lacombe, M., C. Marie-Desvergne, F. Combes, A. Kraut, C. Bruley <i>et al.</i>, 2018 <b>Proteomic characterization of human exhaled breath condensate</b>. Journal of Breath Research 12: 021001.</span>
-    
-    
-    <a href="https://doi.org/10.1088/1752-7163/aa9e71">10.1088/1752-7163/aa9e71</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li></ol>
+                <ol class="bibliography"><li id="Uhln2005">Uhlén, M., E. Björling, C. Agaton, C. A.-K. Szigyarto, B. Amini <i>et al.</i>, 2005 <b>A Human Protein Atlas for Normal and Cancer Tissues Based on Antibody Proteomics</b>. Molecular &amp; Cellular Proteomics 4: 1920–1932. <a href="https://doi.org/10.1074/mcp.m500279-mcp200">10.1074/mcp.m500279-mcp200</a></li>
+<li id="Bredberg2011">Bredberg, A., J. Gobom, A.-C. Almstrand, P. Larsson, K. Blennow <i>et al.</i>, 2011 <b>Exhaled Endogenous Particles Contain Lung Proteins</b>. Clinical Chemistry 58: 431–440. <a href="https://doi.org/10.1373/clinchem.2011.169235">10.1373/clinchem.2011.169235</a></li>
+<li id="croft2013reactome">Croft, D., A. F. Mundo, R. Haw, M. Milacic, J. Weiser <i>et al.</i>, 2013 <b>The Reactome pathway knowledgebase</b>. Nucleic acids research 42: D472–D477.</li>
+<li id="Muccilli2015">Muccilli, V., R. Saletti, V. Cunsolo, J. Ho, E. Gili <i>et al.</i>, 2015 <b>Protein profile of exhaled breath condensate determined by high resolution mass spectrometry</b>. Journal of pharmaceutical and biomedical analysis 105: 134–149.</li>
+<li id="Lacombe2018">Lacombe, M., C. Marie-Desvergne, F. Combes, A. Kraut, C. Bruley <i>et al.</i>, 2018 <b>Proteomic characterization of human exhaled breath condensate</b>. Journal of Breath Research 12: 021001. <a href="https://doi.org/10.1088/1752-7163/aa9e71">10.1088/1752-7163/aa9e71</a></li></ol>
                 
 
                 
 
                 <h1>Feedback</h1>
-                <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+                <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452">how it went</a>.
+                <br>Did you use this material as a learner or student? Click the form below to leave feedback.<i class="fas fa-hand-point-down"></i>
+                </p>
 
                 <div id="feedback-button">
                     <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
@@ -1128,12 +1302,11 @@ This allows the user to go deeper in the analysis of proteomics analyses results
                     })(window, document);
                 </script>
 
-
-
                 <h1>Citing this Tutorial</h1>
                 <p>
                     <ol>
-                        <li id="citation-text">Valentin Loux, Florence Combes, David Christiany, Yves Vandenbrouck, 2021 <b>Annotating a protein list identified by LC-MS/MS experiments (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/proteome_annotation/tutorial.html">https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/proteome_annotation/tutorial.html</a> Online; accessed TODAY
+                        <li id="citation-text">
+                            Valentin Loux, Florence Combes, David Christiany, Yves Vandenbrouck,  <b>Annotating a protein list identified by LC-MS/MS experiments (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/proteome_annotation/tutorial.html">https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/proteome_annotation/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
@@ -1141,37 +1314,49 @@ This allows the user to go deeper in the analysis of proteomics analyses results
                     </ol>
                 </p>
 
-
+                <!-- collapsible boxcontaining the BibTeX-formatted citation -->
                 <blockquote class="details">
-                  <h3><i class="fa fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> BibTeX</h3>
-                  <p style="display: none;">
 
-                <div class="highlighter-rouge"><div class="highlight"><pre class="highlight">
+                  <div id="citation-bibtex" class="box-title">
+                    <button type="button" aria-controls="citation-bibtex" aria-expanded="false" aria-label="Toggle details box: BibTeX for citing this tutorial">
+                      <i class="fas fa-info-circle" aria-hidden="true"></i>
+                      <span class="visually-hidden"></span> BibTeX<span role="button" class="fold-unfold fa fa-minus-square" aria-hidden="true"></span>
+                    </button>
+                   </div>
+                   <p style="display: none;">
+
+                   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight">
+
+
 <code id="citation-code">@misc{proteomics-proteome_annotation,
 author = "Valentin Loux and Florence Combes and David Christiany and Yves Vandenbrouck",
 title = "Annotating a protein list identified by LC-MS/MS experiments (Galaxy Training Materials)",
-year = "2021",
-month = "06",
-day = "24"
+year = "",
+month = "",
+day = ""
 url = "\url{https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/proteome_annotation/tutorial.html}",
 note = "[Online; accessed TODAY]"
 }
-@article{Batut_2018,
-    doi = {10.1016/j.cels.2018.05.012},
-    url = {https://doi.org/10.1016%2Fj.cels.2018.05.012},
-    year = 2018,
-    month = {jun},
-    publisher = {Elsevier {BV}},
-    volume = {6},
-    number = {6},
-    pages = {752--758.e1},
-    author = {B{\'{e}}r{\'{e}}nice Batut and Saskia Hiltemann and Andrea Bagnacani and Dannon Baker and Vivek Bhardwaj and Clemens Blank and Anthony Bretaudeau and Loraine Brillet-Gu{\'{e}}guen and Martin {\v{C}}ech and John Chilton and Dave Clements and Olivia Doppelt-Azeroual and Anika Erxleben and Mallory Ann Freeberg and Simon Gladman and Youri Hoogstrate and Hans-Rudolf Hotz and Torsten Houwaart and Pratik Jagtap and Delphine Larivi{\`{e}}re and Gildas Le Corguill{\'{e}} and Thomas Manke and Fabien Mareuil and Fidel Ram{\'{\i}}rez and Devon Ryan and Florian Christoph Sigloch and Nicola Soranzo and Joachim Wolff and Pavankumar Videm and Markus Wolfien and Aisanjiang Wubuli and Dilmurat Yusuf and James Taylor and Rolf Backofen and Anton Nekrutenko and Björn Grüning},
-    title = {Community-Driven Data Analysis Training for Biology},
-    journal = {Cell Systems}
-}</code>
-                </pre></div></div>
-                </p>
+@article{Hiltemann_2023,
+	doi = {10.1371/journal.pcbi.1010752},
+	url = {https://doi.org/10.1371%2Fjournal.pcbi.1010752},
+	year = 2023,
+	month = {jan},
+	publisher = {Public Library of Science ({PLoS})},
+	volume = {19},
+	number = {1},
+	pages = {e1010752},
+	author = {Saskia Hiltemann and Helena Rasche and Simon Gladman and Hans-Rudolf Hotz and Delphine Larivi{\`{e}}re and Daniel Blankenberg and Pratik D. Jagtap and Thomas Wollmann and Anthony Bretaudeau and Nadia Gou{\'{e}} and Timothy J. Griffin and Coline Royaux and Yvan Le Bras and Subina Mehta and Anna Syme and Frederik Coppens and Bert Droesbeke and Nicola Soranzo and Wendi Bacon and Fotis Psomopoulos and Crist{\'{o}}bal Gallardo-Alba and John Davis and Melanie Christine Föll and Matthias Fahrner and Maria A. Doyle and Beatriz Serrano-Solano and Anne Claire Fouilloux and Peter van Heusden and Wolfgang Maier and Dave Clements and Florian Heyl and Björn Grüning and B{\'{e}}r{\'{e}}nice Batut and},
+	editor = {Francis Ouellette},
+	title = {Galaxy Training: A powerful framework for teaching!},
+	journal = {PLoS Comput Biol} Computational Biology}
+}
+</code>
+                   </pre></div></div>
+                   </p>
                 </blockquote>
+
+                
 
 
 <script type="text/javascript">
@@ -1181,7 +1366,7 @@ document.getElementById("citation-code").innerHTML = document.getElementById("ci
 document.getElementById("citation-text").innerHTML = document.getElementById("citation-text").innerHTML.replace("TODAY", d.toDateString());
 </script>
 
-                <h3><i class="far fa-thumbs-up" aria-hidden="true"></i> Congratulations on successfully completing this tutorial!</h3>
+                <i class="far fa-thumbs-up" aria-hidden="true"></i> Congratulations on successfully completing this tutorial!
 
                 
 
@@ -1197,39 +1382,39 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
         </div>
         
+        <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/popper.min.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
+        <script type="text/javascript" src="/training-material/assets/js/details-element-polyfill.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="/training-material/assets/js/bootstrap-toc.min.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/main.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+
+        <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+        <script type="text/javascript">
+        var snippets=document.querySelectorAll('div.highlight');
+        [].forEach.call(snippets,function(snippet){
+            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        });
+
+        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+            target:function(trigger){return trigger.nextElementSibling;
+        }});
+        </script>
+        
+
+        <script type="text/javascript">
+            if(window.location.hostname === "galaxyproject.github.io") {
+                // Redirect
+                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+                window.setTimeout(function(){
+                    window.location.href = redirect;
+                }, 5000)
+
+            }
+        </script>
     </body>
-    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/popper.min.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-    <script type="text/javascript" src="/training-material/assets/js/details-element-polyfill.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/main.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
-
-    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
-    <script type="text/javascript">
-    var snippets=document.querySelectorAll('div.highlight');
-    [].forEach.call(snippets,function(snippet){
-        snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-    });
-
-    var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-        target:function(trigger){return trigger.nextElementSibling;
-    }});
-    </script>
-    
-
-    <script type="text/javascript">
-        if(window.location.hostname === "galaxyproject.github.io") {
-            // Redirect
-            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-            window.setTimeout(function(){
-                window.location.href = redirect;
-            }, 5000)
-
-        }
-    </script>
 </html>

@@ -17,6 +17,16 @@
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml" />
+        <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/non-dip/tutorial.html" />
+        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+
+        <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material" />
+<meta name="DC.type" content="text" />
+<meta name="DC.title" content="Calling variants in non-diploid systems" />
+<meta name="DC.publisher" content="Galaxy Training Network" />
+<meta name="DC.date" content="2022-10-18 14:23:35 +0000" />
+<meta name="DC.creator" content="Anton Nekrutenko" />
+<meta name="DC.creator" content="Alex Ostrovsky" />
 
         
         
@@ -24,9 +34,11 @@
         
         
         <meta name="description" content="Genetic differences (variants) between healthy and diseas..." />
+        <meta property="og:site_name" content="Galaxy Training Network" />
         <meta property="og:title" content="Galaxy Training: Calling variants in non-diploid systems" />
         <meta property="og:description" content="Genetic differences (variants) between healthy and diseas..." />
         <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+
     </head>
     <body data-spy="scroll" data-target="#toc">
         <header>
@@ -49,6 +61,41 @@
                         </a>
                         
                     </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Languages">
+                            <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Languages
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            
+                              <strong class="dropdown-header">Automatic Translations</strong>
+            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/tutorials/non-dip/tutorial.html&edit-text=&act=url">
+                            Français
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/tutorials/non-dip/tutorial.html&edit-text=&act=url">
+                            日本語
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/tutorials/non-dip/tutorial.html&edit-text=&act=url">
+                            Español
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/tutorials/non-dip/tutorial.html&edit-text=&act=url">
+                            Português
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/tutorials/non-dip/tutorial.html&edit-text=&act=url">
+                            العربية
+                            </a>
+                            
+                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/tutorials/non-dip/tutorial.html&edit-text=&act=url" title="">
+                            And more!
+                            </a>
+                        </div>
+                    </li>
+
                     <li class="nav-item dropdown">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
         <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
@@ -99,46 +146,15 @@
             <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> Page Metrics
         </a>
 
+        <!-- link to feedback -->
         
-            <a class="dropdown-item" href="/training-material/feedback.html" title="Show feedback statistics about this repository">
-                <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
-            </a>
+            
+            
+                <a class="dropdown-item" href="/training-material/feedback.html" title="Show feedback statistics about this repository">
+                    <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
+                </a>
+            
         
-
-        <div class="dropdown-item">
-            <div>
-                <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Translate this page
-            </div>
-
-            <div id="lang-selector">
-                
-                <strong>Automatic Translations</strong>
-
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/tutorials/non-dip/tutorial.html&edit-text=&act=url">
-                Français
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/tutorials/non-dip/tutorial.html&edit-text=&act=url">
-                日本語
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/tutorials/non-dip/tutorial.html&edit-text=&act=url">
-                Español
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/tutorials/non-dip/tutorial.html&edit-text=&act=url">
-                Português
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/tutorials/non-dip/tutorial.html&edit-text=&act=url">
-                العربية
-                </a>
-                
-                <a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Ftutorials%2Fnon-dip%2Ftutorial.html&edit-text=&act=url" title="">
-                And more!
-                </a>
-            </div>
-        </div>
 
         <div class="dropdown-item">
             <div>
@@ -176,7 +192,6 @@
                 <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
             </div>
 
-            
             <div id="archive-selector">
             
                 <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/variant-analysis/tutorials/non-dip/tutorial.html" title="Version 2021-10-01">2021-10-01</a>
@@ -243,27 +258,14 @@
 
 {
   "@context": "http://schema.org",
-  "@type": "Course",
-  "accessMode": [
-    "textual",
-    "visual"
-  ],
-  "accessModeSufficient": [
-    "textual",
-    "visual"
-  ],
-  "accessibilityControl": [
-    "fullKeyboardControl",
-    "fullMouseControl"
-  ],
-  "accessibilityFeature": [
-    "alternativeText",
-    "tableOfContents"
-  ],
-  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "@type": "LearningResource",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+    "@type": "CreativeWork"
+  },
   "audience": {
     "@type": "EducationalAudience",
-    "educationalRole": "students"
+    "educationalRole": "Students"
   },
   "citation": {
     "@type": "CreativeWork",
@@ -276,7 +278,7 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2021-06-17 14:09:33 +0000",
+  "dateModified": "2022-10-18 14:23:35 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Calling variants in non-diploid systems",
   "interactivityType": "mixed",
@@ -301,28 +303,46 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
+  "identifier": "https://github.com/galaxyproject/training-material",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Variant Analysis",
     "description": "Genetic differences (variants) between healthy and diseased tissue,\nbetween individuals of a population, or between strains of an organism\ncan provide mechanistic insight into disease processes and the natural\nfunction of affected genes.\n\nThe tutorials in this section show how to detect evidence for\ngenetic variants in next-generation sequencing data, a process termed\nvariant calling.\n\nOf equal importance, they also demonstrate how you can interpret, for\na range of different organisms, the resulting sets of variants by\npredicting their molecular effects on genes and proteins, by\nannotating previously observed variants with published knowledge, and\nby trying to link phenotypes of the sequenced samples to their variant\ngenotypes.\n",
-    "url": "https://training.galaxyproject.org//training-material/topics/variant-analysis/"
+    "url": "https://training.galaxyproject.org/training-material/topics/variant-analysis/"
   },
-  "courseCode": "variant-analysis / non-dip / hands-on",
   "learningResourceType": "hands-on tutorial",
   "name": "Hands-on for 'Calling variants in non-diploid systems' tutorial",
-  "url": "https://training.galaxyproject.org//training-material/topics/variant-analysis/tutorials/non-dip/tutorial.html",
+  "url": "https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/non-dip/tutorial.html",
   "timeRequired": "PT1H30M",
-  "keywords": "prokaryote",
-  "description": "The questions this  addresses are:\n - How does frequency of mitochondrial polymorphisms change from mother to child?\n\n\\nThe objectives are:\n - Using Galaxy's main site we will see how to call variants in bacteria, viruses, and organelles.\n\n",
+  "keywords": "variant-analysis, prokaryote",
+  "description": "The questions this  addresses are:\n - How does frequency of mitochondrial polymorphisms change from mother to child?\n\n\nThe objectives are:\n - Using Galaxy's main site we will see how to call variants in bacteria, viruses, and organelles.\n\n",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
     "alternateName": "en"
   },
-  "coursePrerequisites": [
+  "competencyRequired": [
     {
-      "@type": "CreativeWork",
-      "url": "https://training.galaxyproject.org//training-material/topics/introduction/",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/introduction/",
       "name": "Introduction to Galaxy Analyses",
       "description": "Introduction to Galaxy Analyses",
       "provider": {
@@ -333,8 +353,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/quality-control/slides.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/quality-control/slides.html",
       "name": "Quality Control",
       "description": "Slides for 'Quality Control' tutorial",
       "learningResourceType": "slides",
@@ -347,8 +368,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html",
       "name": "Quality Control",
       "description": "Hands-on for 'Quality Control' tutorial",
       "learningResourceType": "hands-on tutorial",
@@ -361,22 +383,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/quality-control/slides.html",
-      "name": "Quality Control",
-      "description": "Slides for 'Quality Control' tutorial",
-      "learningResourceType": "slides",
-      "interactivityType": "expositive",
-      "provider": {
-        "@type": "Organization",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "url": "https://galaxyproject.org/teach/gtn/"
-      }
-    },
-    {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/mapping/slides.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/mapping/slides.html",
       "name": "Mapping",
       "description": "Slides for 'Mapping' tutorial",
       "learningResourceType": "slides",
@@ -389,8 +398,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/mapping/tutorial.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/mapping/tutorial.html",
       "name": "Mapping",
       "description": "Hands-on for 'Mapping' tutorial",
       "learningResourceType": "hands-on tutorial",
@@ -401,43 +411,94 @@
         "name": "Galaxy Training Network",
         "url": "https://galaxyproject.org/teach/gtn/"
       }
-    },
-    {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/mapping/slides.html",
-      "name": "Mapping",
-      "description": "Slides for 'Mapping' tutorial",
-      "learningResourceType": "slides",
-      "interactivityType": "expositive",
-      "provider": {
-        "@type": "Organization",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "url": "https://galaxyproject.org/teach/gtn/"
-      }
     }
-  ],
-  "hasPart": [
-
   ],
   "author": [
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Anton Nekrutenko"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/nekrut/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/nekrut/",
+      "name": "Anton Nekrutenko",
+      "image": "https://avatars.githubusercontent.com/nekrut",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Alex Ostrovsky"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/astrovsky01/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/astrovsky01/",
+      "name": "Alex Ostrovsky",
+      "image": "https://avatars.githubusercontent.com/astrovsky01",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     }
   ],
   "contributor": [
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Anton Nekrutenko"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/nekrut/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/nekrut/",
+      "name": "Anton Nekrutenko",
+      "image": "https://avatars.githubusercontent.com/nekrut",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Alex Ostrovsky"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/astrovsky01/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/astrovsky01/",
+      "name": "Alex Ostrovsky",
+      "image": "https://avatars.githubusercontent.com/astrovsky01",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     }
   ],
   "about": [
@@ -445,7 +506,7 @@
       "@type": "CreativeWork",
       "name": "Variant Analysis",
       "description": "Genetic differences (variants) between healthy and diseased tissue,\nbetween individuals of a population, or between strains of an organism\ncan provide mechanistic insight into disease processes and the natural\nfunction of affected genes.\n\nThe tutorials in this section show how to detect evidence for\ngenetic variants in next-generation sequencing data, a process termed\nvariant calling.\n\nOf equal importance, they also demonstrate how you can interpret, for\na range of different organisms, the resulting sets of variants by\npredicting their molecular effects on genes and proteins, by\nannotating previously observed variants with published knowledge, and\nby trying to link phenotypes of the sequenced samples to their variant\ngenotypes.\n",
-      "url": "https://training.galaxyproject.org//training-material/topics/variant-analysis/"
+      "url": "https://training.galaxyproject.org/training-material/topics/variant-analysis/"
     },
     {
       "@type": "DefinedTerm",
@@ -462,15 +523,20 @@
     <h1 data-toc-skip>Calling variants in non-diploid systems</h1>
     
 
-    <div class="contributors-line">Authors: 
+    <div markdown="0">
 
- <a href="/training-material/hall-of-fame/nekrut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nekrut" alt="Avatar">Anton Nekrutenko</a> <a href="/training-material/hall-of-fame/astrovsky01/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/astrovsky01" alt="Avatar">Alex Ostrovsky</a>
+	<div class="contributors-line">
+		Authors: <a href="/training-material/hall-of-fame/nekrut/" class="contributor-badge contributor-nekrut"><img src="https://avatars.githubusercontent.com/nekrut?s=27" alt="Avatar">Anton Nekrutenko</a><a href="/training-material/hall-of-fame/astrovsky01/" class="contributor-badge contributor-astrovsky01"><img src="https://avatars.githubusercontent.com/astrovsky01?s=27" alt="Avatar">Alex Ostrovsky</a>
+	</div>
 
 </div>
 
+
     <blockquote class="overview">
-        <h3>Overview</h3>
+        <div class="box-title" aria-label="overview box">Overview</div>
+        
         <img alt="Creative Commons License" class="float-right" style="border-width:0; display: inline-block; margin:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" aria-hidden="true" />
+        
         <strong><i class="far fa-question-circle" aria-hidden="true"></i> Questions:</strong>
         <ul>
         
@@ -512,6 +578,8 @@
                         
                     
                         
+                    
+                        
                             
                             <li> Quality Control:
                             
@@ -549,6 +617,8 @@
                     
                         
                     
+                        
+                    
                 
             </ul>
         
@@ -572,16 +642,12 @@
         <div id="supporting-materials"><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials:</strong></div>
         <ul class="supporting_material">
             
-                <li class="btn btn-default supporting_material"><a href="/training-material/topics/variant-analysis/slides/introduction.html" title="Topic Overview slides">
-                    <i class="fab fa-slideshare" aria-hidden="true"></i> Topic Overview slides
-                </a></li>
-            
 
             
                 <li class="btn btn-default supporting_material">
 
 
-<a class="topic-icon" href="https://doi.org/10.5281/zenodo.1251112">
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://doi.org/10.5281/zenodo.1251112">
     <i class="far fa-copy" aria-hidden="true"></i> Datasets
 </a>
 
@@ -592,7 +658,7 @@
                 <li class="btn btn-default supporting_material">
 
 
-    <a class="topic-icon" href="/training-material/topics/variant-analysis/tutorials/non-dip/workflows/" title="Workflows" alt="Calling variants in non-diploid systems workflows">
+    <a class="btn btn-default topic-icon" href="/training-material/topics/variant-analysis/tutorials/non-dip/workflows/" title="Workflows" alt="Calling variants in non-diploid systems workflows">
         <i class="fas fa-share-alt" aria-hidden="true"></i> Workflows
     </a>
 
@@ -613,13 +679,40 @@
             
             
             
+                 <li class="btn btn-default supporting_material">
+    <a class="topic-icon" href="/training-material/topics/variant-analysis/tutorials/non-dip/faqs/" title="Frequently Asked Questions" alt="Tutorial FAQs">
+        <i class="far fa-question-circle" aria-hidden="true"></i> FAQs
+    </a>
+  </li>
+
+
+            
+
+            <!-- Check the GTN Video Library for recordings of this tutorial or associated slides -->
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
 
             
                 <li class="btn btn-default supporting_material">
 
 
     <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
-        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span> Available on these Galaxies 
+        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>&nbsp;Available on these Galaxies 
     </a>
     <ul class="dropdown-menu">
     
@@ -629,12 +722,6 @@
             </a>
         </li>
     
-    
-        
-    
-        
-    
-        
     
         
     
@@ -697,6 +784,8 @@
         
     
         
+    
+        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
@@ -705,7 +794,9 @@
         
     
         
-    
+        <a class="dropdown-item" href="https://galaxytrakr.org/" title="GalaxyTrakr">
+            GalaxyTrakr
+        </a>
         
     
         
@@ -763,6 +854,10 @@
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
@@ -810,9 +905,11 @@
         </ul>
         
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jun 17, 2021 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Oct 18, 2022 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+            
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>
+            
             <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">The GTN Framework is licensed under MIT</a>
         </div>
     </blockquote>
@@ -824,11 +921,11 @@
                 <nav id="toc" data-toggle="toc" class="sticky-top" aria-label="Table of Contents"></nav>
             </div>
             <div class="col-sm-10">
-                
+                 
 
-                <h1 class="no_toc" id="introduction">Introduction</h1>
+                <h1 id="introduction">Introduction</h1>
 
-<p>The majority of life on Earth is non-diploid and represented by prokaryotes, viruses, and their derivatives, such as our own mitochondria or plant’s chloroplasts. In non-diploid systems, allele frequencies can range anywhere between 0 and 100% and there could be multiple (not just two) alleles per locus. The main challenge associated with non-diploid variant calling is the difficulty in distinguishing between the sequencing noise (abundant in all NGS platforms) and true low frequency variants. Some of the early attempts to do this well have been accomplished on human mitochondrial <span class="notranslate">DNA</span> although the same approaches will work equally good on viral and bacterial genomes (<a class="citation" href="#Rebolledo-Jaramillo2014">Rebolledo-Jaramillo <i>et al.</i> 2014</a>, <a class="citation" href="#Li2015">Li <i>et al.</i> 2015</a>).</p>
+<p>The majority of life on Earth is non-diploid and represented by prokaryotes, viruses, and their derivatives, such as our own mitochondria or plant’s chloroplasts. In non-diploid systems, allele frequencies can range anywhere between 0 and 100% and there could be multiple (not just two) alleles per locus. The main challenge associated with non-diploid variant calling is the difficulty in distinguishing between the sequencing noise (abundant in all NGS platforms) and true low frequency variants. Some of the early attempts to do this well have been accomplished on human mitochondrial <span class="notranslate">DNA</span> although the same approaches will work equally good on viral and bacterial genomes (<span class="citation"><a href="#Rebolledo-Jaramillo2014">Rebolledo-Jaramillo <i>et al.</i> 2014</a></span>, <span class="citation"><a href="#Li2015">Li <i>et al.</i> 2015</a></span>).</p>
 
 <p>As an example of non-diploid systems, we will be using human mitochondrial genome. However, this approach will also work for most bacterial and viral genomes.</p>
 
@@ -839,20 +936,21 @@
   <li>By assembling a genome first and then <span class="notranslate">mapping</span> against that assembly</li>
 </ol>
 
-<figure id="figure-1"><img src="../../images/ref_vs_assembly.jpg" alt="2 approaches" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 1:</span> This figure from <a class="citation" href="#Olson2015">Olson <i>et al.</i> 2015</a> contrasts the two approaches.</figcaption></figure>
+<figure id="figure-1"><img src="../../images/ref_vs_assembly.jpg" alt="2 approaches. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 1:</span> This figure from <span class="citation"><a href="#Olson2015">Olson <i>et al.</i> 2015</a></span> contrasts the two approaches.</figcaption></figure>
 
 <p>In this tutorial we will take the <em>first</em> path, in which we map <span class="notranslate">reads</span> against an existing assembly. Later in the course, after we learn about assembly approaches, we will try the second approach as well.</p>
 
-<p>The goal of this example is to detect heteroplasmies - variants within mitochondrial <span class="notranslate">DNA</span>. Mitochondria are transmitted mate<span class="notranslate">rna</span>lly, and heteroplasmy frequencies may change dramatically and unpredictably during the transmission due to a germ-line bottleneck (<a class="citation" href="#Cree2008">Cree <i>et al.</i> 2008</a>). As we mentioned above, the procedure for finding variants in bacterial or viral genomes will be essentially the same.</p>
+<p>The goal of this example is to detect heteroplasmies - variants within mitochondrial <span class="notranslate">DNA</span>. Mitochondria are transmitted mate<span class="notranslate">rna</span>lly, and heteroplasmy frequencies may change dramatically and unpredictably during the transmission due to a germ-line bottleneck (<span class="citation"><a href="#Cree2008">Cree <i>et al.</i> 2008</a></span>). As we mentioned above, the procedure for finding variants in bacterial or viral genomes will be essentially the same.</p>
 
 <p>Datasets representing a child and a mother are available in <a href="https://doi.org/10.5281/zenodo.1251112">Zenodo</a>. These datasets were obtained by paired-end Illumina sequencing of human genomic <span class="notranslate">DNA</span> enriched for mitochondria. The enrichment was performed using long-range PCR with two primer pairs that amplify the entire mitochondrial genome. Samples will therefore still contain a lot of <span class="notranslate">DNA</span> from the nuclear genome, which, in this case, is a contaminant.</p>
 
 <blockquote class="agenda">
-  <h3 id="agenda">Agenda</h3>
+  <div id="agenda" class="box-title" aria-label="agenda box: ">Agenda</div>
 
   <p>In this tutorial, we will cover:</p>
 
 <ol id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
   <li><a href="#importing-data" id="markdown-toc-importing-data">Importing data</a>    <ol>
       <li><a href="#checking-data-quality" id="markdown-toc-checking-data-quality">Checking data quality</a></li>
     </ol>
@@ -882,19 +980,19 @@
 
 <h1 id="importing-data">Importing data</h1>
 
-<p>For this tutorial we have prepared a subset of data previously by our group (<a class="citation" href="#Rebolledo-Jaramillo2014">Rebolledo-Jaramillo <i>et al.</i> 2014</a>). Let’s import these data into <span class="notranslate">Galaxy</span>. They are available from <a href="https://usegalaxy.org/library/folders/Fe4842bd0c37b03a7">this <span class="notranslate">Galaxy</span> Library</a> or via <a href="https://zenodo.org/record/582600">Zenodo</a></p>
+<p>For this tutorial we have prepared a subset of data previously by our group (<span class="citation"><a href="#Rebolledo-Jaramillo2014">Rebolledo-Jaramillo <i>et al.</i> 2014</a></span>). Let’s import these data into <span class="notranslate">Galaxy</span>. They are available from <a href="https://usegalaxy.org/library/folders/Fe4842bd0c37b03a7">this <span class="notranslate">Galaxy</span> Library</a> or via <a href="https://zenodo.org/record/582600">Zenodo</a></p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-get-the-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Get the data</h3>
+  <div id="hands-on-get-the-data" class="box-title" aria-label="hands-on box: Get the data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Get the data</div>
 
   <ol>
     <li>
       <p>Create a new history for this tutorial and give it a meaningful name</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-creating-a-new-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history</h3>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>  <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>  <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>  <li>Select the option <strong>Create New</strong> from the menu</li></ol></blockquote>
+      <blockquote class="tip">  <div id="tip-creating-a-new-history" class="box-title"><button type="button" aria-controls="tip-creating-a-new-history-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a new history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>  <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>  <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>  <li>Select the option <strong>Create New</strong> from the menu</li></ol></blockquote>
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-renaming-a-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a history</h3>  <ol>  <li>Click on <strong>Unnamed history</strong> (or the current name of the history) (<strong>Click to rename history</strong>) at the top of your history panel</li>  <li>Type the new name</li>  <li>Press <kbd>Enter</kbd></li></ol></blockquote>
+      <blockquote class="tip">  <div id="tip-renaming-a-history" class="box-title"><button type="button" aria-controls="tip-renaming-a-history-contents" aria-expanded="true" aria-label="Toggle tip box: Renaming a history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a history<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ol>  <li>Click on <strong>Unnamed history</strong> (or the current name of the history) (<strong>Click to rename history</strong>) at the top of your history panel</li>  <li>Type the new name</li>  <li>Press <kbd>Enter</kbd></li></ol></blockquote>
     </li>
     <li>
       <p>Import files from <a href="https://zenodo.org/record/1251112">Zenodo</a>:</p>
@@ -910,7 +1008,7 @@ https://zenodo.org/record/1251112/files/raw_mother-ds-2.fq
 <code class="language-plaintext highlighter-rouge">fastqsanger</code>, and fix any missing or wrong datatype assignment</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-changing-the-datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype</h3>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>  <li>Select <code class="language-plaintext highlighter-rouge">fastqsanger</code></li>  <li>Click the <strong>Change datatype</strong> button</li></ul></blockquote>
+      <blockquote class="tip">  <div id="tip-changing-the-datatype" class="box-title"><button type="button" aria-controls="tip-changing-the-datatype-contents" aria-expanded="true" aria-label="Toggle tip box: Changing the datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>  <li>Select <code class="language-plaintext highlighter-rouge">fastqsanger</code>    <ul>      <li>tip: you can start typing the datatype into the field to filter the dropdown menu</li>    </ul>  </li>  <li>Click the <strong>Save</strong> button</li></ul></blockquote>
     </li>
   </ol>
 
@@ -921,7 +1019,7 @@ https://zenodo.org/record/1251112/files/raw_mother-ds-2.fq
 <p>Before proceeding with the analysis, we need to find out how good the data actually is. For this will use <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-assess-quality-of-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Assess quality of data</h3>
+  <div id="hands-on-assess-quality-of-data" class="box-title" aria-label="hands-on box: Assess quality of data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Assess quality of data</div>
 
   <ol>
     <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72+galaxy1" title="Tested with toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72+galaxy1"><strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72+<span class="notranslate">galaxy</span>1</span></span>  on each of the four FASTQ datasets with the following parameters:
@@ -930,7 +1028,7 @@ https://zenodo.org/record/1251112/files/raw_mother-ds-2.fq
       </ul>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-select-multiple-datasets"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Select multiple datasets</h3>  <ol>  <li>Click on <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">param-files</span> <strong>Multiple datasets</strong></li>  <li>Select several files by keeping the <kbd>Ctrl</kbd> (or<kbd>COMMAND</kbd>) key pressed and clicking on the files of interest</li></ol></blockquote>
+      <blockquote class="tip">  <div id="tip-select-multiple-datasets" class="box-title"><button type="button" aria-controls="tip-select-multiple-datasets-contents" aria-expanded="true" aria-label="Toggle tip box: Select multiple datasets"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Select multiple datasets<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ol>  <li>Click on <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">param-files</span> <strong>Multiple datasets</strong></li>  <li>Select several files by keeping the <kbd>Ctrl</kbd> (or<kbd>COMMAND</kbd>) key pressed and clicking on the files of interest</li></ol></blockquote>
     </li>
   </ol>
 
@@ -938,14 +1036,14 @@ https://zenodo.org/record/1251112/files/raw_mother-ds-2.fq
 
 <p>Once the FastQC jobs runs, you will be able to look at the HTML reports generated by this tool. The data have generally high quality in this example:</p>
 
-<figure id="figure-2"><img src="../../images/mt_qc_plot.png" alt="FastQC output plot" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 2:</span> FastQC plot for one of the mitochondrial datasets shows that qualities are acceptable for 250 bp <span class="notranslate">reads</span> (mostly in the green, which is at or above [Phred score](https://en.wikipedia.org/wiki/Phred_quality_score) of 30).</figcaption></figure>
+<figure id="figure-2"><img src="../../images/mt_qc_plot.png" alt="FastQC output plot. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 2:</span> FastQC plot for one of the mitochondrial datasets shows that qualities are acceptable for 250 bp <span class="notranslate">reads</span> (mostly in the green, which is at or above [Phred score](https://en.wikipedia.org/wiki/Phred_quality_score) of 30).</figcaption></figure>
 
 <h1 id="mapping-reads-to-a-reference"><span class="notranslate">Mapping</span> <span class="notranslate">reads</span> to a reference</h1>
 
-<p>Our <span class="notranslate">reads</span> are long (250 bp) so we will use BWA-MEM (<a class="citation" href="#Li2013">Li 2013</a>) to align them against the reference genome as it has good <span class="notranslate">mapping</span> performance for longer <span class="notranslate">reads</span> (100bp and up).</p>
+<p>Our <span class="notranslate">reads</span> are long (250 bp) so we will use BWA-MEM (<span class="citation"><a href="#Li2013">Li 2013</a></span>) to align them against the reference genome as it has good <span class="notranslate">mapping</span> performance for longer <span class="notranslate">reads</span> (100bp and up).</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-map-reads"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Map <span class="notranslate">reads</span></h3>
+  <div id="hands-on-map-reads" class="box-title" aria-label="hands-on box: Map reads"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Map <span class="notranslate">reads</span></div>
 
   <ol>
     <li>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.1" title="Tested with toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.1"><strong>Map with BWA-MEM</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.1</span></span>  to map the <span class="notranslate">reads</span> to the reference genome with the following parameters:
@@ -976,7 +1074,7 @@ https://zenodo.org/record/1251112/files/raw_mother-ds-2.fq
 </blockquote>
 
 <blockquote class="comment">
-  <h3 id="comment-more-about-selecting-datasets"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> More about selecting datasets</h3>
+  <div id="comment-more-about-selecting-datasets" class="box-title" aria-label="comment box: More about selecting datasets"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: More about selecting datasets</div>
 
   <p>By selecting datasets 1 and 3 as <strong>Select the first set of <span class="notranslate">reads</span></strong> and datasets 2 and 4 as <strong>Select the second set of <span class="notranslate">reads</span></strong>, <span class="notranslate">Galaxy</span> will automatically launch two BWA-MEM jobs using datasets 1,2 and 3,4 generating two resulting BAM files.
 By setting <strong>Set read groups information</strong> to <code class="language-plaintext highlighter-rouge">Set read groups (SAM/BAM specifications)</code> and clicking <strong>Auto-assign</strong> we will ensure that the <span class="notranslate">reads</span> in the resulting BAM dataset are properly set.</p>
@@ -989,7 +1087,7 @@ By setting <strong>Set read groups information</strong> to <code class="language
 <p>Because we have set read groups, we can now merge the two BAM dataset into one. This is because read groups label each read as belonging to either <em>mother</em> or <em>child</em>.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-merge-multiple-datasets-into-one"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Merge multiple datasets into one</h3>
+  <div id="hands-on-merge-multiple-datasets-into-one" class="box-title" aria-label="hands-on box: Merge multiple datasets into one"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Merge multiple datasets into one</div>
 
   <ol>
     <li>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MergeSamFiles/2.18.2.1" title="Tested with toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MergeSamFiles/2.18.2.1"><strong>MergeSAMFiles</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/devteam/picard/picard_MergeSamFiles/2.18.2.1</span></span>  to merge the BAM datasets with the following parameters:
@@ -1004,12 +1102,12 @@ By setting <strong>Set read groups information</strong> to <code class="language
 
 <h2 id="removing-duplicates">Removing duplicates</h2>
 
-<p>Preparation of sequencing libraries (at least at the time of writing) for technologies such as Illumina (used in this example) involves PCR amplification. It is required to generate sufficient number of sequencing templates so that a reliable detection can be performed by base callers. PCR has its own biases which are especially profound in cases of multi-template PCR used for construction of sequencing libraries (<a class="citation" href="#Kanagawa2003">Kanagawa 2003</a>).</p>
+<p>Preparation of sequencing libraries (at least at the time of writing) for technologies such as Illumina (used in this example) involves PCR amplification. It is required to generate sufficient number of sequencing templates so that a reliable detection can be performed by base callers. PCR has its own biases which are especially profound in cases of multi-template PCR used for construction of sequencing libraries (<span class="citation"><a href="#Kanagawa2003">Kanagawa 2003</a></span>).</p>
 
 <p>Duplicates can be identified based on their outer alignment coordinates or using sequence-based clustering. One of the common ways for identification of duplicate <span class="notranslate">reads</span> is the <strong>MarkDuplicates</strong> utility from <a href="https://broadinstitute.github.io/picard/command-line-overview.html">Picard</a> package which is designed to identify both PCR and optical duplicates.</p>
 
 <blockquote class="details">
-  <h3 id="details-more-about-markduplicates"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> More about MarkDuplicates</h3>
+  <div id="details-more-about-markduplicates" class="box-title"><button type="button" aria-controls="details-more-about-markduplicates-contents" aria-expanded="true" aria-label="Toggle details box: More about MarkDuplicates"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Details: More about MarkDuplicates<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Duplicates are identified as read pairs having identical 5’ positions (coordinate and strand) for both <span class="notranslate">reads</span> in a mate pair (and optionally, matching unique molecular identifier <span class="notranslate">reads</span>; see <code class="language-plaintext highlighter-rouge">BARCODE_TAG</code> option). Optical, or more broadly sequencing, duplicates are duplicates that appear clustered together spatially during sequencing and can arise from optical/imagine-processing artifacts or from biochemical processes during clonal amplification and sequencing; they are identified using the <code class="language-plaintext highlighter-rouge">READ_NAME_REGEX</code> and the <code class="language-plaintext highlighter-rouge">OPTICAL_DUPLICATE_PIXEL_DISTANCE</code> options. The tool’s main output is a new SAM or BAM file in which duplicates have been identified in the SAM flags field, or optionally removed (see <code class="language-plaintext highlighter-rouge">REMOVE_DUPLICATE</code> and <code class="language-plaintext highlighter-rouge">REMOVE_SEQUENCING_DUPLICATES</code>), and optionally marked with a duplicate type in the ‘DT’ optional attribute. In addition, it also outputs a metrics file containing the numbers of <code class="language-plaintext highlighter-rouge">READ_PAIRS_EXAMINED</code>, <code class="language-plaintext highlighter-rouge">SECONDARY_OR_SUPPLEMENTARY_RDS</code>, <code class="language-plaintext highlighter-rouge">UNMAPPED_<span class="notranslate">READS</span></code>, <code class="language-plaintext highlighter-rouge">UNPAIRED_<span class="notranslate">READS</span></code>, <code class="language-plaintext highlighter-rouge">UNPAIRED_READ DUPLICATES</code>, <code class="language-plaintext highlighter-rouge">READ_PAIR_DUPLICATES</code>, and <code class="language-plaintext highlighter-rouge">READ_PAIR_OPTICAL_DUPLICATES</code>.</p>
 
@@ -1017,7 +1115,7 @@ By setting <strong>Set read groups information</strong> to <code class="language
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-de-duplicate-mapped-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: De-duplicate mapped data</h3>
+  <div id="hands-on-de-duplicate-mapped-data" class="box-title" aria-label="hands-on box: De-duplicate mapped data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: De-duplicate mapped data</div>
 
   <ol>
     <li>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.2" title="Tested with toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.2"><strong>MarkDuplicates</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.2</span></span>  to de-duplicate the merged BAM datasets with the following parameters:
@@ -1054,14 +1152,14 @@ raw_mother-ds-	95	54973	1951	95	89	4712	2	0.08645	302188
 </ul>
 
 <blockquote class="question">
-  <h3 id="question-question"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+  <div id="question" class="box-title" aria-label="question box: "><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Question</div>
 
   <ol>
     <li>What percent of read duplication are found in each read group (child and mother)?</li>
   </ol>
 
   <blockquote class="solution">
-    <h3 id="solution-solution"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+    <div id="solution" class="box-title"><button type="button" aria-controls="solution-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
       <li>The two datasets have ~6% and ~9% duplicates for child and mother, respectively.</li>
@@ -1072,7 +1170,7 @@ raw_mother-ds-	95	54973	1951	95	89	4712	2	0.08645	302188
 
 <h2 id="left-aligning-indels">Left-aligning indels</h2>
 
-<p>Left aligning of indels (a variant of re-aligning) is extremely important for obtaining accurate variant calls. For illustrating how left-aligning works, we expanded on an example provided by <a class="citation" href="#Tan2015">Tan <i>et al.</i> 2015</a>. Suppose you have a reference sequence and a sequencing read:</p>
+<p>Left aligning of indels (a variant of re-aligning) is extremely important for obtaining accurate variant calls. For illustrating how left-aligning works, we expanded on an example provided by <span class="citation"><a href="#Tan2015">Tan <i>et al.</i> 2015</a></span>. Suppose you have a reference sequence and a sequencing read:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Reference GGGCACACACAGGG
 Read      GGGCACACAGGG
@@ -1092,10 +1190,10 @@ GGGCACACACAGGG            Ref: GCA
 GGG--CACACAGGG            Alt: G
 </code></pre></div></div>
 
-<p>The last of these is <em>left-aligned</em>. In this case gaps (represented by dashes) are moved as far left as possible. For a formal definition of left-alignment and variant normalization, see <a class="citation" href="#Tan2015">Tan <i>et al.</i> 2015</a>.</p>
+<p>The last of these is <em>left-aligned</em>. In this case gaps (represented by dashes) are moved as far left as possible. For a formal definition of left-alignment and variant normalization, see <span class="citation"><a href="#Tan2015">Tan <i>et al.</i> 2015</a></span>.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-left-align-indels"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Left-align indels</h3>
+  <div id="hands-on-left-align-indels" class="box-title" aria-label="hands-on box: Left-align indels"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Left-align indels</div>
 
   <ol>
     <li>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/freebayes/bamleftalign/1.3.1" title="Tested with toolshed.g2.bx.psu.edu/repos/devteam/freebayes/bamleftalign/1.3.1"><strong>BamLeftAlign</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/devteam/freebayes/bamleftalign/1.3.1</span></span>  to perform left alignment with the following parameters:
@@ -1115,7 +1213,7 @@ GGG--CACACAGGG            Alt: G
 <p>Remember that we are trying to call variants in mitochondrial genome. Let focus only on the <span class="notranslate">reads</span> derived from mitochondria genome by filtering everything else out.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-filter-bam-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Filter BAM data</h3>
+  <div id="hands-on-filter-bam-data" class="box-title" aria-label="hands-on box: Filter BAM data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Filter BAM data</div>
 
   <ol>
     <li>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/bamtools_filter/bamFilter/2.4.1" title="Tested with toolshed.g2.bx.psu.edu/repos/devteam/bamtools_filter/bamFilter/2.4.1"><strong>Filter BAM datasets on a variety of attributes</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/devteam/bamtools_filter/bamFilter/2.4.1</span></span>  with the following parameters:
@@ -1162,7 +1260,7 @@ GGG--CACACAGGG            Alt: G
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-filtering-reads"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Filtering <span class="notranslate">reads</span></h3>
+        <div id="comment-filtering-reads" class="box-title" aria-label="comment box: Filtering reads"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: Filtering <span class="notranslate">reads</span></div>
         <p>Further explanation of the filters used:</p>
         <ul>
           <li><em>mapQuality</em> is set to ≥20. <span class="notranslate">Mapping</span> quality reflects the probability that the read is placed incorrectly using <a href="https://en.wikipedia.org/wiki/Phred_quality_score">phred scale</a>. Thus 20 is 1/100 or 1% chance that the read is incorrectly mapped. By setting this parameter to ≥20, we will keep all <span class="notranslate">reads</span> that have 1% or less probability of being mapped incorrectly.</li>
@@ -1180,7 +1278,7 @@ GGG--CACACAGGG            Alt: G
 <p>FreeBayes is widely used for calling variants in diploid systems. However, it can also be used for calling variants in pooled samples where the number of samples is not known. This is the exact scenario we have here: in our sample we have multiple mitochondrial (or bacterial or viral) genomes, but we do not know exactly how many. Thus we will use the <code class="language-plaintext highlighter-rouge">--pooled-continuous</code> option of FreeBayes to generate frequency-based variant calls as well as some other options highlighted below.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-calling-variants"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Calling variants</h3>
+  <div id="hands-on-calling-variants" class="box-title" aria-label="hands-on box: Calling variants"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Calling variants</div>
 
   <ol>
     <li>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/freebayes/freebayes/1.3.1" title="Tested with toolshed.g2.bx.psu.edu/repos/devteam/freebayes/freebayes/1.3.1"><strong>FreeBayes</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/devteam/freebayes/freebayes/1.3.1</span></span>  to call variants with the following parameters:
@@ -1211,7 +1309,7 @@ GGG--CACACAGGG            Alt: G
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-population-model-options"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Population model options</h3>
+        <div id="comment-population-model-options" class="box-title" aria-label="comment box: Population model options"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: Population model options</div>
         <p>The “Population model options” are one of the most important parameter choices to make when calling variants in non-diploid systems.</p>
       </blockquote>
 
@@ -1227,7 +1325,7 @@ GGG--CACACAGGG            Alt: G
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-allelic-scope-options"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Allelic scope options</h3>
+        <div id="comment-allelic-scope-options" class="box-title" aria-label="comment box: Allelic scope options"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: Allelic scope options</div>
         <p>Mitochondria has a number of low complexity regions (mononucleotide repeats). Setting the allelic scope parameters as described above will decrease noise from these regions.</p>
       </blockquote>
 
@@ -1241,7 +1339,7 @@ GGG--CACACAGGG            Alt: G
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-filter-options"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Filter options</h3>
+        <div id="comment-filter-options" class="box-title" aria-label="comment box: Filter options"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: Filter options</div>
         <p>Setting <em>Exclude alignments from analysis if they have a <span class="notranslate">mapping</span> quality less than</em> to <code class="language-plaintext highlighter-rouge">20</code> (phred score of 20) will make FreeBayes only consider reliably aligned <span class="notranslate">reads</span>.
 Setting <em>Exclude alleles from analysis if their supporting base quality less than</em> to <code class="language-plaintext highlighter-rouge">30</code> (phred score of 30) will make FreeBayes only consider high quality bases.</p>
       </blockquote>
@@ -1283,7 +1381,7 @@ chrM	15326	.	A	G	73749.6	.	AB=0;ABP=0;AC=2;AF=1;AN=2;AO=2200;CIGAR=1X;DP=2201;DP
 
 <p>After filtering the data with stringent input parameters (restricting base quality to a minimum of 30 and <span class="notranslate">mapping</span> quality to a minimum of 20) a considerable amount of variants due to read-alignment bias exists. <a href="https://github.com/ekg">Erik Garrison</a> has a beautiful illustration of various biases potentially affecting called variants and making a locus sequence-able.</p>
 
-<figure id="figure-3"><img src="../../images/mt_biases.png" alt="Various biases potentially affecting called variants" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 3:</span> Here you can see that in an ideal case (indicated with a green star) a variant is evenly represent by different areas of sequencing <span class="notranslate">reads</span> (cycle and placement biases) and is balanced across the two strands (strand bias). Allele imbalance is not applicable in our case as it reflects significant deviation from the diploid (50/50) expectation.</figcaption></figure>
+<figure id="figure-3"><img src="../../images/mt_biases.png" alt="Various biases potentially affecting called variants. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 3:</span> Here you can see that in an ideal case (indicated with a green star) a variant is evenly represent by different areas of sequencing <span class="notranslate">reads</span> (cycle and placement biases) and is balanced across the two strands (strand bias). Allele imbalance is not applicable in our case as it reflects significant deviation from the diploid (50/50) expectation.</figcaption></figure>
 
 <p>A robust tool set for processing VCF data is provided by <a href="https://github.com/vcflib/vcflib">vcflib</a> developed by Erik Garrison, the author of FreeBayes. One way to filter VCF is using <code class="language-plaintext highlighter-rouge">INFO</code> fields of the VCF dataset. If you look at the VCF dataset shown above you will see all comment lines beginning with <code class="language-plaintext highlighter-rouge">##INFO</code>.  These are <code class="language-plaintext highlighter-rouge">INFO</code> fields. Each VCF record contains a list of <code class="language-plaintext highlighter-rouge">INFO</code> tags describing a wide range of properties for each VCF record. You will see that FreeBayes and NVC differ significantly in the number and types of <code class="language-plaintext highlighter-rouge">INFO</code> fields each of these caller generates. This why the two require different filtering strategies.</p>
 
@@ -1298,7 +1396,7 @@ chrM	15326	.	A	G	73749.6	.	AB=0;ABP=0;AC=2;AF=1;AN=2;AO=2200;CIGAR=1X;DP=2201;DP
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-filtering-vcf-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Filtering VCF data</h3>
+  <div id="hands-on-filtering-vcf-data" class="box-title" aria-label="hands-on box: Filtering VCF data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Filtering VCF data</div>
 
   <ol>
     <li>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/vcffilter/vcffilter2/1.0.0_rc1+galaxy3" title="Tested with toolshed.g2.bx.psu.edu/repos/devteam/vcffilter/vcffilter2/1.0.0_rc1+galaxy3"><strong>VCFfilter</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/devteam/vcffilter/vcffilter2/1.0.0_rc1+<span class="notranslate">galaxy</span>3</span></span>  to filter the variants with the following parameters:
@@ -1345,7 +1443,7 @@ chrM	15326	.	A	G	73749.6	.	AB=0;ABP=0;AC=2;AF=1;AN=2;AO=2200;CIGAR=1X;DP=2201;DP
       </ul>
 
       <blockquote class="comment">
-        <h3 id="comment-vcf-filter-options"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> VCF filter options</h3>
+        <div id="comment-vcf-filter-options" class="box-title" aria-label="comment box: VCF filter options"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: VCF filter options</div>
         <p>Filtering FreeBayes VCF for strand bias (<code class="language-plaintext highlighter-rouge">SPR</code> and <code class="language-plaintext highlighter-rouge">SAP</code>), placement bias (<code class="language-plaintext highlighter-rouge">EPP</code>), variant quality (<code class="language-plaintext highlighter-rouge">QUAL</code>), and depth of coverage (<code class="language-plaintext highlighter-rouge">DP</code>).</p>
       </blockquote>
     </li>
@@ -1353,14 +1451,14 @@ chrM	15326	.	A	G	73749.6	.	AB=0;ABP=0;AC=2;AF=1;AN=2;AO=2200;CIGAR=1X;DP=2201;DP
 </blockquote>
 
 <blockquote class="question">
-  <h3 id="question-question-1"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+  <div id="question-1" class="box-title" aria-label="question box: "><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Question</div>
 
   <ol>
     <li>How many variants remain after filtering the VCF?</li>
   </ol>
 
   <blockquote class="solution">
-    <h3 id="solution-solution-1"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+    <div id="solution-1" class="box-title"><button type="button" aria-controls="solution-1-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
     <ol>
       <li>Two variants remain after filtering the VCF (your results might be different depending on the input and references you use):
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	raw_child-ds-	raw_mother-ds-
@@ -1381,11 +1479,11 @@ chrM	5539	.	A	G	3281.62	.	AB=0;ABP=0;AC=1;AF=0.5;AN=2;AO=379;CIGAR=1X;DP=787;DPB
 <p>VCF.IOBIO can be invoked by expanding a VCF dataset in <span class="notranslate">Galaxy</span>’s history by clicking on it:</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-display-data-in-vcfiobio"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Display data in VCF.IOBIO</h3>
+  <div id="hands-on-display-data-in-vcf-iobio" class="box-title" aria-label="hands-on box: Display data in VCF.IOBIO"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Display data in VCF.IOBIO</div>
 
-  <figure id="figure-4"><img src="../../images/mt_vcf_dataset_expanded.png" alt="Expanded output" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 4:</span> At the bottom there is a link 'display at vcf.iobio'. Clicking on this link will start indexing of VCF datasets, which is required to display them.</figcaption></figure>
+  <figure id="figure-4"><img src="../../images/mt_vcf_dataset_expanded.png" alt="Expanded output. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 4:</span> At the bottom there is a link 'display at vcf.iobio'. Clicking on this link will start indexing of VCF datasets, which is required to display them.</figcaption></figure>
 
-  <figure id="figure-5"><img src="../../images/mt_vcfiobio.png" alt="VCF.IOBIO overview" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 5:</span> There are not that many variants to look at in this example. Nevertheless there are helpful statistics such as Transition/Transversion (Ts/Tn) ratio.</figcaption></figure>
+  <figure id="figure-5"><img src="../../images/mt_vcfiobio.png" alt="VCF.IOBIO overview. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 5:</span> There are not that many variants to look at in this example. Nevertheless there are helpful statistics such as Transition/Transversion (Ts/Tn) ratio.</figcaption></figure>
 </blockquote>
 
 <h2 id="visualising-with-igv">Visualising with IGV</h2>
@@ -1393,9 +1491,9 @@ chrM	5539	.	A	G	3281.62	.	AB=0;ABP=0;AC=1;AF=0.5;AN=2;AO=379;CIGAR=1X;DP=787;DPB
 <p>Similarly to VCF.IOBIO expanding a history item representing a VCF dataset will reveal an IGV link:</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-display-data-in-igv"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Display data in IGV</h3>
+  <div id="hands-on-display-data-in-igv" class="box-title" aria-label="hands-on box: Display data in IGV"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Display data in IGV</div>
 
-  <figure id="figure-6"><img src="../../images/mt_vcf_dataset_expanded.png" alt="VCFfilter output expanded" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 6:</span> At the bottom there is a link 'display at IGV: local Human hg38'.</figcaption></figure>
+  <figure id="figure-6"><img src="../../images/mt_vcf_dataset_expanded.png" alt="VCFfilter output expanded. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 6:</span> At the bottom there is a link 'display at IGV: local Human hg38'.</figcaption></figure>
 
   <p>The difference between ‘local’ and ‘Human hg38’ links is explained in the following video:</p>
 
@@ -1403,7 +1501,7 @@ chrM	5539	.	A	G	3281.62	.	AB=0;ABP=0;AC=1;AF=0.5;AN=2;AO=379;CIGAR=1X;DP=787;DPB
 
   <p>Visualizing our FreeBayes dataset will produce this:</p>
 
-  <figure id="figure-7"><img src="../../images/mt_igv.png" alt="IGV interface" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 7:</span> Here we focus on one particular variant at position 3243 for reasons that will become apparent in the next section.</figcaption></figure>
+  <figure id="figure-7"><img src="../../images/mt_igv.png" alt="IGV interface. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 7:</span> Here we focus on one particular variant at position 3243 for reasons that will become apparent in the next section.</figcaption></figure>
 </blockquote>
 
 <h2 id="comparing-frequencies">Comparing frequencies</h2>
@@ -1411,7 +1509,7 @@ chrM	5539	.	A	G	3281.62	.	AB=0;ABP=0;AC=1;AF=0.5;AN=2;AO=379;CIGAR=1X;DP=787;DPB
 <p>Visualizing VCF datasets is a good way to get an overall idea of the data, but it does not tell a lot of details. For example, above we have visualized site 3243 using IGV. It is interesting but we need to find out more. One thing we can do is to convert VCF dataset into a tab-delimited representation and with it play a bit more.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-convert-vcf-to-tab-delimited-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Convert VCF to tab-delimited data</h3>
+  <div id="hands-on-convert-vcf-to-tab-delimited-data" class="box-title" aria-label="hands-on box: Convert VCF to tab-delimited data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Convert VCF to tab-delimited data</div>
 
   <ol>
     <li>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/vcf2tsv/vcf2tsv/1.0.0_rc1+galaxy0" title="Tested with toolshed.g2.bx.psu.edu/repos/devteam/vcf2tsv/vcf2tsv/1.0.0_rc1+galaxy0"><strong>VCFtoTab-delimited</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/devteam/vcf2tsv/vcf2tsv/1.0.0_rc1+<span class="notranslate">galaxy</span>0</span></span>  to filter the variants with the following parameters:
@@ -1426,7 +1524,7 @@ chrM	5539	.	A	G	3281.62	.	AB=0;ABP=0;AC=1;AF=0.5;AN=2;AO=379;CIGAR=1X;DP=787;DPB
 </blockquote>
 
 <blockquote class="question">
-  <h3 id="question-question-2"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+  <div id="question-2" class="box-title" aria-label="question box: "><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Question</div>
 
   <ol>
     <li>Why are there four rows in the VCFtoTab-delimited <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> output when the input VCF had only two rows?</li>
@@ -1434,7 +1532,7 @@ chrM	5539	.	A	G	3281.62	.	AB=0;ABP=0;AC=1;AF=0.5;AN=2;AO=379;CIGAR=1X;DP=787;DPB
   </ol>
 
   <blockquote class="solution">
-    <h3 id="solution-solution-2"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+    <div id="solution-2" class="box-title"><button type="button" aria-controls="solution-2-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
       <li>Since <em>“Report data per sample”</em> was set to <code class="language-plaintext highlighter-rouge">Yes</code>, VCFtoTab-delimited <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> produced two rows for each of the two variants, one row per sample (child and mother).</li>
@@ -1443,7 +1541,7 @@ chrM	5539	.	A	G	3281.62	.	AB=0;ABP=0;AC=1;AF=0.5;AN=2;AO=379;CIGAR=1X;DP=787;DPB
   </blockquote>
 </blockquote>
 
-<figure id="figure-8"><img src="../../images/mt_tab.png" alt="VCFtoTab-delimited output" loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 8:</span> The columns in the above dataset represent INFO and Genotype fields on the original VCF dataset.</figcaption></figure>
+<figure id="figure-8"><img src="../../images/mt_tab.png" alt="VCFtoTab-delimited output. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 8:</span> The columns in the above dataset represent INFO and Genotype fields on the original VCF dataset.</figcaption></figure>
 
 <p>Let’s restrict ourselves to a few key columns:</p>
 
@@ -1457,7 +1555,7 @@ chrM	5539	.	A	G	3281.62	.	AB=0;ABP=0;AC=1;AF=0.5;AN=2;AO=379;CIGAR=1X;DP=787;DPB
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-cut-columns-from-a-file"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Cut columns from a file</h3>
+  <div id="hands-on-cut-columns-from-a-file" class="box-title" aria-label="hands-on box: Cut columns from a file"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Cut columns from a file</div>
 
   <ol>
     <li>Use <span class="tool" data-tool="Cut1" title="Tested with Cut1"><strong>Cut columns from a table</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: Cut1</span></span>  to select specific columns with the following parameters:
@@ -1489,14 +1587,14 @@ Child   341    694
 </code></pre></div></div>
 
 <blockquote class="question">
-  <h3 id="question-question-3"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+  <div id="question-3" class="box-title" aria-label="question box: "><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Question</div>
 
   <ol>
     <li>What do you notice about the relative frequencies of the <code class="language-plaintext highlighter-rouge">A</code> and <code class="language-plaintext highlighter-rouge">G</code> alleles between mother and child?</li>
   </ol>
 
   <blockquote class="solution">
-    <h3 id="solution-solution-3"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+    <div id="solution-3" class="box-title"><button type="button" aria-controls="solution-3-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
       <li>The <em>major</em> allele in the mother (<code class="language-plaintext highlighter-rouge">A</code>) becomes the <em>minor</em> allele in the child – a remarkable frequency change due to mitochondrial bottleneck!</li>
@@ -1513,7 +1611,7 @@ Child   341    694
 
                 
                 <blockquote class="key_points">
-                    <h3><i class="fas fa-key" aria-hidden="true"></i> Key points</h3>
+                    <div class="box-title" aria-label="key-points box"><i class="fas fa-key" aria-hidden="true"></i> Key points</div>
                     <ul>
                         
                         <li><p>Variation in human mitochondria is a proxy for other haploid systems.</p>
@@ -1533,99 +1631,35 @@ Child   341    694
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/variant-analysis/faqs/">FAQ page for the Variant Analysis topic</a> to see if your question is listed there.
+                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/variant-analysis/faqs/">FAQ page for the Variant Analysis topic</a> to see if your question is listed there.
                 If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
                 <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+
+                
 
                 
                 <h1 data-toc-skip>Useful literature</h1>
                 <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/training-material/topics/variant-analysis#references">here</a>.</p>
                 
 
+
                 
                 <h1 id="bibliography">References</h1>
-                <ol class="bibliography"><li><span id="Kanagawa2003">Kanagawa, T., 2003 <b>Bias and artifacts in multitemplate polymerase chain reactions (PCR)</b>. Journal of Bioscience and Bioengineering 96: 317–323.</span>
-    
-    
-    <a href="https://doi.org/https://doi.org/10.1016/S1389-1723(03)90130-7">https://doi.org/10.1016/S1389-1723(03)90130-7</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-      <a href="http://www.sciencedirect.com/science/article/pii/S1389172303901307">http://www.sciencedirect.com/science/article/pii/S1389172303901307</a>
-      
-    
-
-</li>
-<li><span id="Cree2008">Cree, L. M., D. C. Samuels, S. C. de Sousa Lopes, H. K. Rajasimha, P. Wonnapinij <i>et al.</i>, 2008 <b>A reduction of mitochondrial DNA molecules during embryogenesis explains the rapid segregation of genotypes</b>. Nature Genetics 40: 249–254.</span>
-    
-    
-    <a href="https://doi.org/10.1038/ng.2007.63">10.1038/ng.2007.63</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li>
-<li><span id="Li2013">Li, H., 2013 <b>Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM</b>.</span>
-    
-    
-    
-
-</li>
-<li><span id="Rebolledo-Jaramillo2014">Rebolledo-Jaramillo, B., M. S.-W. Su, N. Stoler, J. A. McElhoe, B. Dickins <i>et al.</i>, 2014 <b>Maternal age effect and severe germ-line bottleneck in the inheritance of human mitochondrial DNA</b>. Proceedings of the National Academy of Sciences 111: 15474–15479.</span>
-    
-    
-    <a href="https://doi.org/10.1073/pnas.1409328111">10.1073/pnas.1409328111</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-      <a href="https://www.pnas.org/content/111/43/15474">https://www.pnas.org/content/111/43/15474</a>
-      
-    
-
-</li>
-<li><span id="Olson2015">Olson, N. D., S. P. Lund, R. E. Colman, J. T. Foster, J. W. Sahl <i>et al.</i>, 2015 <b>Best practices for evaluating single nucleotide variant calling methods for microbial genomics</b>. Frontiers in Genetics 6: 235.</span>
-    
-    
-    <a href="https://doi.org/10.3389/fgene.2015.00235">10.3389/fgene.2015.00235</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li>
-<li><span id="Tan2015">Tan, A., G. R. Abecasis, and H. M. Kang, 2015 <b>Unified representation of genetic variants</b>. Bioinformatics 31: 2202–2204.</span>
-    
-    
-    <a href="https://doi.org/10.1093/bioinformatics/btv112">10.1093/bioinformatics/btv112</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li>
-<li><span id="Li2015">Li, D., C.-M. Liu, R. Luo, K. Sadakane, and T.-W. Lam, 2015 <b>MEGAHIT: an ultra-fast single-node solution for large and complex metagenomics assembly via succinct de Bruijn graph</b>. Bioinformatics 31: 1674–1676.</span>
-    
-    
-    <a href="https://doi.org/10.1093/bioinformatics/btv033">10.1093/bioinformatics/btv033</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li></ol>
+                <ol class="bibliography"><li id="Kanagawa2003">Kanagawa, T., 2003 <b>Bias and artifacts in multitemplate polymerase chain reactions (PCR)</b>. Journal of Bioscience and Bioengineering 96: 317–323. <a href="https://doi.org/https://doi.org/10.1016/S1389-1723(03)90130-7">https://doi.org/10.1016/S1389-1723(03)90130-7</a> <a href="http://www.sciencedirect.com/science/article/pii/S1389172303901307">http://www.sciencedirect.com/science/article/pii/S1389172303901307</a></li>
+<li id="Cree2008">Cree, L. M., D. C. Samuels, S. C. de Sousa Lopes, H. K. Rajasimha, P. Wonnapinij <i>et al.</i>, 2008 <b>A reduction of mitochondrial DNA molecules during embryogenesis explains the rapid segregation of genotypes</b>. Nature Genetics 40: 249–254. <a href="https://doi.org/10.1038/ng.2007.63">10.1038/ng.2007.63</a></li>
+<li id="Li2013">Li, H., 2013 <b>Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM</b>.</li>
+<li id="Rebolledo-Jaramillo2014">Rebolledo-Jaramillo, B., M. S.-W. Su, N. Stoler, J. A. McElhoe, B. Dickins <i>et al.</i>, 2014 <b>Maternal age effect and severe germ-line bottleneck in the inheritance of human mitochondrial DNA</b>. Proceedings of the National Academy of Sciences 111: 15474–15479. <a href="https://doi.org/10.1073/pnas.1409328111">10.1073/pnas.1409328111</a> <a href="https://www.pnas.org/content/111/43/15474">https://www.pnas.org/content/111/43/15474</a></li>
+<li id="Li2015">Li, W., J. Köster, H. Xu, C.-H. Chen, T. Xiao <i>et al.</i>, 2015 <b>Quality control,  modeling,  and visualization of CRISPR screens with MAGeCK-VISPR</b>. 16: <a href="https://doi.org/10.1186/s13059-015-0843-6">10.1186/s13059-015-0843-6</a></li>
+<li id="Olson2015">Olson, N. D., S. P. Lund, R. E. Colman, J. T. Foster, J. W. Sahl <i>et al.</i>, 2015 <b>Best practices for evaluating single nucleotide variant calling methods for microbial genomics</b>. Frontiers in Genetics 6: 235. <a href="https://doi.org/10.3389/fgene.2015.00235">10.3389/fgene.2015.00235</a></li>
+<li id="Tan2015">Tan, A., G. R. Abecasis, and H. M. Kang, 2015 <b>Unified representation of genetic variants</b>. Bioinformatics 31: 2202–2204. <a href="https://doi.org/10.1093/bioinformatics/btv112">10.1093/bioinformatics/btv112</a></li></ol>
                 
 
                 
 
                 <h1>Feedback</h1>
-                <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+                <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452">how it went</a>.
+                <br>Did you use this material as a learner or student? Click the form below to leave feedback.<i class="fas fa-hand-point-down"></i>
+                </p>
 
                 <div id="feedback-button">
                     <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
@@ -1655,12 +1689,11 @@ Child   341    694
                     })(window, document);
                 </script>
 
-
-
                 <h1>Citing this Tutorial</h1>
                 <p>
                     <ol>
-                        <li id="citation-text">Anton Nekrutenko, Alex Ostrovsky, 2021 <b>Calling variants in non-diploid systems (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/non-dip/tutorial.html">https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/non-dip/tutorial.html</a> Online; accessed TODAY
+                        <li id="citation-text">
+                            Anton Nekrutenko, Alex Ostrovsky,  <b>Calling variants in non-diploid systems (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/non-dip/tutorial.html">https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/non-dip/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
@@ -1668,37 +1701,49 @@ Child   341    694
                     </ol>
                 </p>
 
-
+                <!-- collapsible boxcontaining the BibTeX-formatted citation -->
                 <blockquote class="details">
-                  <h3><i class="fa fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> BibTeX</h3>
-                  <p style="display: none;">
 
-                <div class="highlighter-rouge"><div class="highlight"><pre class="highlight">
+                  <div id="citation-bibtex" class="box-title">
+                    <button type="button" aria-controls="citation-bibtex" aria-expanded="false" aria-label="Toggle details box: BibTeX for citing this tutorial">
+                      <i class="fas fa-info-circle" aria-hidden="true"></i>
+                      <span class="visually-hidden"></span> BibTeX<span role="button" class="fold-unfold fa fa-minus-square" aria-hidden="true"></span>
+                    </button>
+                   </div>
+                   <p style="display: none;">
+
+                   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight">
+
+
 <code id="citation-code">@misc{variant-analysis-non-dip,
 author = "Anton Nekrutenko and Alex Ostrovsky",
 title = "Calling variants in non-diploid systems (Galaxy Training Materials)",
-year = "2021",
-month = "06",
-day = "17"
+year = "",
+month = "",
+day = ""
 url = "\url{https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/non-dip/tutorial.html}",
 note = "[Online; accessed TODAY]"
 }
-@article{Batut_2018,
-    doi = {10.1016/j.cels.2018.05.012},
-    url = {https://doi.org/10.1016%2Fj.cels.2018.05.012},
-    year = 2018,
-    month = {jun},
-    publisher = {Elsevier {BV}},
-    volume = {6},
-    number = {6},
-    pages = {752--758.e1},
-    author = {B{\'{e}}r{\'{e}}nice Batut and Saskia Hiltemann and Andrea Bagnacani and Dannon Baker and Vivek Bhardwaj and Clemens Blank and Anthony Bretaudeau and Loraine Brillet-Gu{\'{e}}guen and Martin {\v{C}}ech and John Chilton and Dave Clements and Olivia Doppelt-Azeroual and Anika Erxleben and Mallory Ann Freeberg and Simon Gladman and Youri Hoogstrate and Hans-Rudolf Hotz and Torsten Houwaart and Pratik Jagtap and Delphine Larivi{\`{e}}re and Gildas Le Corguill{\'{e}} and Thomas Manke and Fabien Mareuil and Fidel Ram{\'{\i}}rez and Devon Ryan and Florian Christoph Sigloch and Nicola Soranzo and Joachim Wolff and Pavankumar Videm and Markus Wolfien and Aisanjiang Wubuli and Dilmurat Yusuf and James Taylor and Rolf Backofen and Anton Nekrutenko and Björn Grüning},
-    title = {Community-Driven Data Analysis Training for Biology},
-    journal = {Cell Systems}
-}</code>
-                </pre></div></div>
-                </p>
+@article{Hiltemann_2023,
+	doi = {10.1371/journal.pcbi.1010752},
+	url = {https://doi.org/10.1371%2Fjournal.pcbi.1010752},
+	year = 2023,
+	month = {jan},
+	publisher = {Public Library of Science ({PLoS})},
+	volume = {19},
+	number = {1},
+	pages = {e1010752},
+	author = {Saskia Hiltemann and Helena Rasche and Simon Gladman and Hans-Rudolf Hotz and Delphine Larivi{\`{e}}re and Daniel Blankenberg and Pratik D. Jagtap and Thomas Wollmann and Anthony Bretaudeau and Nadia Gou{\'{e}} and Timothy J. Griffin and Coline Royaux and Yvan Le Bras and Subina Mehta and Anna Syme and Frederik Coppens and Bert Droesbeke and Nicola Soranzo and Wendi Bacon and Fotis Psomopoulos and Crist{\'{o}}bal Gallardo-Alba and John Davis and Melanie Christine Föll and Matthias Fahrner and Maria A. Doyle and Beatriz Serrano-Solano and Anne Claire Fouilloux and Peter van Heusden and Wolfgang Maier and Dave Clements and Florian Heyl and Björn Grüning and B{\'{e}}r{\'{e}}nice Batut and},
+	editor = {Francis Ouellette},
+	title = {Galaxy Training: A powerful framework for teaching!},
+	journal = {PLoS Comput Biol} Computational Biology}
+}
+</code>
+                   </pre></div></div>
+                   </p>
                 </blockquote>
+
+                
 
 
 <script type="text/javascript">
@@ -1708,7 +1753,7 @@ document.getElementById("citation-code").innerHTML = document.getElementById("ci
 document.getElementById("citation-text").innerHTML = document.getElementById("citation-text").innerHTML.replace("TODAY", d.toDateString());
 </script>
 
-                <h3><i class="far fa-thumbs-up" aria-hidden="true"></i> Congratulations on successfully completing this tutorial!</h3>
+                <i class="far fa-thumbs-up" aria-hidden="true"></i> Congratulations on successfully completing this tutorial!
 
                 
 
@@ -1724,39 +1769,39 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
         </div>
         
+        <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/popper.min.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
+        <script type="text/javascript" src="/training-material/assets/js/details-element-polyfill.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="/training-material/assets/js/bootstrap-toc.min.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/main.js"></script>
+        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+
+        <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+        <script type="text/javascript">
+        var snippets=document.querySelectorAll('div.highlight');
+        [].forEach.call(snippets,function(snippet){
+            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        });
+
+        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+            target:function(trigger){return trigger.nextElementSibling;
+        }});
+        </script>
+        
+
+        <script type="text/javascript">
+            if(window.location.hostname === "galaxyproject.github.io") {
+                // Redirect
+                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+                window.setTimeout(function(){
+                    window.location.href = redirect;
+                }, 5000)
+
+            }
+        </script>
     </body>
-    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/popper.min.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-    <script type="text/javascript" src="/training-material/assets/js/details-element-polyfill.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/main.js"></script>
-    <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
-
-    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
-    <script type="text/javascript">
-    var snippets=document.querySelectorAll('div.highlight');
-    [].forEach.call(snippets,function(snippet){
-        snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-    });
-
-    var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-        target:function(trigger){return trigger.nextElementSibling;
-    }});
-    </script>
-    
-
-    <script type="text/javascript">
-        if(window.location.hostname === "galaxyproject.github.io") {
-            // Redirect
-            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-            window.setTimeout(function(){
-                window.location.href = redirect;
-            }, 5000)
-
-        }
-    </script>
 </html>
