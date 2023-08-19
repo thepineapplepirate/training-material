@@ -746,14 +746,6 @@
           ]
         },
         {
-          "id": "LEs_GTN_tutorials.yaml",
-          "path": "topics/contributing/tutorials/design/quiz/LEs_GTN_tutorials.yaml",
-          "title": "LEs in GTN tutorials",
-          "contributors": [
-            "bebatut"
-          ]
-        },
-        {
           "id": "effectiveness_GTN_tutorials.yaml",
           "path": "topics/contributing/tutorials/design/quiz/effectiveness_GTN_tutorials.yaml",
           "title": "Evaluate effectiveness in GTN tutorials",
@@ -765,6 +757,14 @@
           "id": "assessments_GTN_tutorials.yaml",
           "path": "topics/contributing/tutorials/design/quiz/assessments_GTN_tutorials.yaml",
           "title": "Evaluate assessment in GTN tutorials",
+          "contributors": [
+            "bebatut"
+          ]
+        },
+        {
+          "id": "LEs_GTN_tutorials.yaml",
+          "path": "topics/contributing/tutorials/design/quiz/LEs_GTN_tutorials.yaml",
+          "title": "LEs in GTN tutorials",
           "contributors": [
             "bebatut"
           ]
@@ -1112,17 +1112,9 @@
           ]
         },
         {
-          "id": "learning_metaphors.yaml",
-          "path": "topics/contributing/tutorials/learning-principles/quiz/learning_metaphors.yaml",
-          "title": "Learning metaphors",
-          "contributors": [
-            "bebatut"
-          ]
-        },
-        {
-          "id": "teaching_or_training.yaml",
-          "path": "topics/contributing/tutorials/learning-principles/quiz/teaching_or_training.yaml",
-          "title": "Teaching or training?",
+          "id": "overloading_short_term_memory.yaml",
+          "path": "topics/contributing/tutorials/learning-principles/quiz/overloading_short_term_memory.yaml",
+          "title": "How can you avoid to overload learners working memory?",
           "contributors": [
             "bebatut"
           ]
@@ -1136,9 +1128,17 @@
           ]
         },
         {
-          "id": "overloading_short_term_memory.yaml",
-          "path": "topics/contributing/tutorials/learning-principles/quiz/overloading_short_term_memory.yaml",
-          "title": "How can you avoid to overload learners working memory?",
+          "id": "learning_metaphors.yaml",
+          "path": "topics/contributing/tutorials/learning-principles/quiz/learning_metaphors.yaml",
+          "title": "Learning metaphors",
+          "contributors": [
+            "bebatut"
+          ]
+        },
+        {
+          "id": "teaching_or_training.yaml",
+          "path": "topics/contributing/tutorials/learning-principles/quiz/teaching_or_training.yaml",
+          "title": "Teaching or training?",
           "contributors": [
             "bebatut"
           ]
