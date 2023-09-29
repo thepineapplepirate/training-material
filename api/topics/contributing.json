@@ -366,11 +366,11 @@
       "slides": false,
       "workflows": [
         {
-          "workflow": "Galaxy-Workflow-MakeAFakeInput.ga",
+          "workflow": "main_workflow.ga",
           "tests": false
         },
         {
-          "workflow": "main_workflow.ga",
+          "workflow": "Galaxy-Workflow-MakeAFakeInput.ga",
           "tests": false
         }
       ],
@@ -746,9 +746,9 @@
           ]
         },
         {
-          "id": "LEs_GTN_tutorials.yaml",
-          "path": "topics/contributing/tutorials/design/quiz/LEs_GTN_tutorials.yaml",
-          "title": "LEs in GTN tutorials",
+          "id": "assessments_GTN_tutorials.yaml",
+          "path": "topics/contributing/tutorials/design/quiz/assessments_GTN_tutorials.yaml",
+          "title": "Evaluate assessment in GTN tutorials",
           "contributors": [
             "bebatut"
           ]
@@ -762,9 +762,9 @@
           ]
         },
         {
-          "id": "assessments_GTN_tutorials.yaml",
-          "path": "topics/contributing/tutorials/design/quiz/assessments_GTN_tutorials.yaml",
-          "title": "Evaluate assessment in GTN tutorials",
+          "id": "LEs_GTN_tutorials.yaml",
+          "path": "topics/contributing/tutorials/design/quiz/LEs_GTN_tutorials.yaml",
+          "title": "LEs in GTN tutorials",
           "contributors": [
             "bebatut"
           ]
@@ -1104,6 +1104,14 @@
       "slides": false,
       "quiz": [
         {
+          "id": "verbs.yaml",
+          "path": "topics/contributing/tutorials/learning-principles/quiz/verbs.yaml",
+          "title": "Identify observable and non observable actions (verbs)",
+          "contributors": [
+            "bebatut"
+          ]
+        },
+        {
           "id": "teaching_or_training.yaml",
           "path": "topics/contributing/tutorials/learning-principles/quiz/teaching_or_training.yaml",
           "title": "Teaching or training?",
@@ -1120,14 +1128,6 @@
           ]
         },
         {
-          "id": "short_term_memory.yaml",
-          "path": "topics/contributing/tutorials/learning-principles/quiz/short_term_memory.yaml",
-          "title": "How short is your short term memory?",
-          "contributors": [
-            "bebatut"
-          ]
-        },
-        {
           "id": "overloading_short_term_memory.yaml",
           "path": "topics/contributing/tutorials/learning-principles/quiz/overloading_short_term_memory.yaml",
           "title": "How can you avoid to overload learners working memory?",
@@ -1136,9 +1136,9 @@
           ]
         },
         {
-          "id": "verbs.yaml",
-          "path": "topics/contributing/tutorials/learning-principles/quiz/verbs.yaml",
-          "title": "Identify observable and non observable actions (verbs)",
+          "id": "short_term_memory.yaml",
+          "path": "topics/contributing/tutorials/learning-principles/quiz/short_term_memory.yaml",
+          "title": "How short is your short term memory?",
           "contributors": [
             "bebatut"
           ]
