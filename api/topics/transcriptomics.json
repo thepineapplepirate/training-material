@@ -228,11 +228,11 @@
       "slides": false,
       "workflows": [
         {
-          "workflow": "rna-seq-reads-to-counts.ga",
+          "workflow": "qc_report.ga",
           "tests": false
         },
         {
-          "workflow": "qc_report.ga",
+          "workflow": "rna-seq-reads-to-counts.ga",
           "tests": false
         }
       ],
@@ -1187,11 +1187,11 @@
           "tests": false
         },
         {
-          "workflow": "qc-mapping-counting.ga",
+          "workflow": "deg-analysis.ga",
           "tests": true
         },
         {
-          "workflow": "deg-analysis.ga",
+          "workflow": "qc-mapping-counting.ga",
           "tests": true
         }
       ],
