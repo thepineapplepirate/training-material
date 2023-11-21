@@ -92,17 +92,17 @@
           ]
         },
         {
-          "id": "formative_assessment.yaml",
-          "path": "topics/teaching/tutorials/assessment/quiz/formative_assessment.yaml",
-          "title": "Collecting formative assessment",
+          "id": "integrate_formative_assessment.yaml",
+          "path": "topics/teaching/tutorials/assessment/quiz/integrate_formative_assessment.yaml",
+          "title": "How to integrate the result of formative assessment / feedback in your course?",
           "contributors": [
             "bebatut"
           ]
         },
         {
-          "id": "integrate_formative_assessment.yaml",
-          "path": "topics/teaching/tutorials/assessment/quiz/integrate_formative_assessment.yaml",
-          "title": "How to integrate the result of formative assessment / feedback in your course?",
+          "id": "formative_assessment.yaml",
+          "path": "topics/teaching/tutorials/assessment/quiz/formative_assessment.yaml",
+          "title": "Collecting formative assessment",
           "contributors": [
             "bebatut"
           ]
@@ -1127,17 +1127,9 @@
       "slides": false,
       "quiz": [
         {
-          "id": "active_learning_strategies.yaml",
-          "path": "topics/teaching/tutorials/learner_participation_engagement/quiz/active_learning_strategies.yaml",
-          "title": "Which strategies for active learning training did you use?",
-          "contributors": [
-            "bebatut"
-          ]
-        },
-        {
-          "id": "mazur_interview.yaml",
-          "path": "topics/teaching/tutorials/learner_participation_engagement/quiz/mazur_interview.yaml",
-          "title": "Reflect on Mazur's interview",
+          "id": "effective_training_trainer.yaml",
+          "path": "topics/teaching/tutorials/learner_participation_engagement/quiz/effective_training_trainer.yaml",
+          "title": "What makes training effective and a good trainer?",
           "contributors": [
             "bebatut"
           ]
@@ -1151,6 +1143,14 @@
           ]
         },
         {
+          "id": "mazur_interview.yaml",
+          "path": "topics/teaching/tutorials/learner_participation_engagement/quiz/mazur_interview.yaml",
+          "title": "Reflect on Mazur's interview",
+          "contributors": [
+            "bebatut"
+          ]
+        },
+        {
           "id": "trainer_skills.yaml",
           "path": "topics/teaching/tutorials/learner_participation_engagement/quiz/trainer_skills.yaml",
           "title": "Reflect on your skills as a trainer",
@@ -1159,9 +1159,9 @@
           ]
         },
         {
-          "id": "effective_training_trainer.yaml",
-          "path": "topics/teaching/tutorials/learner_participation_engagement/quiz/effective_training_trainer.yaml",
-          "title": "What makes training effective and a good trainer?",
+          "id": "active_learning_strategies.yaml",
+          "path": "topics/teaching/tutorials/learner_participation_engagement/quiz/active_learning_strategies.yaml",
+          "title": "Which strategies for active learning training did you use?",
           "contributors": [
             "bebatut"
           ]
