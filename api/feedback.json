@@ -26673,5 +26673,38 @@
     "topic": "Introduction to Galaxy Analyses",
     "month": "2023-11",
     "date": "2023-11-20"
+  },
+  {
+    "": "3284",
+    "note": "1",
+    "pro": null,
+    "con": null,
+    "anonymous": null,
+    "tutorial": "Mapping",
+    "topic": "Sequence analysis",
+    "month": "2023-11",
+    "date": "2023-11-23"
+  },
+  {
+    "": "3285",
+    "note": "5",
+    "pro": null,
+    "con": null,
+    "anonymous": null,
+    "tutorial": "Galaxy 101",
+    "topic": "Introduction to Galaxy Analyses",
+    "month": "2023-11",
+    "date": "2023-11-23"
+  },
+  {
+    "": "3286",
+    "note": "5",
+    "pro": "Questions and answers",
+    "con": null,
+    "anonymous": null,
+    "tutorial": "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
+    "topic": "Single Cell",
+    "month": "2023-11",
+    "date": "2023-11-24"
   }
 ]
